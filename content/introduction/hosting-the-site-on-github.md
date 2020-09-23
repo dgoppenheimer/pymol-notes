@@ -1,7 +1,7 @@
 ---
 title: "Hosting the Site on Github"
 date: 2020-09-23T19:04:15-04:00
-draft: true
+draft: false
 ---
 
 I more-or-less followed the instructions provided on the [Hugo website](https://gohugo.io/hosting-and-deployment/hosting-on-github/).
@@ -153,6 +153,12 @@ cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)
 
 #echo "Pushing to github"
 #git push --all
+```
+
+Make the script executable.
+
+```zsh
+chmod +x publish_to_ghpages.sh
 ```
 
 Run the script with `./publish_to_ghpages.sh`.
