@@ -6,7 +6,7 @@ draft: true
 
 I more-or-less followed the instructions provided on the [Hugo website](https://gohugo.io/hosting-and-deployment/hosting-on-github/).
 
-I already have a GitHub account. I'll create a new project called `pymol-notes`, which will be the repository for my project. I'll deploy my site from the `gh-pages` branch of my project.
+I already have a GitHub account. I'll create a new public repository called `pymol-notes`, which will be the repository for my project. I'll deploy my site from the `gh-pages` branch of my project.
 
 Update the local repository for the site.
 
@@ -155,42 +155,4 @@ cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)
 #git push --all
 ```
 
-
-
-
-
-
-
-https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Using_Github_pages
-gh-pages
-
-Get github account
-log in to github
-
-create a new repository
-
-public
-
-git remote add origin https://github.com/chrisdavidmills/my-repository.git
-
-git add --all
-git commit -m 'adding my files to my repository'
-
-git push -u origin master
-
-Now you need to turn GitHub pages on for your repository. To do this, from the homepage of your repository choose Settings, then scroll down until  you get to the GitHub Pages section. Underneath Source, choose Master branch. The page should refresh.
-
-using gh-pages branch
-
-set up repository on github
-public
-
-```zsh
-git@github.com:dgoppenheimer/pymol-notes.git
-```
-
-```zsh
-git remote add origin git@github.com:dgoppenheimer/pymol-notes.git
-git branch -M master
-git push -u origin master
-```
+Run the script with `./publish_to_ghpages.sh`.
