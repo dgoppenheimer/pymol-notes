@@ -2,6 +2,7 @@
 title: "Building this site"
 date: 2020-09-22T13:50:44-04:00
 draft: false
+weight: 1
 ---
 
 I already have [Hugo](https://gohugo.io/) installed. I installed it using [MacPorts](https://www.macports.org/).
