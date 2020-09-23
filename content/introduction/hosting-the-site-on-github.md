@@ -2,6 +2,7 @@
 title: "Hosting the Site on Github"
 date: 2020-09-23T19:04:15-04:00
 draft: false
+weight = 5
 ---
 
 I more-or-less followed the instructions provided on the [Hugo website](https://gohugo.io/hosting-and-deployment/hosting-on-github/).
