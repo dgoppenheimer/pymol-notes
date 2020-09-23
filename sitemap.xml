@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/introduction/building-this-site/</loc>
+    <lastmod>2020-09-22T13:50:44-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dgoppenheimer.github.io/pymol-notes/introduction/hosting-the-site-on-github/</loc>
     <lastmod>2020-09-23T19:04:15-04:00</lastmod>
   </url>
@@ -15,11 +20,6 @@
   <url>
     <loc>https://dgoppenheimer.github.io/pymol-notes/</loc>
     <lastmod>2020-09-23T19:04:15-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dgoppenheimer.github.io/pymol-notes/introduction/building-this-site/</loc>
-    <lastmod>2020-09-22T13:50:44-04:00</lastmod>
   </url>
   
   <url>
