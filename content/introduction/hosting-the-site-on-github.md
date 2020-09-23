@@ -162,4 +162,4 @@ Make the script executable.
 chmod +x publish_to_ghpages.sh
 ```
 
-Run the script with `./publish_to_ghpages.sh`.
+Run the script with `./publish_to_ghpages.sh`. Either uncomment the `git push` lines, or manually run `git push --all`. Wait a few minutes and the site should be live on GitHub.
