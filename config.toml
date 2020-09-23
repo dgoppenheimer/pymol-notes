@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "PyMOL Notes"
+theme = "hugo-theme-learn"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
