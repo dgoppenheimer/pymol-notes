@@ -1,0 +1,36 @@
+[
+{
+	"uri": "https://dgoppenheimer.github.io/pymol-notes/introduction/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 1 Introduction I built this site to keep track of my notes when using PyMOL.\n"
+},
+{
+	"uri": "https://dgoppenheimer.github.io/pymol-notes/introduction/building-this-site/",
+	"title": "Building this site",
+	"tags": [],
+	"description": "",
+	"content": "I already have Hugo installed. I installed it using MacPorts.\nCreate a project cd ~/Sites hugo new site pymol-notes Install the theme I want to use the Learn theme for Hugo. It is a theme designed for documentation. It looks nice and is functional.\nThe theme\u0026rsquo;s repository is: https://github.com/matcornic/hugo-theme-learn.git.\ncd pymol-notes git init git submodule add https://github.com/matcornic/hugo-theme-learn.git themes/hugo-theme-learn echo \u0026#39;theme = \u0026#34;hugo-theme-learn\u0026#34;\u0026#39; \u0026gt;\u0026gt; config.toml Configure the theme Open config.toml and add the following:\n# Change the default theme to be use when building the site with Hugo theme = \u0026#34;hugo-theme-learn\u0026#34; # Change the title title = \u0026#34;PyMOL Notes\u0026#34; # For search functionality [outputs] home = [ \u0026#34;HTML\u0026#34;, \u0026#34;RSS\u0026#34;, \u0026#34;JSON\u0026#34;] Create a chapter page hugo new --kind chapter introduction/_index.md Create some content hugo new introduction/building-this-site.md Spin up the site hugo server  When you run hugo server, Hugo will build the site in and serve the pages from memory.\n Go to http://localhost:1313.\nSuccess!\nIf you want the site to be built in and served from the public directory, then run hugo server --renderToDisk. If you just want to build the site in the public directory, then run hugo.\n "
+},
+{
+	"uri": "https://dgoppenheimer.github.io/pymol-notes/",
+	"title": "PyMOL Notes",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dgoppenheimer.github.io/pymol-notes/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://dgoppenheimer.github.io/pymol-notes/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
