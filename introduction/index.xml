@@ -8,6 +8,18 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 22 Sep 2020 13:21:40 -0400</lastBuildDate><atom:link href="https://dgoppenheimer.github.io/pymol-notes/introduction/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hosting the Site on Github</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/introduction/hosting-the-site-on-github/</link>
+      <pubDate>Wed, 23 Sep 2020 19:04:15 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/introduction/hosting-the-site-on-github/</guid>
+      <description>I more-or-less followed the instructions provided on the Hugo website.
+I already have a GitHub account. I&amp;rsquo;ll create a new public repository called pymol-notes, which will be the repository for my project. I&amp;rsquo;ll deploy my site from the gh-pages branch of my project.
+Update the local repository for the site.
+git add . git status On branch master No commits yet Changes to be committed: (use &amp;#34;git rm --cached &amp;lt;file&amp;gt;...&amp;#34; to unstage) new file: .</description>
+    </item>
+    
+    <item>
       <title>Building this site</title>
       <link>https://dgoppenheimer.github.io/pymol-notes/introduction/building-this-site/</link>
       <pubDate>Tue, 22 Sep 2020 13:50:44 -0400</pubDate>
