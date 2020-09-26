@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/pymol-notes/images/favicon.png" type="image/png">
 
-    <title>Building this site :: PyMOL Notes</title>
+    <title>Creating a Logo :: PyMOL Notes</title>
 
     
     <link href="/pymol-notes/css/nucleus.css?1601090145" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/pymol-notes/introduction/building-this-site/">
+  <body class="" data-url="/pymol-notes/introduction/creating-a-logo/">
     <nav id="sidebar" class="">
 
 
@@ -110,7 +110,7 @@
  
   
     
-      <li data-nav-id="/pymol-notes/introduction/building-this-site/" title="Building this site" class="dd-item active">
+      <li data-nav-id="/pymol-notes/introduction/building-this-site/" title="Building this site" class="dd-item ">
         <a href="/pymol-notes/introduction/building-this-site/">
         Building this site
         
@@ -152,7 +152,7 @@
  
   
     
-      <li data-nav-id="/pymol-notes/introduction/creating-a-logo/" title="Creating a Logo" class="dd-item ">
+      <li data-nav-id="/pymol-notes/introduction/creating-a-logo/" title="Creating a Logo" class="dd-item active">
         <a href="/pymol-notes/introduction/creating-a-logo/">
         Creating a Logo
         
@@ -220,7 +220,7 @@
             
           
           
-            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/introduction/'>Introduction</a> > Building this site
+            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/introduction/'>Introduction</a> > Creating a Logo
           
         
           
@@ -233,16 +233,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#create-a-project">Create a project</a></li>
-    <li><a href="#install-the-theme">Install the theme</a></li>
-    <li><a href="#configure-the-theme">Configure the theme</a></li>
-    <li><a href="#create-a-chapter-page">Create a chapter page</a></li>
-    <li><a href="#create-some-content">Create some content</a></li>
-    <li><a href="#spin-up-the-site">Spin up the site</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -258,51 +249,54 @@
           
             <h1>
               
-              Building this site
+              Creating a Logo
             </h1>
           
 
         
 
 
-<p>I already have <a href="https://gohugo.io/">Hugo</a> installed. I installed it using <a href="https://www.macports.org/">MacPorts</a>.</p>
-<h2 id="create-a-project">Create a project</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">cd ~/Sites
-hugo new site pymol-notes
-</code></pre></div><h2 id="install-the-theme">Install the theme</h2>
-<p>I want to use the <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en/">Learn theme</a> for Hugo. It is a theme designed for documentation. It looks nice and is functional.</p>
-<p>The theme&rsquo;s repository is: <a href="https://github.com/matcornic/hugo-theme-learn.git">https://github.com/matcornic/hugo-theme-learn.git</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">cd pymol-notes
-git init
-git submodule add https://github.com/matcornic/hugo-theme-learn.git themes/hugo-theme-learn
-echo <span style="color:#e6db74">&#39;theme = &#34;hugo-theme-learn&#34;&#39;</span> &gt;&gt; config.toml
-</code></pre></div><h2 id="configure-the-theme">Configure the theme</h2>
-<p>Open <code>config.toml</code> and add the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#75715e"># Change the default theme to be use when building the site with Hugo</span>
-theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hugo-theme-learn&#34;</span>
+<p>I&rsquo;ll create my own logo to replace the beautiful GRAV logo.</p>
+<p>Open <code>PyMOL</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">fetch <span style="color:#ae81ff">3</span>G6M, mol, async<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+extract caf1, <span style="color:#f92672">/</span>mol<span style="color:#f92672">//</span>A<span style="color:#f92672">/</span>CFF<span style="color:#960050;background-color:#1e0010">`</span><span style="color:#ae81ff">427</span>
+h_add
+set valence, <span style="color:#ae81ff">0</span>
+hide everything, caf1
+create molball, caf1
+create molstick, caf1
+show spheres, molball
+set sphere_scale, <span style="color:#ae81ff">0.25</span>
+show sticks, molstick
+set stick_radius, <span style="color:#ae81ff">0.15</span>
+disable mol
+color hydrogen, elem H <span style="color:#f92672">and</span> molball
+color wheat, elem C <span style="color:#f92672">and</span> molball
+color salmon, elem O <span style="color:#f92672">and</span> molball
+color lightblue, elem N <span style="color:#f92672">and</span> molball
+color skyblue, molstick
+set orthoscopic, off
+set field_of_view, <span style="color:#ae81ff">60</span>
+set ray_opaque_background, off
+viewport <span style="color:#ae81ff">640</span>, <span style="color:#ae81ff">640</span> 
+png caffeine<span style="color:#f92672">-</span>logo<span style="color:#f92672">.</span>png, width<span style="color:#f92672">=</span><span style="color:#ae81ff">640</span>, height<span style="color:#f92672">=</span><span style="color:#ae81ff">640</span>, ray<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>I opened this image in Affinity Designer, changed it to black and white, added the text (and rounded the ends of the letters), and saved it as an <code>.svg</code> file. I minimized the <code>.svg</code> file on the <a href="https://jakearchibald.github.io/svgomg/">https://jakearchibald.github.io/svgomg/</a> site.</p>
+<p>Refer to this post on <a href="https://www.bitovi.com/blog/best-practices-for-working-with-svgs">Best Practices for Working with SVGs</a> for useful tips.</p>
 
-<span style="color:#75715e"># Change the title</span>
-title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;PyMOL Notes&#34;</span>
-
-<span style="color:#75715e"># For search functionality</span>
-<span style="color:#f92672">[</span>outputs<span style="color:#f92672">]</span>
-home <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span><span style="color:#f92672">]</span>
-</code></pre></div><h2 id="create-a-chapter-page">Create a chapter page</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo new --kind chapter introduction/_index.md
-</code></pre></div><h2 id="create-some-content">Create some content</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo new introduction/building-this-site.md
-</code></pre></div><h2 id="spin-up-the-site">Spin up the site</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo server
-</code></pre></div>
-<div class="notices note" ><p>When you run <code>hugo server</code>, Hugo will build the site in and serve the pages from memory.</p>
+<div class="notices tip" ><p>Do not change the logo.html file in the <code>pymol-notes/themes/hugo-theme-learn/layouts/partials/</code> directory. Instead make a new partial in the <code>layouts/partials</code> directory of your local project. This partial will have the priority.</p>
 </div>
 
-<p>Go to <code>http://localhost:1313</code>.</p>
+<p>Create a <code>partials</code> directory in the <code>pymol-notes/layouts/</code> directory. Copy the <code>logo.html</code> file from <code>pymol-notes/themes/hugo-theme-learn/layouts/partials/</code> to the <code>pymol-notes/layouts/partials</code> directory.</p>
+<p>Open the new copy of <code>logo.html</code> in your favorite text editor and replace the <code>svg</code> code with your new logo.</p>
+
+<div class="notices info" ><p>The logo size will adapt to different screen sizes automatically.</p>
+</div>
+
+<p>Replace the code in between the <code>&lt;svg&gt;</code> tags in <code>logo.html</code> with the contents of your <code>.svg</code> file. Also add the following to the <code>&lt;svg&gt;</code> tag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">id=&#34;pymol-notes-logo&#34; style=&#34;width:100%; height:100%;&#34;
+</code></pre></div><p>To the second and third <code>&lt;path&gt;</code> tags, add <code>fill=&quot;#fff&quot;</code> so that the text is displayed as white.</p>
+<p>Save the <code>logo.html</code> file, and spin up the site with <code>hugo server</code>. Check the site locally at <code>127.0.0.1:1313</code></p>
 <p>Success!</p>
-
-<div class="notices note" ><p>If you want the site to be built in and served from the <code>public</code> directory, then run <code>hugo server --renderToDisk</code>. If you just want to build the site in the <code>public</code> directory, then run <code>hugo</code>.</p>
-</div>
-
 
 
 <footer class="footline">
@@ -354,23 +348,6 @@ home <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -389,6 +366,23 @@ home <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -413,10 +407,10 @@ home <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <
 	 
 	 
 		
-			<a class="nav nav-prev" href="/pymol-notes/introduction/" title="Introduction"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/pymol-notes/introduction/hosting-the-site-on-github/" title="Hosting the Site on Github"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/pymol-notes/introduction/hosting-the-site-on-github/" title="Hosting the Site on Github" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/pymol-notes/introduction/building-this-site/" title="Building this site" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
