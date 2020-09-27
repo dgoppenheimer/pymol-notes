@@ -10,4 +10,4 @@ pre = "<b>1. </b>"
 
 # Introduction
 
-I built this site to keep track of my notes when using PyMOL.
+Here I'll document how I built this site. Thanks to excellent documentation, it was fairly straightforward.

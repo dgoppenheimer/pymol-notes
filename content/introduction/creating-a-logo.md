@@ -36,6 +36,10 @@ png caffeine-logo.png, width=640, height=640, ray=1
 
 I opened this image in Affinity Designer, changed it to black and white, added the text (and rounded the ends of the letters), and saved it as an `.svg` file. I minimized the `.svg` file on the [https://jakearchibald.github.io/svgomg/](https://jakearchibald.github.io/svgomg/) site.
 
+### Update
+
+I used the `.png` file as a template and created a series of tubes for the bonds and circles for the atoms. I used a 2 pt black stroke and filled the objects with white. It took a while to get the layers in the correct order so the apporpriate bonds were on top of the appropriate atoms. I saved the file as a `.svg` file. Without the `.png` embedded as base64, the file was much smaller.
+
 Refer to this post on [Best Practices for Working with SVGs](https://www.bitovi.com/blog/best-practices-for-working-with-svgs) for useful tips.
 
 {{% notice tip %}}
