@@ -43,7 +43,7 @@ git rm --cached content/introduction/.DS_Store
 echo ".DS_Store" >> .gitignore
 ```
 
-## Preparations for `gh-pages` branch
+## Preparations for _gh-pages_ branch
 
 These steps only need to be done once. Replace `upstream` with the name of your remote; e.g., `origin`:
 
@@ -57,7 +57,7 @@ For this project, in `config.toml`, change `baseURL = "http://example.org/"` to
 baseURL = "https://dgoppenheimer.github.io/pymol-notes/"
 ```
 
-### Add the `public` folder to `.gitignore`
+### Add the _public_ folder to _.gitignore_
 
 Add the `public` folder to the `.gitignore` in your project root.
 
@@ -65,7 +65,7 @@ Add the `public` folder to the `.gitignore` in your project root.
 echo "public" >> .gitignore
 ```
 
-## Initialize your `gh-pages` branch
+## Initialize your _gh-pages_ branch
 
 Initialize your local `gh-pages` branch as an empty [orphan branch](https://git-scm.com/docs/git-checkout/#git-checkout---orphanltnewbranchgt):
 
@@ -110,7 +110,7 @@ Push the changes to the gh-pages branch to the GitHub repo.
 git push origin gh-pages
 ```
 
-### Set `gh-pages` as your publish branch
+### Set _gh-pages_ as your publish branch
 
 To publish the `gh-pages` branch as your site, you need to tweak some setting in GitHub.
 
@@ -122,7 +122,7 @@ The site should be visible at [https://dgoppenheimer.github.io/pymol-notes/](htt
 
 Success!
 
-To automate the publishing to `gh-pages` process, create the following script: `publish_to_ghpages.sh`. Put this script in your project directory. 
+To automate the publishing to `gh-pages` process, create the following script: `publish_to_ghpages.sh`. Put this script in your project directory.
 
 ```sh
 

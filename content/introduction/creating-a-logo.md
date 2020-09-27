@@ -65,3 +65,14 @@ To the second and third `<path>` tags, add `fill="#fff"` so that the text is dis
 Save the `logo.html` file, and spin up the site with `hugo server`. Check the site locally at `127.0.0.1:1313`
 
 Success!
+
+## Create a favicon
+
+Select the molecule image and paste it into a new Affinity Designer document.
+
+Export it as `favicon.png` at 64 x 52 px (144 dpi resolution).
+
+Place it in the local `static/images/` folder.
+
+Success!
+
