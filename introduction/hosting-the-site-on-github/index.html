@@ -11,19 +11,19 @@
     <title>Hosting the Site on Github :: PyMOL Notes</title>
 
     
-    <link href="/pymol-notes/css/nucleus.css?1601234302" rel="stylesheet">
-    <link href="/pymol-notes/css/fontawesome-all.min.css?1601234302" rel="stylesheet">
-    <link href="/pymol-notes/css/hybrid.css?1601234302" rel="stylesheet">
-    <link href="/pymol-notes/css/featherlight.min.css?1601234302" rel="stylesheet">
-    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1601234302" rel="stylesheet">
-    <link href="/pymol-notes/css/auto-complete.css?1601234302" rel="stylesheet">
-    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1601234302" rel="stylesheet">
-    <link href="/pymol-notes/css/theme.css?1601234302" rel="stylesheet">
-    <link href="/pymol-notes/css/hugo-theme.css?1601234302" rel="stylesheet">
+    <link href="/pymol-notes/css/nucleus.css?1601235243" rel="stylesheet">
+    <link href="/pymol-notes/css/fontawesome-all.min.css?1601235243" rel="stylesheet">
+    <link href="/pymol-notes/css/hybrid.css?1601235243" rel="stylesheet">
+    <link href="/pymol-notes/css/featherlight.min.css?1601235243" rel="stylesheet">
+    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1601235243" rel="stylesheet">
+    <link href="/pymol-notes/css/auto-complete.css?1601235243" rel="stylesheet">
+    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1601235243" rel="stylesheet">
+    <link href="/pymol-notes/css/theme.css?1601235243" rel="stylesheet">
+    <link href="/pymol-notes/css/hugo-theme.css?1601235243" rel="stylesheet">
     
     
 
-    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1601234302"></script>
+    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1601235243"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -141,14 +141,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1601234302"></script>
-<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1601234302"></script>
+<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1601235243"></script>
+<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1601235243"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dgoppenheimer.github.io\/pymol-notes\/";
     
 </script>
-<script type="text/javascript" src="/pymol-notes/js/search.js?1601234302"></script>
+<script type="text/javascript" src="/pymol-notes/js/search.js?1601235243"></script>
 
     
   </div>
@@ -318,15 +318,15 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#preparations-for-gh-pages-branch">Preparations for <code>gh-pages</code> branch</a>
+    <li><a href="#preparations-for-_gh-pages_-branch">Preparations for <em>gh-pages</em> branch</a>
       <ul>
-        <li><a href="#add-the-public-folder-to-gitignore">Add the <code>public</code> folder to <code>.gitignore</code></a></li>
+        <li><a href="#add-the-_public_-folder-to-_gitignore_">Add the <em>public</em> folder to <em>.gitignore</em></a></li>
       </ul>
     </li>
-    <li><a href="#initialize-your-gh-pages-branch">Initialize your <code>gh-pages</code> branch</a></li>
+    <li><a href="#initialize-your-_gh-pages_-branch">Initialize your <em>gh-pages</em> branch</a></li>
     <li><a href="#build-and-deploy-your-project">Build and deploy your project</a>
       <ul>
-        <li><a href="#set-gh-pages-as-your-publish-branch">Set <code>gh-pages</code> as your publish branch</a></li>
+        <li><a href="#set-_gh-pages_-as-your-publish-branch">Set <em>gh-pages</em> as your publish branch</a></li>
       </ul>
     </li>
   </ul>
@@ -377,7 +377,7 @@ Changes to be committed:
 </code></pre></div><p>Oops. I need to untrack the <code>.DS_Store</code> files.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git rm --cached content/introduction/.DS_Store
 echo <span style="color:#e6db74">&#34;.DS_Store&#34;</span> &gt;&gt; .gitignore
-</code></pre></div><h2 id="preparations-for-gh-pages-branch">Preparations for <code>gh-pages</code> branch</h2>
+</code></pre></div><h2 id="preparations-for-_gh-pages_-branch">Preparations for <em>gh-pages</em> branch</h2>
 <p>These steps only need to be done once. Replace <code>upstream</code> with the name of your remote; e.g., <code>origin</code>:</p>
 
 <div class="notices note" ><p>Make sure your baseURL key-value in your site&rsquo;s <code>config.toml</code> configuration file reflects the full URL of your GitHub pages repository if you’re using the default GitHub Pages URL (e.g., <!-- raw HTML omitted -->.github.io/<!-- raw HTML omitted -->/) and not a custom domain.</p>
@@ -385,10 +385,10 @@ echo <span style="color:#e6db74">&#34;.DS_Store&#34;</span> &gt;&gt; .gitignore
 
 <p>For this project, in <code>config.toml</code>, change <code>baseURL = &quot;http://example.org/&quot;</code> to</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://dgoppenheimer.github.io/pymol-notes/&#34;</span>
-</code></pre></div><h3 id="add-the-public-folder-to-gitignore">Add the <code>public</code> folder to <code>.gitignore</code></h3>
+</code></pre></div><h3 id="add-the-_public_-folder-to-_gitignore_">Add the <em>public</em> folder to <em>.gitignore</em></h3>
 <p>Add the <code>public</code> folder to the <code>.gitignore</code> in your project root.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">echo <span style="color:#e6db74">&#34;public&#34;</span> &gt;&gt; .gitignore
-</code></pre></div><h2 id="initialize-your-gh-pages-branch">Initialize your <code>gh-pages</code> branch</h2>
+</code></pre></div><h2 id="initialize-your-_gh-pages_-branch">Initialize your <em>gh-pages</em> branch</h2>
 <p>Initialize your local <code>gh-pages</code> branch as an empty <a href="https://git-scm.com/docs/git-checkout/#git-checkout---orphanltnewbranchgt">orphan branch</a>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git checkout --orphan gh-pages
 git reset --hard
@@ -411,7 +411,7 @@ cd ..
 cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span style="color:#f92672">&amp;&amp;</span> git commit -m <span style="color:#e6db74">&#34;Publishing to gh-pages&#34;</span> <span style="color:#f92672">&amp;&amp;</span> cd ..
 </code></pre></div><p>Push the changes to the gh-pages branch to the GitHub repo.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git push origin gh-pages
-</code></pre></div><h3 id="set-gh-pages-as-your-publish-branch">Set <code>gh-pages</code> as your publish branch</h3>
+</code></pre></div><h3 id="set-_gh-pages_-as-your-publish-branch">Set <em>gh-pages</em> as your publish branch</h3>
 <p>To publish the <code>gh-pages</code> branch as your site, you need to tweak some setting in GitHub.</p>
 <ul>
 <li>Log into your account using a web browser.</li>
@@ -579,19 +579,19 @@ cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span styl
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/pymol-notes/js/clipboard.min.js?1601234303"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1601234303"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1601234303"></script>
-    <script src="/pymol-notes/js/jquery.sticky.js?1601234303"></script>
-    <script src="/pymol-notes/js/featherlight.min.js?1601234303"></script>
-    <script src="/pymol-notes/js/highlight.pack.js?1601234303"></script>
+    <script src="/pymol-notes/js/clipboard.min.js?1601235243"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1601235243"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1601235243"></script>
+    <script src="/pymol-notes/js/jquery.sticky.js?1601235243"></script>
+    <script src="/pymol-notes/js/featherlight.min.js?1601235243"></script>
+    <script src="/pymol-notes/js/highlight.pack.js?1601235243"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1601234303"></script>
-    <script src="/pymol-notes/js/learn.js?1601234303"></script>
-    <script src="/pymol-notes/js/hugo-learn.js?1601234303"></script>
+    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1601235243"></script>
+    <script src="/pymol-notes/js/learn.js?1601235243"></script>
+    <script src="/pymol-notes/js/hugo-learn.js?1601235243"></script>
     
         
-            <script src="/pymol-notes/mermaid/mermaid.js?1601234303"></script>
+            <script src="/pymol-notes/mermaid/mermaid.js?1601235243"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
