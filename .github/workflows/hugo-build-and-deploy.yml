@@ -1,0 +1,25 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout main
+      uses: actions/checkout@v1
+      with:
+        submodules: true
+
+    - name: Hugo Deploy GitHub Pages
+      uses: benmatselby/hugo-deploy-gh-pages@master
+      env:
+        HUGO_VERSION: 0.75.0
+        TARGET_REPO: dgoppenheimer.github.io/pymol-notes/
+        TOKEN: ${{ secrets.TOKEN }}
+        
