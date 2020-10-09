@@ -43,7 +43,7 @@ git rm --cached content/introduction/.DS_Store
 echo ".DS_Store" >> .gitignore
 ```
 
-## Preparations for _gh-pages_ branch
+## Preparations for `gh-pages` branch
 
 These steps only need to be done once. Replace `upstream` with the name of your remote; e.g., `origin`:
 
@@ -57,15 +57,15 @@ For this project, in `config.toml`, change `baseURL = "http://example.org/"` to
 baseURL = "https://dgoppenheimer.github.io/pymol-notes/"
 ```
 
-### Add the _public_ folder to _.gitignore_
+### Add the `public` folder to `.gitignore`
 
-Add the `public` folder to the `.gitignore` in your project root.
+Add the `public` folder to the `.gitignore` in your project root. You don't need to track the files for the built site, only for the source files.
 
 ```zsh
 echo "public" >> .gitignore
 ```
 
-## Initialize your _gh-pages_ branch
+## Initialize your `gh-pages` branch
 
 Initialize your local `gh-pages` branch as an empty [orphan branch](https://git-scm.com/docs/git-checkout/#git-checkout---orphanltnewbranchgt):
 
@@ -80,7 +80,7 @@ git checkout master
 
 ## Build and deploy your project
 
-Checkout the `gh-pages` branch into your `public` directory using the [git worktree feature](https://git-scm.com/docs/git-worktree). This feature allows you to checkout have different branches of the same local repository in different directories.
+Checkout the `gh-pages` branch into your `public` directory using the [git worktree feature](https://git-scm.com/docs/git-worktree). This feature allows you to checkout and have different branches of the same local repository in different directories.
 
 ```zsh
 rm -rf public
@@ -162,4 +162,4 @@ Make the script executable.
 chmod +x publish_to_ghpages.sh
 ```
 
-Run the script with `./publish_to_ghpages.sh`. Either uncomment the `git push` lines, or manually run `git push --all`. Wait a few minutes and the site should be live on GitHub.
+Run the script with `./publish_to_ghpages.sh`. Either uncomment the `git push` line, or manually run `git push --all`. Wait a few minutes and the site should be live on GitHub.
