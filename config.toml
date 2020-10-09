@@ -6,3 +6,6 @@ theme = "hugo-theme-learn"
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
+[params]
+    custom_css = ["css/custom.css"]
+
