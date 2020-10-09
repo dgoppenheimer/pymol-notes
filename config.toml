@@ -8,4 +8,4 @@ home = [ "HTML", "RSS", "JSON"]
 
 [params]
     custom_css = ["css/custom.css"]
-
+    disableInlineCopyToClipBoard = true 
