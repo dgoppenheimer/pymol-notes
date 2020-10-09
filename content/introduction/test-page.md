@@ -7,10 +7,8 @@ draft: false
 ## Hello World!
 
 Just a test page with some text.
-More text.
-Third try.
 
-even more text
+trying text with new action
 
 
 ```
