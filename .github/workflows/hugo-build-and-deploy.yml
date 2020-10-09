@@ -21,5 +21,5 @@ jobs:
       env:
         HUGO_VERSION: 0.75.0
         TARGET_REPO: dgoppenheimer.github.io/pymol-notes/
-        TOKEN: ${{ secrets.TOKEN }}
+        TOKEN: ${{ secrets.EXAMPLE_TOKEN }}
         
