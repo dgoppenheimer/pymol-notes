@@ -1,1 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://dgoppenheimer.github.io/pymol-notes/introduction/building-this-site/</loc><lastmod>2020-09-22T13:50:44-04:00</lastmod></url><url><loc>https://dgoppenheimer.github.io/pymol-notes/introduction/hosting-the-site-on-github/</loc><lastmod>2020-09-23T19:04:15-04:00</lastmod></url><url><loc>https://dgoppenheimer.github.io/pymol-notes/introduction/</loc><lastmod>2020-09-22T13:21:40-04:00</lastmod></url><url><loc>https://dgoppenheimer.github.io/pymol-notes/introduction/creating-a-logo/</loc><lastmod>2020-09-22T13:50:44-04:00</lastmod></url><url><loc>https://dgoppenheimer.github.io/pymol-notes/</loc><lastmod>2020-09-26T19:43:33-04:00</lastmod></url><url><loc>https://dgoppenheimer.github.io/pymol-notes/categories/</loc></url><url><loc>https://dgoppenheimer.github.io/pymol-notes/tags/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/introduction/building-this-site/</loc>
+    <lastmod>2020-09-22T13:50:44-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/introduction/hosting-the-site-on-github/</loc>
+    <lastmod>2020-09-23T19:04:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/introduction/</loc>
+    <lastmod>2020-09-22T13:21:40-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/introduction/creating-a-logo/</loc>
+    <lastmod>2020-09-22T13:50:44-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/</loc>
+    <lastmod>2020-09-26T19:43:33-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/tags/</loc>
+  </url>
+  
+</urlset>
