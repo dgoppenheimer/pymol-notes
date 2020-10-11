@@ -42,5 +42,15 @@ Open PyMOL.
 fetch 3G6M, mol, async=0 extract caf1, /mol//A/CFF`427 h_add set valence, 0 hide everything, caf1 create molball, caf1 create molstick, caf1 show spheres, molball set sphere_scale, 0.25 show sticks, molstick set stick_radius, 0.15 disable mol color hydrogen, elem H and molball color wheat, elem C and molball color salmon, elem O and molball color lightblue, elem N and molball color skyblue, molstick set orthoscopic, off set field_of_view, 60 set ray_opaque_background, off viewport 640, 640 png caffeine-logo.</description>
     </item>
     
+    <item>
+      <title>Customizing the Site</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/introduction/customizing-the-site/</link>
+      <pubDate>Fri, 09 Oct 2020 19:08:25 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/introduction/customizing-the-site/</guid>
+      <description>Removing the copy-to-clipboard button from inline code The copy-to-clipboard button is useful on code blocks, but distracting when attached to the inline code. I thought I could remove it using custom css, so I created a static/css directory in the root of my project and added a custom.css file to contain my overrides. To have hugo see the custom file, add the following to config.toml:
+[params] custom_css = [&amp;#34;css/custom.css&amp;#34;] Now I need to figure out how what css to override.</description>
+    </item>
+    
   </channel>
 </rss>
