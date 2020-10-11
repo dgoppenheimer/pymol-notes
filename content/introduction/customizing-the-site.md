@@ -1,7 +1,7 @@
 ---
 title: "Customizing the Site"
 date: 2020-10-09T19:08:25-04:00
-draft: true
+draft: false
 ---
 
 ## Removing the copy-to-clipboard button from inline code
