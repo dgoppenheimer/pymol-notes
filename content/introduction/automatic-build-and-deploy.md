@@ -1,7 +1,7 @@
 ---
 title: "Automatic Build and Deploy using GitHub Actions"
 date: 2020-10-09T20:22:44-04:00
-draft: true
+draft: false
 weight: 30
 ---
 
