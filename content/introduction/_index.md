@@ -10,4 +10,4 @@ pre = "<b>1. </b>"
 
 # Introduction
 
-Here I'll document how I built this site. Thanks to excellent documentation, it was fairly straightforward.
+Here I'll document how I built this site. Thanks to excellent documentation for Hugo and the theme, it was straightforward.
