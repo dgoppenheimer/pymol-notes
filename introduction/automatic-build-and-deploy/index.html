@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/pymol-notes/images/favicon2.png">
-    <title>Tags :: PyMOL Notes</title>
+    <title>Automatic Build and Deploy using GitHub Actions :: PyMOL Notes</title>
 
     
     <link href="/pymol-notes/css/nucleus.css?1602652221" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/pymol-notes/tags/">
+  <body class="" data-url="/pymol-notes/introduction/automatic-build-and-deploy/">
     <nav id="sidebar" class="">
 
 
@@ -171,7 +171,7 @@
   
     
     <li data-nav-id="/pymol-notes/introduction/" title="Introduction" class="dd-item 
-        
+        parent
         
         
         ">
@@ -260,7 +260,7 @@
  
   
     
-      <li data-nav-id="/pymol-notes/introduction/automatic-build-and-deploy/" title="Automatic Build and Deploy using GitHub Actions" class="dd-item ">
+      <li data-nav-id="/pymol-notes/introduction/automatic-build-and-deploy/" title="Automatic Build and Deploy using GitHub Actions" class="dd-item active">
         <a href="/pymol-notes/introduction/automatic-build-and-deploy/">
         Automatic Build and Deploy using GitHub Actions
         
@@ -345,7 +345,13 @@
             
           
           
-            <a href='/pymol-notes/'>PyMOL Notes</a> > Tags
+            
+            
+          
+          
+            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/introduction/'>Introduction</a> > Automatic Build and Deploy using GitHub Actions
+          
+        
           
         
           
@@ -356,7 +362,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#getting-started">Getting started</a>
+      <ul>
+        <li><a href="#rename-master-to-main">Rename <code>master</code> to <code>main</code></a></li>
+        <li><a href="#automate-the-build-and-deploy-workflow">Automate the build and deploy workflow</a></li>
+      </ul>
+    </li>
+    <li><a href="#results">Results</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -372,24 +388,97 @@
           
             <h1>
               
-                tag ::
-              
-              Tags
+              Automatic Build and Deploy using GitHub Actions
             </h1>
           
 
         
 
 
+<p>I&rsquo;m using GitHub Pages to host this site. I started by building the site locally, and pushing the <code>/public</code> directory to my <code>gh-pages</code> branch on GitHub. (See these instructions on the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Hugo website</a>.) GitHub provides native support for building <a href="https://jekyllrb.com/">Jekyll</a> sites, but does not have native support for <a href="https://gohugo.io/">Hugo</a>. Nonetheless, using <a href="https://github.com/features/actions">GitHub Actions</a>, I can build and deploy my Hugo site automatically when I push new content to the <code>main</code> branch of my GitHub repository.</p>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="rename-master-to-main">Rename <code>master</code> to <code>main</code></h3>
+<p>First, rename local branch.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">cd ~/Sites/pymol-notes
+git branch -m master main
+git status
+On branch main
+nothing to commit, working tree clean
+</code></pre></div><p>Next, rename remote branch.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git push -u origin main
+git push origin --delete master
+</code></pre></div><p>Because I am the solo developer on this project and I have a single local repository, I don&rsquo;t have to do anything else.</p>
+<h3 id="automate-the-build-and-deploy-workflow">Automate the build and deploy workflow</h3>
+<p>First, create a <code>.github/workflows/</code> directory in your project root.</p>
+<p>Next, create a <code>gh-pages.yaml</code> file in the <code>.github/workflows/</code> directory that has the following contents.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build and Deploy</span>
+
+<span style="color:#f92672">on</span>:
+  <span style="color:#f92672">push</span>:
+    <span style="color:#f92672">branches</span>:
+      - <span style="color:#ae81ff">main</span>
+
+<span style="color:#f92672">jobs</span>:
+  <span style="color:#f92672">build</span>:
+
+    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+
+    <span style="color:#f92672">steps</span>:
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout main</span>
+      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v1</span>
+      <span style="color:#f92672">with</span>:
+        <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>
+
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Hugo Deploy GitHub Pages</span>
+      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">benmatselby/hugo-deploy-gh-pages@master</span>
+      <span style="color:#f92672">env</span>:
+        <span style="color:#f92672">HUGO_VERSION</span>: <span style="color:#ae81ff">0.75.0</span>
+        <span style="color:#f92672">TARGET_REPO</span>: <span style="color:#ae81ff">dgoppenheimer.github.io/pymol-notes/</span>
+        <span style="color:#f92672">TOKEN</span>: <span style="color:#ae81ff">${{ secrets.EXAMPLE_TOKEN }}</span>
+</code></pre></div><p>Let&rsquo;s test this.</p>
+<pre><code>hugo new introduction/test-page.md
+</code></pre><h2 id="results">Results</h2>
+<p>No joy.</p>
+<p>Here is a nice tutorial:</p>
+<p><a href="https://www.google.com/amp/s/ruddra.com/amp/hugo-deploy-static-page-using-github-actions/">Hugo: Deploy Static Site using GitHub Actions</a></p>
+<p>And another set of instructions that uses a similar <code>.yml</code> file from <code>peaceiris</code>:</p>
+<p><a href="https://discourse.gohugo.io/t/deploy-hugo-project-to-github-pages-with-github-actions/20725">Deploy Hugo project to GitHub Pages with GitHub Actions</a></p>
+<p>I had success using the <code>peaceiris</code> actions</p>
+<p>Here is the <code>gh-pages.yml</code> file that I used:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">github pages</span>
+
+<span style="color:#f92672">on</span>:
+  <span style="color:#f92672">push</span>:
+    <span style="color:#f92672">branches</span>:
+      - <span style="color:#ae81ff">main  # Set a branch to deploy</span>
+
+<span style="color:#f92672">jobs</span>:
+  <span style="color:#f92672">deploy</span>:
+    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-18.04</span>
+    <span style="color:#f92672">steps</span>:
+      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
+        <span style="color:#f92672">with</span>:
+          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># Fetch Hugo themes (true OR recursive)</span>
+          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod</span>
+
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
+        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
+        <span style="color:#f92672">with</span>:
+          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;0.75.1&#39;</span>
+          <span style="color:#75715e"># extended: true</span>
+
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo</span>
+
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
+        <span style="color:#f92672">with</span>:
+          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.EXAMPLE_TOKEN }}</span>
+          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
+</code></pre></div><p>Note: I removed &ndash;minify from <code>run: hugo</code>, otherwise, my <code>svg</code> logo was not visible.</p>
 
 
-
-<ul>
-	
-</ul>
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -424,8 +513,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -439,6 +526,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -488,6 +578,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -503,6 +594,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -527,8 +621,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/pymol-notes/introduction/creating-a-logo/" title="Creating a Logo"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/pymol-notes/introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/pymol-notes/introduction/customizing-the-site/" title="Customizing the Site" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -560,3 +656,4 @@
 
   </body>
 </html>
+
