@@ -11,19 +11,19 @@
     <title>Automatic Build and Deploy using GitHub Actions :: PyMOL Notes</title>
 
     
-    <link href="/pymol-notes/css/nucleus.css?1602701538" rel="stylesheet">
-    <link href="/pymol-notes/css/fontawesome-all.min.css?1602701538" rel="stylesheet">
-    <link href="/pymol-notes/css/hybrid.css?1602701538" rel="stylesheet">
-    <link href="/pymol-notes/css/featherlight.min.css?1602701538" rel="stylesheet">
-    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1602701538" rel="stylesheet">
-    <link href="/pymol-notes/css/auto-complete.css?1602701538" rel="stylesheet">
-    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1602701538" rel="stylesheet">
-    <link href="/pymol-notes/css/theme.css?1602701538" rel="stylesheet">
-    <link href="/pymol-notes/css/hugo-theme.css?1602701538" rel="stylesheet">
+    <link href="/pymol-notes/css/nucleus.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/fontawesome-all.min.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/hybrid.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/featherlight.min.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/auto-complete.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/theme.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/hugo-theme.css?1603382387" rel="stylesheet">
     
-    <link href="/pymol-notes/css/custom.css?1602701538" rel="stylesheet">
+    <link href="/pymol-notes/css/custom.css?1603382387" rel="stylesheet">
 
-    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1602701538"></script>
+    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1603382387"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -145,14 +145,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1602701538"></script>
-<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1602701538"></script>
+<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1603382387"></script>
+<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1603382387"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dgoppenheimer.github.io\/pymol-notes\/";
     
 </script>
-<script type="text/javascript" src="/pymol-notes/js/search.js?1602701538"></script>
+<script type="text/javascript" src="/pymol-notes/js/search.js?1603382387"></script>
 
     
   </div>
@@ -364,13 +364,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#getting-started">Getting started</a>
+    <li>
       <ul>
-        <li><a href="#rename-master-to-main">Rename <code>master</code> to <code>main</code></a></li>
-        <li><a href="#automate-the-build-and-deploy-workflow">Automate the build and deploy workflow</a></li>
+        <li><a href="#getting-started">Getting started</a></li>
+        <li><a href="#results">Results</a></li>
       </ul>
     </li>
-    <li><a href="#results">Results</a></li>
   </ul>
 </nav>
     </div>
@@ -396,8 +395,8 @@
 
 
 <p>I&rsquo;m using GitHub Pages to host this site. I started by building the site locally, and pushing the <code>/public</code> directory to my <code>gh-pages</code> branch on GitHub. (See these instructions on the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Hugo website</a>.) GitHub provides native support for building <a href="https://jekyllrb.com/">Jekyll</a> sites, but does not have native support for <a href="https://gohugo.io/">Hugo</a>. Nonetheless, using <a href="https://github.com/features/actions">GitHub Actions</a>, I can build and deploy my Hugo site automatically when I push new content to the <code>main</code> branch of my GitHub repository.</p>
-<h2 id="getting-started">Getting started</h2>
-<h3 id="rename-master-to-main">Rename <code>master</code> to <code>main</code></h3>
+<h3 id="getting-started">Getting started</h3>
+<h4 id="rename-master-to-main">Rename <code>master</code> to <code>main</code></h4>
 <p>First, rename local branch.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">cd ~/Sites/pymol-notes
 git branch -m master main
@@ -408,7 +407,7 @@ nothing to commit, working tree clean
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git push -u origin main
 git push origin --delete master
 </code></pre></div><p>Because I am the solo developer on this project and I have a single local repository, I don&rsquo;t have to do anything else.</p>
-<h3 id="automate-the-build-and-deploy-workflow">Automate the build and deploy workflow</h3>
+<h4 id="automate-the-build-and-deploy-workflow">Automate the build and deploy workflow</h4>
 <p>First, create a <code>.github/workflows/</code> directory in your project root.</p>
 <p>Next, create a <code>gh-pages.yaml</code> file in the <code>.github/workflows/</code> directory that has the following contents.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build and Deploy</span>
@@ -437,7 +436,7 @@ git push origin --delete master
         <span style="color:#f92672">TOKEN</span>: <span style="color:#ae81ff">${{ secrets.EXAMPLE_TOKEN }}</span>
 </code></pre></div><p>Let&rsquo;s test this.</p>
 <pre><code>hugo new introduction/test-page.md
-</code></pre><h2 id="results">Results</h2>
+</code></pre><h3 id="results">Results</h3>
 <p>No joy.</p>
 <p>Here is a nice tutorial:</p>
 <p><a href="https://www.google.com/amp/s/ruddra.com/amp/hugo-deploy-static-page-using-github-actions/">Hugo: Deploy Static Site using GitHub Actions</a></p>
@@ -634,19 +633,19 @@ git push origin --delete master
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/pymol-notes/js/clipboard.min.js?1602701538"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1602701538"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1602701538"></script>
-    <script src="/pymol-notes/js/jquery.sticky.js?1602701538"></script>
-    <script src="/pymol-notes/js/featherlight.min.js?1602701538"></script>
-    <script src="/pymol-notes/js/highlight.pack.js?1602701538"></script>
+    <script src="/pymol-notes/js/clipboard.min.js?1603382387"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1603382387"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1603382387"></script>
+    <script src="/pymol-notes/js/jquery.sticky.js?1603382387"></script>
+    <script src="/pymol-notes/js/featherlight.min.js?1603382387"></script>
+    <script src="/pymol-notes/js/highlight.pack.js?1603382387"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1602701538"></script>
-    <script src="/pymol-notes/js/learn.js?1602701538"></script>
-    <script src="/pymol-notes/js/hugo-learn.js?1602701538"></script>
+    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1603382387"></script>
+    <script src="/pymol-notes/js/learn.js?1603382387"></script>
+    <script src="/pymol-notes/js/hugo-learn.js?1603382387"></script>
     
         
-            <script src="/pymol-notes/mermaid/mermaid.js?1602701538"></script>
+            <script src="/pymol-notes/mermaid/mermaid.js?1603382387"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
