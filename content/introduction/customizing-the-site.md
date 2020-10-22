@@ -4,7 +4,7 @@ date: 2020-10-09T19:08:25-04:00
 draft: false
 ---
 
-## Removing the copy-to-clipboard button from inline code
+### Removing the copy-to-clipboard button from inline code
 
 The copy-to-clipboard button is useful on code blocks, but distracting when attached to the inline code. I thought I could remove it using custom `css`, so I created a `static/css` directory in the root of my project and added a `custom.css` file to contain my overrides. To have `hugo` see the custom file, add the following to `config.toml`:
 

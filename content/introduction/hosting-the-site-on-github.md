@@ -43,7 +43,7 @@ git rm --cached content/introduction/.DS_Store
 echo ".DS_Store" >> .gitignore
 ```
 
-## Preparations for `gh-pages` branch
+### Preparations for `gh-pages` branch
 
 These steps only need to be done once. Replace `upstream` with the name of your remote; e.g., `origin`:
 
@@ -57,7 +57,7 @@ For this project, in `config.toml`, change `baseURL = "http://example.org/"` to
 baseURL = "https://dgoppenheimer.github.io/pymol-notes/"
 ```
 
-### Add the `public` folder to `.gitignore`
+#### Add the `public` folder to `.gitignore`
 
 Add the `public` folder to the `.gitignore` in your project root. You don't need to track the files for the built site, only for the source files.
 
@@ -65,7 +65,7 @@ Add the `public` folder to the `.gitignore` in your project root. You don't need
 echo "public" >> .gitignore
 ```
 
-## Initialize your `gh-pages` branch
+### Initialize your `gh-pages` branch
 
 Initialize your local `gh-pages` branch as an empty [orphan branch](https://git-scm.com/docs/git-checkout/#git-checkout---orphanltnewbranchgt):
 
@@ -78,7 +78,7 @@ git push origin gh-pages
 git checkout master
 ```
 
-## Build and deploy your project
+### Build and deploy your project
 
 Checkout the `gh-pages` branch into your `public` directory using the [git worktree feature](https://git-scm.com/docs/git-worktree). This feature allows you to checkout and have different branches of the same local repository in different directories.
 
@@ -110,7 +110,7 @@ Push the changes to the gh-pages branch to the GitHub repo.
 git push origin gh-pages
 ```
 
-### Set _gh-pages_ as your publish branch
+#### Set _gh-pages_ as your publish branch
 
 To publish the `gh-pages` branch as your site, you need to tweak some setting in GitHub.
 

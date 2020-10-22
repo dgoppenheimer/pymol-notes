@@ -36,7 +36,7 @@ png caffeine-logo.png, width=640, height=640, ray=1
 
 I opened this image in Affinity Designer, changed it to black and white, added the text (and rounded the ends of the letters), and saved it as an `.svg` file. I minimized the `.svg` file on the [https://jakearchibald.github.io/svgomg/](https://jakearchibald.github.io/svgomg/) site.
 
-### Update
+#### Update
 
 The `.svg` file was rather large and didn't look right. I decided to try something different. I used the `.png` file  from PyMOL as a template and created a series of tubes for the bonds and circles for the atoms. I used a 2 pt black stroke and filled the objects with white. It took a while to get the layers in the correct order so the appropriate bonds were on top of the appropriate atoms. I saved the file as a `.svg` file. Without the `.png` embedded as base64, the file was much smaller.
 
@@ -66,7 +66,7 @@ Save the `logo.html` file, and spin up the site with `hugo server`. Check the si
 
 Success!
 
-## Create a favicon
+### Create a favicon
 
 Select the molecule image and paste it into a new Affinity Designer document.
 

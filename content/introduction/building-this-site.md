@@ -7,14 +7,14 @@ weight: 1
 
 I already have [Hugo](https://gohugo.io/) installed. I installed it using [MacPorts](https://www.macports.org/).
 
-## Create a project
+### Create a project
 
 ```zsh
 cd ~/Sites
 hugo new site pymol-notes
 ```
 
-## Install the theme
+### Install the theme
 
 I want to use the [Learn theme](https://themes.gohugo.io/theme/hugo-theme-learn/en/) for Hugo. It is a theme designed for documentation. It looks nice and is functional.
 
@@ -27,7 +27,7 @@ git submodule add https://github.com/matcornic/hugo-theme-learn.git themes/hugo-
 echo 'theme = "hugo-theme-learn"' >> config.toml
 ```
 
-## Configure the theme
+### Configure the theme
 
 Open `config.toml` and add the following:
 
@@ -43,19 +43,19 @@ title = "PyMOL Notes"
 home = [ "HTML", "RSS", "JSON"]
 ```
 
-## Create a chapter page
+### Create a chapter page
 
 ```zsh
 hugo new --kind chapter introduction/_index.md
 ```
 
-## Create some content
+### Create some content
 
 ```zsh
 hugo new introduction/building-this-site.md
 ```
 
-## Spin up the site
+### Spin up the site
 
 ```zsh
 hugo server
@@ -73,7 +73,7 @@ Success!
 If you want the site to be built in and served from the `public` directory, then run `hugo server --renderToDisk`. If you just want to build the site in the `public` directory, then run `hugo`.
 {{% /notice %}}
 
-## Create a homepage
+### Create a homepage
 
 ```zsh
 hugo new _index.md
