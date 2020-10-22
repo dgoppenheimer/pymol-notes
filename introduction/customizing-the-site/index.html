@@ -11,19 +11,19 @@
     <title>Customizing the Site :: PyMOL Notes</title>
 
     
-    <link href="/pymol-notes/css/nucleus.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/fontawesome-all.min.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/hybrid.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/featherlight.min.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/auto-complete.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/theme.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/hugo-theme.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/nucleus.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/fontawesome-all.min.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/hybrid.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/featherlight.min.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/auto-complete.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/theme.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/hugo-theme.css?1603382801" rel="stylesheet">
     
-    <link href="/pymol-notes/css/custom.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/custom.css?1603382801" rel="stylesheet">
 
-    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1603382387"></script>
+    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1603382801"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -145,14 +145,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1603382387"></script>
-<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1603382387"></script>
+<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1603382801"></script>
+<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1603382801"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dgoppenheimer.github.io\/pymol-notes\/";
     
 </script>
-<script type="text/javascript" src="/pymol-notes/js/search.js?1603382387"></script>
+<script type="text/javascript" src="/pymol-notes/js/search.js?1603382801"></script>
 
     
   </div>
@@ -364,7 +364,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#removing-the-copy-to-clipboard-button-from-inline-code">Removing the copy-to-clipboard button from inline code</a></li>
+    <li>
+      <ul>
+        <li><a href="#removing-the-copy-to-clipboard-button-from-inline-code">Removing the copy-to-clipboard button from inline code</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -389,7 +393,7 @@
         
 
 
-<h2 id="removing-the-copy-to-clipboard-button-from-inline-code">Removing the copy-to-clipboard button from inline code</h2>
+<h3 id="removing-the-copy-to-clipboard-button-from-inline-code">Removing the copy-to-clipboard button from inline code</h3>
 <p>The copy-to-clipboard button is useful on code blocks, but distracting when attached to the inline code. I thought I could remove it using custom <code>css</code>, so I created a <code>static/css</code> directory in the root of my project and added a <code>custom.css</code> file to contain my overrides. To have <code>hugo</code> see the custom file, add the following to <code>config.toml</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
     <span style="color:#a6e22e">custom_css</span> = [<span style="color:#e6db74">&#34;css/custom.css&#34;</span>]
@@ -562,19 +566,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/pymol-notes/js/clipboard.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/jquery.sticky.js?1603382387"></script>
-    <script src="/pymol-notes/js/featherlight.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/highlight.pack.js?1603382387"></script>
+    <script src="/pymol-notes/js/clipboard.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/jquery.sticky.js?1603382801"></script>
+    <script src="/pymol-notes/js/featherlight.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/highlight.pack.js?1603382801"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1603382387"></script>
-    <script src="/pymol-notes/js/learn.js?1603382387"></script>
-    <script src="/pymol-notes/js/hugo-learn.js?1603382387"></script>
+    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1603382801"></script>
+    <script src="/pymol-notes/js/learn.js?1603382801"></script>
+    <script src="/pymol-notes/js/hugo-learn.js?1603382801"></script>
     
         
-            <script src="/pymol-notes/mermaid/mermaid.js?1603382387"></script>
+            <script src="/pymol-notes/mermaid/mermaid.js?1603382801"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

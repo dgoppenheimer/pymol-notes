@@ -11,19 +11,19 @@
     <title>Building this site :: PyMOL Notes</title>
 
     
-    <link href="/pymol-notes/css/nucleus.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/fontawesome-all.min.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/hybrid.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/featherlight.min.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/auto-complete.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/theme.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/hugo-theme.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/nucleus.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/fontawesome-all.min.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/hybrid.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/featherlight.min.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/auto-complete.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/theme.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/hugo-theme.css?1603382801" rel="stylesheet">
     
-    <link href="/pymol-notes/css/custom.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/custom.css?1603382801" rel="stylesheet">
 
-    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1603382387"></script>
+    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1603382801"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -145,14 +145,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1603382387"></script>
-<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1603382387"></script>
+<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1603382801"></script>
+<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1603382801"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dgoppenheimer.github.io\/pymol-notes\/";
     
 </script>
-<script type="text/javascript" src="/pymol-notes/js/search.js?1603382387"></script>
+<script type="text/javascript" src="/pymol-notes/js/search.js?1603382801"></script>
 
     
   </div>
@@ -364,13 +364,17 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#create-a-project">Create a project</a></li>
-    <li><a href="#install-the-theme">Install the theme</a></li>
-    <li><a href="#configure-the-theme">Configure the theme</a></li>
-    <li><a href="#create-a-chapter-page">Create a chapter page</a></li>
-    <li><a href="#create-some-content">Create some content</a></li>
-    <li><a href="#spin-up-the-site">Spin up the site</a></li>
-    <li><a href="#create-a-homepage">Create a homepage</a></li>
+    <li>
+      <ul>
+        <li><a href="#create-a-project">Create a project</a></li>
+        <li><a href="#install-the-theme">Install the theme</a></li>
+        <li><a href="#configure-the-theme">Configure the theme</a></li>
+        <li><a href="#create-a-chapter-page">Create a chapter page</a></li>
+        <li><a href="#create-some-content">Create some content</a></li>
+        <li><a href="#spin-up-the-site">Spin up the site</a></li>
+        <li><a href="#create-a-homepage">Create a homepage</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -396,17 +400,17 @@
 
 
 <p>I already have <a href="https://gohugo.io/">Hugo</a> installed. I installed it using <a href="https://www.macports.org/">MacPorts</a>.</p>
-<h2 id="create-a-project">Create a project</h2>
+<h3 id="create-a-project">Create a project</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">cd ~/Sites
 hugo new site pymol-notes
-</code></pre></div><h2 id="install-the-theme">Install the theme</h2>
+</code></pre></div><h3 id="install-the-theme">Install the theme</h3>
 <p>I want to use the <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en/">Learn theme</a> for Hugo. It is a theme designed for documentation. It looks nice and is functional.</p>
 <p>The theme&rsquo;s repository is: <a href="https://github.com/matcornic/hugo-theme-learn.git">https://github.com/matcornic/hugo-theme-learn.git</a>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">cd pymol-notes
 git init
 git submodule add https://github.com/matcornic/hugo-theme-learn.git themes/hugo-theme-learn
 echo <span style="color:#e6db74">&#39;theme = &#34;hugo-theme-learn&#34;&#39;</span> &gt;&gt; config.toml
-</code></pre></div><h2 id="configure-the-theme">Configure the theme</h2>
+</code></pre></div><h3 id="configure-the-theme">Configure the theme</h3>
 <p>Open <code>config.toml</code> and add the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#75715e"># Change the default theme to be use when building the site with Hugo</span>
 theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hugo-theme-learn&#34;</span>
@@ -417,11 +421,11 @@ title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;PyMO
 <span style="color:#75715e"># For search functionality</span>
 <span style="color:#f92672">[</span>outputs<span style="color:#f92672">]</span>
 home <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span><span style="color:#f92672">]</span>
-</code></pre></div><h2 id="create-a-chapter-page">Create a chapter page</h2>
+</code></pre></div><h3 id="create-a-chapter-page">Create a chapter page</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo new --kind chapter introduction/_index.md
-</code></pre></div><h2 id="create-some-content">Create some content</h2>
+</code></pre></div><h3 id="create-some-content">Create some content</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo new introduction/building-this-site.md
-</code></pre></div><h2 id="spin-up-the-site">Spin up the site</h2>
+</code></pre></div><h3 id="spin-up-the-site">Spin up the site</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo server
 </code></pre></div>
 <div class="notices note" ><p>When you run <code>hugo server</code>, Hugo will build the site in and serve the pages from memory.</p>
@@ -433,7 +437,7 @@ home <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <
 <div class="notices note" ><p>If you want the site to be built in and served from the <code>public</code> directory, then run <code>hugo server --renderToDisk</code>. If you just want to build the site in the <code>public</code> directory, then run <code>hugo</code>.</p>
 </div>
 
-<h2 id="create-a-homepage">Create a homepage</h2>
+<h3 id="create-a-homepage">Create a homepage</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo new _index.md
 </code></pre></div><p>Add some content to the homepage, and you&rsquo;re good to go!</p>
 
@@ -591,19 +595,19 @@ home <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/pymol-notes/js/clipboard.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/jquery.sticky.js?1603382387"></script>
-    <script src="/pymol-notes/js/featherlight.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/highlight.pack.js?1603382387"></script>
+    <script src="/pymol-notes/js/clipboard.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/jquery.sticky.js?1603382801"></script>
+    <script src="/pymol-notes/js/featherlight.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/highlight.pack.js?1603382801"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1603382387"></script>
-    <script src="/pymol-notes/js/learn.js?1603382387"></script>
-    <script src="/pymol-notes/js/hugo-learn.js?1603382387"></script>
+    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1603382801"></script>
+    <script src="/pymol-notes/js/learn.js?1603382801"></script>
+    <script src="/pymol-notes/js/hugo-learn.js?1603382801"></script>
     
         
-            <script src="/pymol-notes/mermaid/mermaid.js?1603382387"></script>
+            <script src="/pymol-notes/mermaid/mermaid.js?1603382801"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

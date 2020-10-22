@@ -11,19 +11,19 @@
     <title>Creating a Logo :: PyMOL Notes</title>
 
     
-    <link href="/pymol-notes/css/nucleus.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/fontawesome-all.min.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/hybrid.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/featherlight.min.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/auto-complete.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/theme.css?1603382387" rel="stylesheet">
-    <link href="/pymol-notes/css/hugo-theme.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/nucleus.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/fontawesome-all.min.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/hybrid.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/featherlight.min.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/auto-complete.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/theme.css?1603382801" rel="stylesheet">
+    <link href="/pymol-notes/css/hugo-theme.css?1603382801" rel="stylesheet">
     
-    <link href="/pymol-notes/css/custom.css?1603382387" rel="stylesheet">
+    <link href="/pymol-notes/css/custom.css?1603382801" rel="stylesheet">
 
-    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1603382387"></script>
+    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1603382801"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -145,14 +145,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1603382387"></script>
-<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1603382387"></script>
+<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1603382801"></script>
+<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1603382801"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dgoppenheimer.github.io\/pymol-notes\/";
     
 </script>
-<script type="text/javascript" src="/pymol-notes/js/search.js?1603382387"></script>
+<script type="text/javascript" src="/pymol-notes/js/search.js?1603382801"></script>
 
     
   </div>
@@ -366,10 +366,10 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#update">Update</a></li>
+        <li></li>
+        <li><a href="#create-a-favicon">Create a favicon</a></li>
       </ul>
     </li>
-    <li><a href="#create-a-favicon">Create a favicon</a></li>
   </ul>
 </nav>
     </div>
@@ -419,7 +419,7 @@ set ray_opaque_background, off
 viewport <span style="color:#ae81ff">640</span>, <span style="color:#ae81ff">640</span> 
 png caffeine<span style="color:#f92672">-</span>logo<span style="color:#f92672">.</span>png, width<span style="color:#f92672">=</span><span style="color:#ae81ff">640</span>, height<span style="color:#f92672">=</span><span style="color:#ae81ff">640</span>, ray<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
 </code></pre></div><p>I opened this image in Affinity Designer, changed it to black and white, added the text (and rounded the ends of the letters), and saved it as an <code>.svg</code> file. I minimized the <code>.svg</code> file on the <a href="https://jakearchibald.github.io/svgomg/">https://jakearchibald.github.io/svgomg/</a> site.</p>
-<h3 id="update">Update</h3>
+<h4 id="update">Update</h4>
 <p>The <code>.svg</code> file was rather large and didn&rsquo;t look right. I decided to try something different. I used the <code>.png</code> file  from PyMOL as a template and created a series of tubes for the bonds and circles for the atoms. I used a 2 pt black stroke and filled the objects with white. It took a while to get the layers in the correct order so the appropriate bonds were on top of the appropriate atoms. I saved the file as a <code>.svg</code> file. Without the <code>.png</code> embedded as base64, the file was much smaller.</p>
 <p>Refer to this post on <a href="https://www.bitovi.com/blog/best-practices-for-working-with-svgs">Best Practices for Working with SVGs</a> for useful tips.</p>
 
@@ -437,7 +437,7 @@ png caffeine<span style="color:#f92672">-</span>logo<span style="color:#f92672">
 </code></pre></div><p>To the second and third <code>&lt;path&gt;</code> tags, add <code>fill=&quot;#fff&quot;</code> so that the text is displayed as white.</p>
 <p>Save the <code>logo.html</code> file, and spin up the site with <code>hugo server</code>. Check the site locally at <code>127.0.0.1:1313/pymol-notes</code>.</p>
 <p>Success!</p>
-<h2 id="create-a-favicon">Create a favicon</h2>
+<h3 id="create-a-favicon">Create a favicon</h3>
 <p>Select the molecule image and paste it into a new Affinity Designer document.</p>
 <p>Export it as <code>favicon.png</code> at 64 x 52 px (144 dpi resolution).</p>
 <p>Place it in the local <code>static/images/</code> folder.</p>
@@ -600,19 +600,19 @@ png caffeine<span style="color:#f92672">-</span>logo<span style="color:#f92672">
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/pymol-notes/js/clipboard.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/jquery.sticky.js?1603382387"></script>
-    <script src="/pymol-notes/js/featherlight.min.js?1603382387"></script>
-    <script src="/pymol-notes/js/highlight.pack.js?1603382387"></script>
+    <script src="/pymol-notes/js/clipboard.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/jquery.sticky.js?1603382801"></script>
+    <script src="/pymol-notes/js/featherlight.min.js?1603382801"></script>
+    <script src="/pymol-notes/js/highlight.pack.js?1603382801"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1603382387"></script>
-    <script src="/pymol-notes/js/learn.js?1603382387"></script>
-    <script src="/pymol-notes/js/hugo-learn.js?1603382387"></script>
+    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1603382801"></script>
+    <script src="/pymol-notes/js/learn.js?1603382801"></script>
+    <script src="/pymol-notes/js/hugo-learn.js?1603382801"></script>
     
         
-            <script src="/pymol-notes/mermaid/mermaid.js?1603382387"></script>
+            <script src="/pymol-notes/mermaid/mermaid.js?1603382801"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
