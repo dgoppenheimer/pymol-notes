@@ -5,7 +5,7 @@ draft: false
 weight: 30
 ---
 
-I'm using GitHub Pages to host this site. I started by building the site locally, and pushing the `/public` directory to my `gh-pages` branch on GitHub. (See these instructions on the [Hugo website](https://gohugo.io/hosting-and-deployment/hosting-on-github/).) GitHub provides native support for building [Jekyll](https://jekyllrb.com/) sites, but does not have native support for [Hugo](https://gohugo.io/). Nonetheless, using [GitHub Actions](https://github.com/features/actions), I can build and deploy my Hugo site automatically when I push new content to the `main` branch of my GitHub repository. 
+I'm using GitHub Pages to host this site. I started by building the site locally, and pushing the `/public` directory to my `gh-pages` branch on GitHub. (See these instructions on the [Hugo website](https://gohugo.io/hosting-and-deployment/hosting-on-github/).) GitHub provides native support for building [Jekyll](https://jekyllrb.com/) sites, but does not have native support for [Hugo](https://gohugo.io/). Nonetheless, using [GitHub Actions](https://github.com/features/actions), I can build and deploy my Hugo site automatically when I push new content to the `main` branch of my GitHub repository.
 
 ### Getting started
 
@@ -28,7 +28,7 @@ git push -u origin main
 git push origin --delete master
 ```
 
-Because I am the solo developer on this project and I have a single local repository, I don't have to do anything else. 
+Because I am the solo developer on this project and I have a single local repository, I don't have to do anything else.
 
 #### Automate the build and deploy workflow
 
@@ -61,17 +61,17 @@ jobs:
         HUGO_VERSION: 0.75.0
         TARGET_REPO: dgoppenheimer.github.io/pymol-notes/
         TOKEN: ${{ secrets.EXAMPLE_TOKEN }}
-``` 
-        
+```
+
 Let's test this.
 
-```
+```zsh
 hugo new introduction/test-page.md
 ```
 
 ### Results
 
-No joy. 
+No joy.
 
 Here is a nice tutorial:
 
@@ -120,4 +120,12 @@ jobs:
 
 Note: I removed --minify from `run: hugo`, otherwise, my `svg` logo was not visible.
 
+Great. Now I can work on a page, save it and do the following to update the site:
 
+```zsh
+cd ~/Sites/pymol-notes
+git status
+git add .
+git commit -m "updated site, added a page, corrected typos"
+git push origin main
+```

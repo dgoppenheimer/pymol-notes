@@ -70,7 +70,7 @@ Go to `http://localhost:1313`.
 Success!
 
 {{% notice note %}}
-If you want the site to be built in and served from the `public` directory, then run `hugo server --renderToDisk`. If you just want to build the site in the `public` directory, then run `hugo`.
+If you want the site to be built in, and served from, the `public` directory, then run `hugo server --renderToDisk`. If you just want to build the site in the `public` directory, then run `hugo`.
 {{% /notice %}}
 
 ### Create a homepage

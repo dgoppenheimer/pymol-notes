@@ -13,7 +13,7 @@ The copy-to-clipboard button is useful on code blocks, but distracting when atta
     custom_css = ["css/custom.css"]
 ```
 
-Now I need to figure out how what `css` to override. 
+Now I need to figure out what `css` to override.
 
 From searching the web, I found an old issue on the hugo-theme-learn repository, [Configuration of the appearance of the copy-to-clipboard icons](https://github.com/matcornic/hugo-theme-learn/issues/54), where a user suggested using this `css`: 
 
@@ -23,7 +23,7 @@ From searching the web, I found an old issue on the hugo-theme-learn repository,
 }
 ```
 
-But more importantly, the theme designer, matcornic, updated the theme to provide this function in the theme's configuration file. 
+But more importantly, the theme designer, matcornic, updated the theme to provide this function in the theme's configuration file.
 
 Add this to `config.toml` in the `[params]` section:
 
