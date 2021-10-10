@@ -58,7 +58,7 @@ fetch 3G6M, mol, async=0 extract caf1, /mol//A/CFF`427 h_add set valence, 0 hide
       
       <guid>https://dgoppenheimer.github.io/pymol-notes/introduction/customizing-the-site/</guid>
       <description>Removing the copy-to-clipboard button from inline code The copy-to-clipboard button is useful on code blocks, but distracting when attached to the inline code. I thought I could remove it using custom css, so I created a static/css directory in the root of my project and added a custom.css file to contain my overrides. To have hugo see the custom file, add the following to config.toml:
-[params] custom_css = [&amp;#34;css/custom.css&amp;#34;] Now I need to figure out how what css to override.</description>
+[params] custom_css = [&amp;#34;css/custom.css&amp;#34;] Now I need to figure out what css to override.</description>
     </item>
     
   </channel>
