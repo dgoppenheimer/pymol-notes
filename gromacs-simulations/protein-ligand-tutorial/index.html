@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.75.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/pymol-notes/images/favicon2.png">
+    <title>Protein-Ligand Complex Tutorial :: PyMOL Notes</title>
+
+    
+    <link href="/pymol-notes/css/nucleus.css?1634243101" rel="stylesheet">
+    <link href="/pymol-notes/css/fontawesome-all.min.css?1634243101" rel="stylesheet">
+    <link href="/pymol-notes/css/hybrid.css?1634243101" rel="stylesheet">
+    <link href="/pymol-notes/css/featherlight.min.css?1634243101" rel="stylesheet">
+    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1634243101" rel="stylesheet">
+    <link href="/pymol-notes/css/auto-complete.css?1634243101" rel="stylesheet">
+    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1634243101" rel="stylesheet">
+    <link href="/pymol-notes/css/theme.css?1634243101" rel="stylesheet">
+    <link href="/pymol-notes/css/hugo-theme.css?1634243101" rel="stylesheet">
+    
+    <link href="/pymol-notes/css/custom.css?1634243101" rel="stylesheet">
+
+    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1634243101"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/pymol-notes/gromacs-simulations/protein-ligand-tutorial/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://dgoppenheimer.github.io/pymol-notes/">
+  <svg id="caffeine-logo-outline" width="100%" height="100%" viewBox="0 0 1040 312" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(0.764771,0,0,0.744101,-32.0841,-121.612)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.65px;"/>
+    </g>
+    <g id="_6" serif:id="6" transform="matrix(0.829282,0.479376,-0.411528,0.711911,168.902,-6.21961)">
+        <path d="M32.191,62.08L32.191,29.223L32.2,29.223C32.378,26.308 35.144,23.99 38.525,23.99C41.906,23.99 44.672,26.308 44.85,29.223L44.878,29.223L44.878,62.08L32.191,62.08Z" style="fill:white;stroke:black;stroke-width:2.24px;"/>
+    </g>
+    <g transform="matrix(0.760029,0,0,0.739487,-142.881,-82.277)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.67px;"/>
+    </g>
+    <g id="_4" serif:id="4" transform="matrix(0.699686,-0.555279,0.62164,0.783303,45.363,66.3373)">
+        <path d="M32.191,62.08L32.191,29.223L32.2,29.223C32.378,26.308 35.144,23.99 38.525,23.99C41.906,23.99 44.672,26.308 44.85,29.223L44.878,29.223L44.878,62.08L32.191,62.08Z" style="fill:white;stroke:black;stroke-width:2.11px;"/>
+    </g>
+    <g transform="matrix(0.760029,0,0,0.739487,-118.801,-48.7379)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.67px;"/>
+    </g>
+    <g transform="matrix(-0.240085,-0.605011,0.826443,-0.327955,148.871,309.168)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.57px;"/>
+    </g>
+    <g id="_2" serif:id="2" transform="matrix(0.70757,0.429003,-0.518455,0.855105,-117.446,17.7458)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.18px;"/>
+    </g>
+    <g transform="matrix(1.11188,0,0,1.08183,-290.168,75.865)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:1.82px;"/>
+    </g>
+    <g transform="matrix(0.878487,0,0,0.854744,-94.7963,-93.444)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.31px;"/>
+    </g>
+    <g transform="matrix(0.547176,-0.458574,0.423215,0.504985,-34.1273,196.882)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.91px;"/>
+    </g>
+    <g transform="matrix(1.01192,2.80863e-17,0,0.984566,-97.6956,-74.902)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(-0.0285174,-0.819867,1.06581,-0.0370719,165.108,385.33)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.1px;"/>
+    </g>
+    <g transform="matrix(0.70757,0.429003,-0.518455,0.855105,-7.24693,-65.4796)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.18px;"/>
+    </g>
+    <g id="CH3-1" serif:id="CH3 1" transform="matrix(1.17376,0,0,1.17376,43.502,-29.2485)">
+        <circle cx="262.111" cy="60.363" r="24.489" style="fill:white;stroke:black;stroke-width:1.7px;"/>
+    </g>
+    <g id="CH3-1-bond" serif:id="CH3 1 bond" transform="matrix(0.622796,0.626812,-0.709376,0.70483,171.918,-195.059)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.12px;"/>
+    </g>
+    <g transform="matrix(0.760029,0,0,0.739487,-205.93,22.6848)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.67px;"/>
+    </g>
+    <g id="_41" serif:id="4" transform="matrix(-0.296288,-0.938557,0.953611,-0.301041,19.6417,205.455)">
+        <path d="M32.191,62.08L32.191,29.223L32.2,29.223C32.378,26.308 35.144,23.99 38.525,23.99C41.906,23.99 44.672,26.308 44.85,29.223L44.878,29.223L44.878,62.08L32.191,62.08Z" style="fill:white;stroke:black;stroke-width:2.02px;"/>
+    </g>
+    <g transform="matrix(0.566775,0.35118,-0.526701,0.850051,-54.0496,-65.8967)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.35px;"/>
+    </g>
+    <g transform="matrix(0.899721,0,0,0.875404,-196.676,-16.5331)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.25px;"/>
+    </g>
+    <g transform="matrix(1.0277,-0.387797,0.27634,0.732324,29.4297,156.791)">
+        <path d="M32.191,62.08L32.191,29.223L32.2,29.223C32.378,26.308 35.144,23.99 38.525,23.99C41.906,23.99 44.672,26.308 44.85,29.223L44.878,29.223L44.878,62.08L32.191,62.08Z" style="fill:white;stroke:black;stroke-width:2.1px;"/>
+    </g>
+    <g transform="matrix(0.922596,0,0,0.897661,-183.913,30.0555)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.2px;"/>
+    </g>
+    <g transform="matrix(-0.158165,-0.798561,0.872193,-0.172749,104.447,474.397)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.35px;"/>
+    </g>
+    <g transform="matrix(1.06849,0,0,1.03962,-158.416,-10.7868)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:1.9px;"/>
+    </g>
+    <g transform="matrix(1.0964,0,0,1.08673,-31.5746,-16.6491)">
+        <circle cx="287.026" cy="114.324" r="23.072" style="fill:white;stroke:black;stroke-width:1.83px;"/>
+    </g>
+    <g transform="matrix(-0.591525,-0.86277,0.824768,-0.565471,374.023,552.818)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:1.95px;"/>
+    </g>
+    <g transform="matrix(0.935355,-0.196148,0.193993,0.925079,-37.1528,127.271)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.1px;"/>
+    </g>
+    <g transform="matrix(1.26533,0,0,1.23113,-78.4456,-49.9484)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:1.6px;"/>
+    </g>
+    <g transform="matrix(0.653147,-0.675499,0.766673,0.741304,-92.2011,375.455)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:1.99px;"/>
+    </g>
+    <g transform="matrix(1.14281,0,0,1.11192,-126.282,28.2889)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:1.77px;"/>
+    </g>
+    <path id="PyMOL-Notes" serif:id="PyMOL Notes" fill="#fff" d="M500.288,197.431C484.988,197.431 473.138,202.381 465.788,213.481L465.788,198.631C463.928,189.726 452.426,190.757 451.388,198.631L451.388,303.631C452.134,312.327 465.308,312.84 466.388,303.631L466.388,244.081C466.388,221.431 478.688,210.781 497.288,210.781C514.688,210.781 525.638,221.131 525.638,241.831L525.638,303.631C527.238,312.206 538.897,312.19 540.488,303.631L540.488,241.381C540.488,212.881 525.188,197.431 500.288,197.431ZM698.588,288.631C695.588,291.031 691.538,292.381 687.338,292.381C679.238,292.381 674.888,287.581 674.888,279.031L674.888,235.981L697.688,235.981C703.48,235.789 705.644,225.687 697.688,224.131L674.888,224.131L674.888,206.731C673.767,197.972 661.4,198.426 660.488,206.731L660.488,279.631C660.488,295.681 669.638,304.531 685.688,304.531C692.138,304.531 698.738,302.731 703.088,298.981C710.3,292.883 702.668,285.644 698.588,288.631ZM829.388,304.531C850.538,304.531 863.738,295.381 863.738,280.981C863.738,250.081 813.338,265.381 813.338,246.631C813.338,240.331 819.488,235.681 832.088,235.681C839.888,235.681 847.838,237.331 855.038,241.981C861.826,244.309 866.724,236.109 861.188,230.581C854.288,226.081 842.588,223.381 832.238,223.381C811.838,223.381 799.088,232.981 799.088,247.231C799.088,278.881 849.338,263.431 849.338,281.281C849.338,288.031 843.788,292.081 830.438,292.081C820.088,292.081 809.288,288.631 802.538,283.831C796.024,281.292 789.688,289.96 796.538,295.231C803.138,300.481 816.188,304.531 829.388,304.531ZM752.138,291.931C738.788,291.931 728.888,285.631 724.838,274.681L787.988,262.381C787.538,238.681 770.588,223.381 748.838,223.381C725.738,223.381 708.938,240.331 708.938,263.881C708.938,287.581 726.038,304.531 751.688,304.531C764.888,304.531 775.838,300.031 782.888,291.631C788.69,284.56 779.994,278.272 775.088,282.331C769.238,288.781 761.438,291.931 752.138,291.931ZM601.538,304.531C625.388,304.531 642.788,287.581 642.788,263.881C642.788,240.181 625.388,223.381 601.538,223.381C577.688,223.381 560.138,240.181 560.138,263.881C560.138,287.581 577.688,304.531 601.538,304.531ZM601.538,291.931C586.238,291.931 574.688,280.831 574.688,263.881C574.688,246.931 586.238,235.981 601.538,235.981C616.838,235.981 628.238,246.931 628.238,263.881C628.238,280.831 616.838,291.931 601.538,291.931ZM748.838,235.531C761.738,235.531 771.188,243.631 773.738,255.031L722.888,264.631L722.888,263.131C722.888,246.481 733.688,235.531 748.838,235.531ZM614.288,32.514L614.288,69.414C614.288,86.514 604.688,95.814 589.688,95.814C576.038,95.814 568.238,88.014 568.238,72.564L568.238,32.514C566.492,23.684 554.781,24.826 553.838,32.514L553.838,74.214C553.838,97.614 567.488,108.714 588.038,108.714C598.838,108.714 608.438,104.514 614.288,96.864L614.288,102.714C614.288,120.714 606.488,129.264 588.938,129.264C577.838,129.264 567.488,125.364 560.588,119.064C551.693,114.581 547.467,125.798 553.538,130.164C561.938,137.964 575.888,142.014 589.688,142.014C615.338,142.014 628.688,129.264 628.688,101.214L628.688,32.514C628.005,24.414 615.251,23.721 614.288,32.514ZM769.988,5.814C754.538,5.814 741.788,12.114 735.188,23.364C729.788,12.414 718.238,5.814 702.488,5.814C687.338,5.814 675.788,11.964 669.638,22.314L669.638,7.014C668.628,-1.534 656.086,-0.957 655.238,7.014L655.238,112.014C656.724,121.451 669.424,120.719 670.238,112.014L670.238,49.314C670.238,28.164 682.238,19.164 698.888,19.164C714.188,19.164 724.388,28.014 724.388,47.214L724.388,112.014C725.513,120.567 737.957,120.941 739.238,112.014L739.238,49.314C739.238,28.164 750.938,19.164 767.438,19.164C782.588,19.164 793.688,28.014 793.688,47.214L793.688,112.014C794.786,120.366 806.889,121.447 808.538,112.014L808.538,46.764C808.538,19.764 793.838,5.814 769.988,5.814ZM492.338,7.014L451.388,7.014L451.42,112.017C452.788,120.86 464.971,121.277 466.404,112.02L466.388,80.214L492.338,80.214C519.638,80.214 536.138,66.414 536.138,43.614C536.138,20.814 519.638,7.014 492.338,7.014ZM883.688,113.214C915.638,113.214 939.338,90.414 939.338,59.514C939.338,28.614 915.638,5.814 883.688,5.814C851.438,5.814 827.738,28.764 827.738,59.514C827.738,90.264 851.438,113.214 883.688,113.214ZM959.288,112.014L1031.14,112.014C1039.92,111.083 1038.33,99.101 1031.14,98.964L974.288,98.964L974.288,7.014C972.93,-1.555 960.903,-1.635 959.288,7.014L959.288,112.014ZM883.688,99.864C860.138,99.864 842.738,82.764 842.738,59.514C842.738,36.264 860.138,19.164 883.688,19.164C906.938,19.164 924.338,36.264 924.338,59.514C924.338,82.764 906.938,99.864 883.688,99.864ZM491.888,67.164L466.388,67.164L466.388,20.064L491.888,20.064C511.088,20.064 521.138,28.614 521.138,43.614C521.138,58.614 511.088,67.164 491.888,67.164Z" style="fill-rule:nonzero;"/>
+</svg>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1634243101"></script>
+<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1634243101"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/dgoppenheimer.github.io\/pymol-notes\/";
+    
+</script>
+<script type="text/javascript" src="/pymol-notes/js/search.js?1634243101"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/pymol-notes/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/pymol-notes/introduction/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/introduction/building-this-site/" title="Building this site" class="dd-item ">
+        <a href="/pymol-notes/introduction/building-this-site/">
+        Building this site
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/introduction/hosting-the-site-on-github/" title="Hosting the Site on Github" class="dd-item ">
+        <a href="/pymol-notes/introduction/hosting-the-site-on-github/">
+        Hosting the Site on Github
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/introduction/creating-a-logo/" title="Creating a Logo" class="dd-item ">
+        <a href="/pymol-notes/introduction/creating-a-logo/">
+        Creating a Logo
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/introduction/automatic-build-and-deploy/" title="Automatic Build and Deploy using GitHub Actions" class="dd-item ">
+        <a href="/pymol-notes/introduction/automatic-build-and-deploy/">
+        Automatic Build and Deploy using GitHub Actions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/introduction/customizing-the-site/" title="Customizing the Site" class="dd-item ">
+        <a href="/pymol-notes/introduction/customizing-the-site/">
+        Customizing the Site
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/pymol-notes/gromacs-simulations/" title="GROMACS Simulations" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/pymol-notes/gromacs-simulations/">
+          <b>2. </b>GROMACS Simulations
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/gromacs-simulations/protein-ligand-tutorial/" title="Protein-Ligand Complex Tutorial" class="dd-item active">
+        <a href="/pymol-notes/gromacs-simulations/protein-ligand-tutorial/">
+        Protein-Ligand Complex Tutorial
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/gromacs-simulations/'>GROMACS Simulations</a> > Protein-Ligand Complex Tutorial
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-two-prepare-the-ligand-topology">Step Two: Prepare the Ligand Topology</a>
+      <ul>
+        <li><a href="#add-hydrogen-atoms-to-jz4">Add Hydrogen Atoms to JZ4</a></li>
+        <li><a href="#generate-the-jz4-topology-with-cgenff">Generate the JZ4 Topology with CGenFF</a></li>
+        <li><a href="#build-the-complex">Build the Complex</a></li>
+        <li><a href="#build-the-topology">Build the Topology</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-three-defining-the-unit-cell--adding-solvent">Step Three: Defining the Unit Cell &amp; Adding Solvent</a></li>
+    <li><a href="#step-four-adding-ions">Step Four: Adding Ions</a></li>
+    <li><a href="#step-five-energy-minimization">Step Five: Energy Minimization</a></li>
+    <li><a href="#step-six-equilibration">Step Six: Equilibration</a>
+      <ul>
+        <li><a href="#restraining-the-ligand">Restraining the Ligand</a></li>
+        <li><a href="#thermostats">Thermostats</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-seven-equilibration-part-2">Step Seven: Equilibration, Part 2</a></li>
+    <li><a href="#step-eight-production-md">Step Eight: Production MD</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Protein-Ligand Complex Tutorial
+            </h1>
+          
+
+        
+
+
+<p>This tutorial is from <a href="http://www.mdtutorials.com/gmx/complex/index.html">this website</a>.</p>
+<ul>
+<li>
+<p>Download <a href="https://www.rcsb.org/structure/3HTB">3HTB</a> from the <a href="https://www.rcsb.org/">RCSB website</a>.</p>
+</li>
+<li>
+<p>View the structure in VMD.</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">cd ../gromacs-work/gromacs-prot-ligand-tutorial
+mol new 3htb.pdb
+mol modstyle <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> licorice
+</code></pre></div><p>A few of the amino acids have 2 conformers that are present in the structure.</p>
+<ul>
+<li>Strip out the crystal waters, PO<!-- raw HTML omitted -->4<!-- raw HTML omitted -->, and BME.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">awk <span style="color:#e6db74">&#39;!(/HETATM/ &amp;&amp; /HOH/ || /HETATM/ &amp;&amp; /BME/ || /HETATM/ &amp;&amp; /PO4/)&#39;</span> 3htb.pdb &gt; 3htb-clean.pdb
+<span style="color:#75715e"># &amp;&amp; is AND, and  || is OR</span>
+<span style="color:#75715e"># ! shows the lines that do not have the pattern</span>
+</code></pre></div><p>The tutorial-supplied file is <code>3htb_clean.pdb</code>. For fun, run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git diff --no-index --word-diff 3htb-clean.pdb 3htb_clean.pdb
+</code></pre></div><p>Because I used the more specific <code>awk</code> command instead of multiple <code>grep</code> commands, I have a few lines in the <code>3htb-clean.pdb</code> file that are missing from the <code>3htb_clean.pdb</code> file. Also the <code>3htb_clean.pdb</code> file is missing all the <code>CONECT</code> entries. I&rsquo;ll remove them from <code>3htb-clean.pdb</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">awk <span style="color:#e6db74">&#39;!/CONECT/&#39;</span> 3htb-clean.pdb &gt; 3htb-tmp.pdb
+mv -i 3htb-tmp.pdb 3htb-clean.pdb
+</code></pre></div><p>Nice!</p>
+<ul>
+<li>Put the <code>JZ4</code> coordinates into its own file.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">grep JZ4 3HTB-clean.pdb &gt; jz4.pdb
+awk <span style="color:#e6db74">&#39;!(/HETATM/ &amp;&amp; /JZ4/)&#39;</span> 3HTB-clean.pdb &gt; 3htb-tmp.pdb
+mv -i 3htb-tmp.pdb 3htb-clean.pdb
+</code></pre></div><ul>
+<li>Check which version of <code>python</code> you are using with <code>python --version</code>.</li>
+<li>Download the <code>CHARMM36</code> force field file from the <a href="http://mackerell.umaryland.edu/charmm_ff.shtml#gromacs">MacKerell lab website</a>.</li>
+<li>Download the <code>cgenff_charmm2gmx.py</code> script from the same website.</li>
+<li>Unarchive the force field tarball:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">tar -zxvf charmm36-feb2021.ff.tgz
+rm charmm36-feb2021.ff.tgz
+</code></pre></div><ul>
+<li>Write the topology for the T4 lysozyme with <code>pdb2gmx</code>:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx pdb2gmx -f 3htb-clean.pdb -o 3htb_processed.gro
+<span style="color:#75715e"># choose the CHARMM36 force field (option 1)</span>
+<span style="color:#75715e"># choose the default water model (TIP 3-point, recommended, by default uses CHARMM TIP3 with LJ on H)</span>
+</code></pre></div><h2 id="step-two-prepare-the-ligand-topology">Step Two: Prepare the Ligand Topology</h2>
+<h3 id="add-hydrogen-atoms-to-jz4">Add Hydrogen Atoms to JZ4</h3>
+<ul>
+<li>Add hydrogens using Avogadro.</li>
+<li>Save the file as a <code>.mol2</code> file.</li>
+<li>Open the file in a text editor. Under the <code>@&lt;TRIPOS&gt;MOLECULE</code> heading, change <code>*****</code> to <code>JZ4</code>.</li>
+<li>Fix the residue names and numbers such that they are all the same. Change:</li>
+</ul>
+<pre><code class="language-mol2" data-lang="mol2">@&lt;TRIPOS&gt;ATOM
+      1 C4         24.2940  -24.1240   -0.0710 C.3   167  JZ4167     -0.0650
+      2 C7         21.5530  -27.2140   -4.1120 C.ar  167  JZ4167     -0.0613
+      3 C8         22.0680  -26.7470   -5.3310 C.ar  167  JZ4167     -0.0583
+      4 C9         22.6710  -25.5120   -5.4480 C.ar  167  JZ4167     -0.0199
+      5 C10        22.7690  -24.7300   -4.2950 C.ar  167  JZ4167      0.1200
+      6 C11        21.6930  -26.4590   -2.9540 C.ar  167  JZ4167     -0.0551
+      7 C12        22.2940  -25.1870   -3.0750 C.ar  167  JZ4167     -0.0060
+      8 C13        22.4630  -24.4140   -1.8080 C.3   167  JZ4167     -0.0245
+      9 C14        23.9250  -24.7040   -1.3940 C.3   167  JZ4167     -0.0518
+     10 OAB        23.4120  -23.5360   -4.3420 O.3   167  JZ4167     -0.5065
+     11 H          25.3133  -24.3619    0.1509 H       1  UNL1        0.0230
+     12 H          23.6591  -24.5327    0.6872 H       1  UNL1        0.0230
+     13 H          24.1744  -23.0611   -0.1016 H       1  UNL1        0.0230
+     14 H          21.0673  -28.1238   -4.0754 H       1  UNL1        0.0618
+     15 H          21.9931  -27.3472   -6.1672 H       1  UNL1        0.0619
+     16 H          23.0361  -25.1783   -6.3537 H       1  UNL1        0.0654
+     17 H          21.3701  -26.8143   -2.0405 H       1  UNL1        0.0621
+     18 H          21.7794  -24.7551   -1.0588 H       1  UNL1        0.0314
+     19 H          22.2659  -23.3694   -1.9301 H       1  UNL1        0.0314
+     20 H          24.5755  -24.2929   -2.1375 H       1  UNL1        0.0266
+     21 H          24.0241  -25.7662   -1.3110 H       1  UNL1        0.0266
+     22 H          23.7394  -23.2120   -5.1580 H       1  UNL1        0.2921
+</code></pre><p>to</p>
+<pre><code class="language-mol2" data-lang="mol2">@&lt;TRIPOS&gt;ATOM
+      1 C4         24.2940  -24.1240   -0.0710 C.3     1  JZ4        -0.0650
+      2 C7         21.5530  -27.2140   -4.1120 C.ar    1  JZ4        -0.0613
+      3 C8         22.0680  -26.7470   -5.3310 C.ar    1  JZ4        -0.0583
+      4 C9         22.6710  -25.5120   -5.4480 C.ar    1  JZ4        -0.0199
+      5 C10        22.7690  -24.7300   -4.2950 C.ar    1  JZ4         0.1200
+      6 C11        21.6930  -26.4590   -2.9540 C.ar    1  JZ4        -0.0551
+      7 C12        22.2940  -25.1870   -3.0750 C.ar    1  JZ4        -0.0060
+      8 C13        22.4630  -24.4140   -1.8080 C.3     1  JZ4        -0.0245
+      9 C14        23.9250  -24.7040   -1.3940 C.3     1  JZ4        -0.0518
+     10 OAB        23.4120  -23.5360   -4.3420 O.3     1  JZ4        -0.5065
+     11 H          25.3133  -24.3619    0.1509 H       1  JZ4         0.0230
+     12 H          23.6591  -24.5327    0.6872 H       1  JZ4         0.0230
+     13 H          24.1744  -23.0611   -0.1016 H       1  JZ4         0.0230
+     14 H          21.0673  -28.1238   -4.0754 H       1  JZ4         0.0618
+     15 H          21.9931  -27.3472   -6.1672 H       1  JZ4         0.0619
+     16 H          23.0361  -25.1783   -6.3537 H       1  JZ4         0.0654
+     17 H          21.3701  -26.8143   -2.0405 H       1  JZ4         0.0621
+     18 H          21.7794  -24.7551   -1.0588 H       1  JZ4         0.0314
+     19 H          22.2659  -23.3694   -1.9301 H       1  JZ4         0.0314
+     20 H          24.5755  -24.2929   -2.1375 H       1  JZ4         0.0266
+     21 H          24.0241  -25.7662   -1.3110 H       1  JZ4         0.0266
+     22 H          23.7394  -23.2120   -5.1580 H       1  JZ4         0.2921
+</code></pre><ul>
+<li>Fix the bond order using the <code>sort_mol2_bonds.pl</code> script.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">perl sort_mol2_bonds.pl jz4.mol2 jz4_fix.mol2
+</code></pre></div><ul>
+<li>Use the <code>jz4_fix.mol2</code> file for the next step.</li>
+</ul>
+<h3 id="generate-the-jz4-topology-with-cgenff">Generate the JZ4 Topology with CGenFF</h3>
+<ul>
+<li>Log in to your account on the <a href="https://cgenff.umaryland.edu/">CGenFF server</a>.</li>
+<li>Click the <code>Choose File</code> button and choose the <code>jz4_fix.mol2</code> file. Then click the <code>Upload File</code> button.</li>
+<li>Compare the file with the one from the tutorial:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git diff --no-index --word-diff jz4_fix.str jz4.str
+</code></pre></div><p>The tutorial file has atoms labeled <code>C1, C2, etc.</code> whereas the file I generated has atoms labeled <code>C4, C5, etc.</code> but none labeled <code>C1 etc.</code>. This is due to how <code>CGenFF</code> processed the file, because the <code>jz4_fix.mol2</code> file I generated was the same as the one downloaded from the tutorial site.</p>
+<p>All of my penalty scores were less than 10, so the file should be good to go.</p>
+<ul>
+<li>Use the <code>cgenff_charmm2gmx_py3_nx2.py</code> script to convert the topology from <code>CHARMM</code> to <code>GROMACS</code> format.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">python cgenff_charmm2gmx_py3_nx2.py JZ4 jz4_fix.mol2 jz4_fix.str charmm36-feb2021.ff
+
+<span style="color:#75715e"># I got this error:</span>
+<span style="color:#75715e">#   File &#34;cgenff_charmm2gmx_py3_nx2.py&#34;, line 53, in &lt;module&gt;</span>
+<span style="color:#75715e">#    import numpy as np</span>
+<span style="color:#75715e"># ModuleNotFoundError: No module named &#39;numpy&#39;</span>
+</code></pre></div><p>Try to install <code>numpy</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">python3 -m pip install numpy
+</code></pre></div><p>Looks like it installed okay. Try script again:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">python cgenff_charmm2gmx_py3_nx2.py JZ4 jz4_fix.mol2 jz4_fix.str charmm36-feb2021.ff
+
+<span style="color:#75715e"># got this error:</span>
+<span style="color:#75715e"># ModuleNotFoundError: No module named &#39;networkx&#39;</span>
+
+<span style="color:#75715e"># try to fix:</span>
+python3 -m pip install networkx
+
+<span style="color:#75715e"># try again:</span>
+python cgenff_charmm2gmx_py3_nx2.py JZ4 jz4_fix.mol2 jz4_fix.str charmm36-feb2021.ff
+
+<span style="color:#75715e"># Got this error:</span>
+<span style="color:#75715e">#   File &#34;cgenff_charmm2gmx_py3_nx2.py&#34;, line 991, in &lt;module&gt;</span>
+<span style="color:#75715e">#     if(float(nx.__version__) &lt; 2.0):</span>
+<span style="color:#75715e"># ValueError: could not convert string to float: &#39;2.6.3&#39;</span>
+
+<span style="color:#75715e"># try to use the other script:</span>
+
+python cgenff_charmm2gmx_py3_nx1.py JZ4 jz4_fix.mol2 jz4_fix.str charmm36-feb2021.ff
+</code></pre></div><ul>
+<li>Try the following:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">python3 -m pip uninstall networkx
+python3 -m pip install networkx<span style="color:#f92672">==</span>2.3
+python cgenff_charmm2gmx_py3_nx2.py JZ4 jz4_fix.mol2 jz4_fix.str charmm36-feb2021.ff
+</code></pre></div><p>I got the error:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">NOTE 3: Please be sure to use the same version of CGenFF in your simulations that was used during parameter generation:
+--Version of CGenFF detected in  jz4_fix.str : 4.5
+--Version of CGenFF detected in  charmm36-feb2021.ff/forcefield.doc : 4.4
+
+WARNING: CGenFF versions are not equivalent!
+</code></pre></div><p>From the web:</p>
+<blockquote>
+<p>Don&rsquo;t worry about this difference. The web server needs to be updated, but not in any way that affects the end user.</p>
+</blockquote>
+<p>—Justin A. Lemkul, Ph.D.</p>
+<h3 id="build-the-complex">Build the Complex</h3>
+<ul>
+<li>Convert <code>jz4_ini.pdb</code> to <code>.gro</code> format with <code>editconf</code>:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx editconf -f jz4_ini.pdb -o jz4.gro
+</code></pre></div><ul>
+<li>Copy <code>3htb_processed.gro</code> to a new file to be manipulated, for instance, call it <code>complex.gro</code>.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">cp 3htb_processed.gro complex.gro
+</code></pre></div><ul>
+<li>Copy the coordinate section of <code>jz4.gro</code> and paste it into <code>complex.gro</code>, below the last line of the protein atoms, and before the box vectors, like so:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">  163ASN   HD22 <span style="color:#ae81ff">2611</span>   0.944  -0.584  -0.525
+  163ASN      C <span style="color:#ae81ff">2612</span>   0.621  -0.740  -0.126
+  163ASN    OT1 <span style="color:#ae81ff">2613</span>   0.624  -0.616  -0.140
+  163ASN    OT2 <span style="color:#ae81ff">2614</span>   0.683  -0.703  -0.011
+    1JZ4     C4    <span style="color:#ae81ff">1</span>   2.429  -2.412  -0.007
+    1JZ4     C7    <span style="color:#ae81ff">2</span>   2.155  -2.721  -0.411
+    1JZ4     C8    <span style="color:#ae81ff">3</span>   2.207  -2.675  -0.533
+    1JZ4     C9    <span style="color:#ae81ff">4</span>   2.267  -2.551  -0.545
+    1JZ4    C10    <span style="color:#ae81ff">5</span>   2.277  -2.473  -0.430
+    1JZ4    C11    <span style="color:#ae81ff">6</span>   2.169  -2.646  -0.295
+    1JZ4    C12    <span style="color:#ae81ff">7</span>   2.229  -2.519  -0.308
+    1JZ4    C13    <span style="color:#ae81ff">8</span>   2.246  -2.441  -0.181
+    1JZ4    C14    <span style="color:#ae81ff">9</span>   2.392  -2.470  -0.139
+    1JZ4    OAB   <span style="color:#ae81ff">10</span>   2.341  -2.354  -0.434
+    1JZ4     H1   <span style="color:#ae81ff">11</span>   2.531  -2.436   0.015
+    1JZ4     H2   <span style="color:#ae81ff">12</span>   2.366  -2.453   0.069
+    1JZ4     H3   <span style="color:#ae81ff">13</span>   2.417  -2.306  -0.010
+    1JZ4     H4   <span style="color:#ae81ff">14</span>   2.107  -2.812  -0.407
+    1JZ4     H5   <span style="color:#ae81ff">15</span>   2.199  -2.735  -0.617
+    1JZ4     H6   <span style="color:#ae81ff">16</span>   2.304  -2.518  -0.635
+    1JZ4     H7   <span style="color:#ae81ff">17</span>   2.137  -2.681  -0.204
+    1JZ4     H8   <span style="color:#ae81ff">18</span>   2.178  -2.476  -0.106
+    1JZ4     H9   <span style="color:#ae81ff">19</span>   2.227  -2.337  -0.193
+    1JZ4    H10   <span style="color:#ae81ff">20</span>   2.458  -2.429  -0.214
+    1JZ4    H11   <span style="color:#ae81ff">21</span>   2.402  -2.577  -0.131
+    1JZ4    H12   <span style="color:#ae81ff">22</span>   2.374  -2.321  -0.516
+   5.99500   5.19182   9.66100   0.00000   0.00000  -2.99750   0.00000   0.00000   0.00000
+</code></pre></div><ul>
+<li><strong>IMPORTANT!</strong> Since we have added 22 more atoms into the <code>.gro</code> file, increment the second line of <code>complex.gro</code> to reflect this change. There should be 2636 atoms in the coordinate file now.</li>
+</ul>
+<h3 id="build-the-topology">Build the Topology</h3>
+<ul>
+<li>Insert a line that says <code>#include &quot;jz4.itp&quot;</code> into <code>topol.top</code> after the position restraint file is included, like so:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">; Include Position restraint file
+<span style="color:#75715e">#ifdef POSRES</span>
+<span style="color:#75715e">#include &#34;posre.itp&#34;</span>
+<span style="color:#75715e">#endif</span>
+
+; Include water topology
+<span style="color:#75715e">#include &#34;./charmm36-feb2021.ff/tip3p.itp&#34;</span>
+</code></pre></div><p>Becomes &hellip;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">; Include Position restraint file
+<span style="color:#75715e">#ifdef POSRES</span>
+<span style="color:#75715e">#include &#34;posre.itp&#34;</span>
+<span style="color:#75715e">#endif</span>
+
+; Include ligand topology
+<span style="color:#75715e">#include &#34;jz4.itp&#34;</span>
+
+; Include water topology
+<span style="color:#75715e">#include &#34;./charmm36-feb2021.ff/tip3p.itp&#34;</span>
+</code></pre></div><ul>
+<li>Insert an <code>#include</code> statement to add the <code>jz4.prm</code> parameters at the <strong>TOP</strong> of <code>topol.top</code>, like so:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">; Include forcefield parameters
+<span style="color:#75715e">#include &#34;./charmm36-feb2021.ff/forcefield.itp&#34;</span>
+
+<span style="color:#f92672">[</span> moleculetype <span style="color:#f92672">]</span>
+; Name            nrexcl
+Protein_chain_A     <span style="color:#ae81ff">3</span>
+</code></pre></div><p>Becomes</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">; Include forcefield parameters
+<span style="color:#75715e">#include &#34;./charmm36-feb2021.ff/forcefield.itp&#34;</span>
+
+; Include ligand parameters
+<span style="color:#75715e">#include &#34;jz4.prm&#34;</span>
+
+<span style="color:#f92672">[</span> moleculetype <span style="color:#f92672">]</span>
+; Name            nrexcl
+Protein_chain_A     <span style="color:#ae81ff">3</span>
+</code></pre></div><p>It is important to place this statement <strong>before</strong> any <code>[ moleculetype ]</code> entry. It must also appear <strong>AFTER</strong> the #<code>include</code> statement for the parent force field.</p>
+<ul>
+<li>Add the JZ4 molecule to <code>[ molecules ]</code> directive, like so:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#f92672">[</span> molecules <span style="color:#f92672">]</span>
+; Compound        <span style="color:#75715e">#mols</span>
+Protein_chain_A     <span style="color:#ae81ff">1</span>
+JZ4                 <span style="color:#ae81ff">1</span>
+</code></pre></div><h2 id="step-three-defining-the-unit-cell--adding-solvent">Step Three: Defining the Unit Cell &amp; Adding Solvent</h2>
+<ul>
+<li>Define the unit cell and fill it with water.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx editconf -f complex.gro -o newbox.gro -bt dodecahedron -d 1.0
+gmx solvate -cp newbox.gro -cs spc216.gro -p topol.top -o solv.gro
+</code></pre></div><h2 id="step-four-adding-ions">Step Four: Adding Ions</h2>
+<ul>
+<li>Use <code>grompp</code> to assemble a <code>.tpr</code> file, using any <code>.mdp</code> file. I downloaded the <code>ions.mdp</code> file from <a href="http://www.mdtutorials.com/gmx/complex/Files/ions.mdp">this website</a>.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx grompp -f ions.mdp -c solv.gro -p topol.top -o ions.tpr
+</code></pre></div><ul>
+<li>Pass the <code>.tpr</code> file to <code>genion</code>:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx genion -s ions.tpr -o solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+<span style="color:#75715e"># when prompted, choose group 15:</span>
+<span style="color:#75715e"># Group    15 (            SOL) has 30882 elements</span>
+</code></pre></div><p>The names of the ions specified with <code>-pname</code> and <code>-nname</code> are always the elemental symbol in all capital letters. Refer to <code>ions.itp</code> for proper nomenclature if you encounter difficulties.</p>
+<ul>
+<li>Open the <code>topol.top</code> file. Your <code>[ molecules ]</code> directive should now look like:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#f92672">[</span> molecules <span style="color:#f92672">]</span>
+; Compound        <span style="color:#75715e">#mols</span>
+Protein_chain_A     <span style="color:#ae81ff">1</span>
+JZ4                 <span style="color:#ae81ff">1</span>
+SOL         <span style="color:#ae81ff">10288</span>
+CL               <span style="color:#ae81ff">6</span>
+</code></pre></div><h2 id="step-five-energy-minimization">Step Five: Energy Minimization</h2>
+<ul>
+<li>Create the binary input using <code>grompp</code> using the <code>em.mdp</code> input parameter file from <a href="http://www.mdtutorials.com/gmx/complex/Files/em.mdp">this website</a>:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx grompp -f em.mdp -c solv_ions.gro -p topol.top -o em.tpr
+</code></pre></div><ul>
+<li>Invoke <code>mdrun</code> to carry out the energy minimization (EM):</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx mdrun -v -deffnm em
+</code></pre></div><p>For the tutorial author, the system converged relatively quickly:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">Steepest Descents converged to Fmax &lt; <span style="color:#ae81ff">1000</span> in <span style="color:#ae81ff">143</span> steps
+Potential Energy  <span style="color:#f92672">=</span> -4.9014547e+05
+Maximum force     <span style="color:#f92672">=</span>  8.7411469e+02 on atom <span style="color:#ae81ff">27</span>
+Norm of force     <span style="color:#f92672">=</span>  5.6676244e+01
+</code></pre></div><p>My system also converged relatively quickly:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">Steepest Descents converged to Fmax &lt; <span style="color:#ae81ff">1000</span> in <span style="color:#ae81ff">156</span> steps
+Potential Energy  <span style="color:#f92672">=</span> -4.9085631e+05
+Maximum force     <span style="color:#f92672">=</span>  8.8324829e+02 on atom <span style="color:#ae81ff">2045</span>
+Norm of force     <span style="color:#f92672">=</span>  5.6558131e+01
+</code></pre></div><h2 id="step-six-equilibration">Step Six: Equilibration</h2>
+<h3 id="restraining-the-ligand">Restraining the Ligand</h3>
+<ul>
+<li>Generate a position restraint topology for the ligand. First, create an index group for JZ4 that contains only its non-hydrogen atoms:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx make_ndx -f jz4.gro -o index_jz4.ndx
+...
+ &gt; <span style="color:#ae81ff">0</span> &amp; ! a H*
+ &gt; q
+</code></pre></div><ul>
+<li>Then, execute the <code>genrestr</code> module and select this newly created index group (which will be group 3 in the <code>index_jz4.ndx</code> file):</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx genrestr -f jz4.gro -n index_jz4.ndx -o posre_jz4.itp -fc <span style="color:#ae81ff">1000</span> <span style="color:#ae81ff">1000</span> <span style="color:#ae81ff">1000</span>
+</code></pre></div><ul>
+<li>Include this information in our topology. Here we want to restrain the ligand whenever the protein is also restrained. Add the following lines to your topology file (<code>topol.top</code>) in the location indicated (<strong>Location matters!</strong>):</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">; Include Position restraint file
+<span style="color:#75715e">#ifdef POSRES</span>
+<span style="color:#75715e">#include &#34;posre.itp&#34;</span>
+<span style="color:#75715e">#endif</span>
+
+; Include ligand topology
+<span style="color:#75715e">#include &#34;jz4.itp&#34;</span>
+
+; Ligand position restraints
+<span style="color:#75715e">#ifdef POSRES</span>
+<span style="color:#75715e">#include &#34;posre_jz4.itp&#34;</span>
+<span style="color:#75715e">#endif</span>
+
+; Include water topology
+<span style="color:#75715e">#include &#34;./charmm36-feb2021.ff/tip3p.itp&#34;</span>
+</code></pre></div><h3 id="thermostats">Thermostats</h3>
+<p>Important: <strong>Do not couple every single species in your system separately.</strong></p>
+<p>Group JZ4 with the protein for the purposes of temperature coupling. In the same way, the few Cl- ions we inserted are considered part of the solvent. We need a special index group that merges the protein and JZ4. We accomplish this with the <code>make_ndx</code> module, supplying any coordinate file of the complete system. Here, we use <code>em.gro</code>, the output (minimized) structure of our system:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx make_ndx -f em.gro -o index.ndx
+…
+
+  <span style="color:#ae81ff">0</span> System              : <span style="color:#ae81ff">33506</span> atoms
+  <span style="color:#ae81ff">1</span> Protein             :  <span style="color:#ae81ff">2614</span> atoms
+  <span style="color:#ae81ff">2</span> Protein-H           :  <span style="color:#ae81ff">1301</span> atoms
+  <span style="color:#ae81ff">3</span> C-alpha             :   <span style="color:#ae81ff">163</span> atoms
+  <span style="color:#ae81ff">4</span> Backbone            :   <span style="color:#ae81ff">489</span> atoms
+  <span style="color:#ae81ff">5</span> MainChain           :   <span style="color:#ae81ff">651</span> atoms
+  <span style="color:#ae81ff">6</span> MainChain+Cb        :   <span style="color:#ae81ff">803</span> atoms
+  <span style="color:#ae81ff">7</span> MainChain+H         :   <span style="color:#ae81ff">813</span> atoms
+  <span style="color:#ae81ff">8</span> SideChain           :  <span style="color:#ae81ff">1801</span> atoms
+  <span style="color:#ae81ff">9</span> SideChain-H         :   <span style="color:#ae81ff">650</span> atoms
+ <span style="color:#ae81ff">10</span> Prot-Masses         :  <span style="color:#ae81ff">2614</span> atoms
+ <span style="color:#ae81ff">11</span> non-Protein         : <span style="color:#ae81ff">30892</span> atoms
+ <span style="color:#ae81ff">12</span> Other               :    <span style="color:#ae81ff">22</span> atoms
+ <span style="color:#ae81ff">13</span> JZ4                 :    <span style="color:#ae81ff">22</span> atoms
+ <span style="color:#ae81ff">14</span> CL                  :     <span style="color:#ae81ff">6</span> atoms
+ <span style="color:#ae81ff">15</span> Water               : <span style="color:#ae81ff">30864</span> atoms
+ <span style="color:#ae81ff">16</span> SOL                 : <span style="color:#ae81ff">30864</span> atoms
+ <span style="color:#ae81ff">17</span> non-Water           :  <span style="color:#ae81ff">2642</span> atoms
+ <span style="color:#ae81ff">18</span> Ion                 :     <span style="color:#ae81ff">6</span> atoms
+ <span style="color:#ae81ff">19</span> JZ4                 :    <span style="color:#ae81ff">22</span> atoms
+ <span style="color:#ae81ff">20</span> CL                  :     <span style="color:#ae81ff">6</span> atoms
+ <span style="color:#ae81ff">21</span> Water_and_ions      : <span style="color:#ae81ff">30870</span> atoms
+</code></pre></div><ul>
+<li>Merge the &ldquo;Protein&rdquo; and &ldquo;JZ4&rdquo; groups with the following, where <code>&gt;</code> indicates the <code>make_ndx</code> prompt:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">&gt; <span style="color:#ae81ff">1</span> | <span style="color:#ae81ff">13</span>
+
+Copied index group <span style="color:#ae81ff">1</span> <span style="color:#e6db74">&#39;Protein&#39;</span>
+Copied index group <span style="color:#ae81ff">13</span> <span style="color:#e6db74">&#39;JZ4&#39;</span>
+Merged two groups with OR: <span style="color:#ae81ff">2614</span> <span style="color:#ae81ff">22</span> -&gt; <span style="color:#ae81ff">2636</span>
+
+ <span style="color:#ae81ff">22</span> Protein_JZ4         :  <span style="color:#ae81ff">2636</span> atoms
+
+&gt; q
+</code></pre></div><p>We can now set <code>tc-grps = Protein_JZ4 Water_and_ions</code> to achieve our desired &ldquo;Protein Non-Protein&rdquo; effect.</p>
+<ul>
+<li>Proceed with NVT equilibration using the <code>nvt.mdp</code> file from <a href="http://www.mdtutorials.com/gmx/complex/Files/nvt.mdp">this website</a>.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -n index.ndx -o nvt.tpr
+gmx mdrun -deffnm nvt
+</code></pre></div><p>Laptop fan started running almost immediately. I used an ice pack to cool the computer.<br>
+Started run at 2:02PM, finished at 2:12PM (634 s).</p>
+<h2 id="step-seven-equilibration-part-2">Step Seven: Equilibration, Part 2</h2>
+<ul>
+<li>Once the NVT simulation is complete, proceed to NPT using the <code>npt.mdp</code> file from <a href="http://www.mdtutorials.com/gmx/complex/Files/npt.mdp">this website</a>:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx grompp -f npt.mdp -c nvt.gro -t nvt.cpt -r nvt.gro -p topol.top -n index.ndx -o npt.tpr
+gmx mdrun -deffnm npt
+</code></pre></div><p>Run started at 2:25PM, finished at 2:38PM (690 s).</p>
+<h2 id="step-eight-production-md">Step Eight: Production MD</h2>
+<ul>
+<li>Download the <code>md.mdp</code> file from <a href="http://www.mdtutorials.com/gmx/complex/Files/md.mdp">this website</a>.</li>
+<li>Run a 10 ns molecular dynamics (MD) simulation:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -n index.ndx -o md_0_10.tpr
+gmx mdrun -deffnm md_0_10
+</code></pre></div><p>The 100 ps runs took $$\approx$$ 10 min. For the production MD run of 10 ns, expect:</p>
+<pre><code class="language-math" data-lang="math">\mathsf{10\,ns\times\cfrac{1000\,ps}{ns}\times\cfrac{10\,min}{100\,ps}\times\cfrac{1\,hr}{60\,min}=16.7\,hr}
+</code></pre><p>Note: to print the math, I used <a href="https://katex.org/docs/supported.html#style-color-size-and-font">K<!-- raw HTML omitted -->A<!-- raw HTML omitted -->T<!-- raw HTML omitted -->E<!-- raw HTML omitted -->X</a>. For inline math, use <code>$&lt;math here&gt;$</code> and for more complex math use fenced code blocks:</p>
+<pre><code>
+```math
+&lt;complex math here&gt;
+```
+</code></pre>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/pymol-notes/gromacs-simulations/" title="GROMACS Simulations"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/pymol-notes/introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/pymol-notes/js/clipboard.min.js?1634243101"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1634243101"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1634243101"></script>
+    <script src="/pymol-notes/js/jquery.sticky.js?1634243101"></script>
+    <script src="/pymol-notes/js/featherlight.min.js?1634243101"></script>
+    <script src="/pymol-notes/js/highlight.pack.js?1634243101"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1634243101"></script>
+    <script src="/pymol-notes/js/learn.js?1634243101"></script>
+    <script src="/pymol-notes/js/hugo-learn.js?1634243101"></script>
+    
+        
+            <script src="/pymol-notes/mermaid/mermaid.js?1634243101"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

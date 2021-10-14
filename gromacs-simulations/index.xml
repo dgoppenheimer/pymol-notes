@@ -7,5 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Oct 2021 15:41:22 -0400</lastBuildDate><atom:link href="https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Protein-Ligand Complex Tutorial</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/protein-ligand-tutorial/</link>
+      <pubDate>Thu, 14 Oct 2021 15:53:20 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/protein-ligand-tutorial/</guid>
+      <description>This tutorial is from this website.
+  Download 3HTB from the RCSB website.
+  View the structure in VMD.
+  cd ../gromacs-work/gromacs-prot-ligand-tutorial mol new 3htb.pdb mol modstyle 0 0 licorice A few of the amino acids have 2 conformers that are present in the structure.
+ Strip out the crystal waters, PO4, and BME.  awk &amp;#39;!(/HETATM/ &amp;amp;&amp;amp; /HOH/ || /HETATM/ &amp;amp;&amp;amp; /BME/ || /HETATM/ &amp;amp;&amp;amp; /PO4/)&amp;#39; 3htb.</description>
+    </item>
+    
   </channel>
 </rss>

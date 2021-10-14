@@ -52,6 +52,19 @@ fetch 3G6M, mol, async=0 extract caf1, /mol//A/CFF`427 h_add set valence, 0 hide
     </item>
     
     <item>
+      <title>Protein-Ligand Complex Tutorial</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/protein-ligand-tutorial/</link>
+      <pubDate>Thu, 14 Oct 2021 15:53:20 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/protein-ligand-tutorial/</guid>
+      <description>This tutorial is from this website.
+  Download 3HTB from the RCSB website.
+  View the structure in VMD.
+  cd ../gromacs-work/gromacs-prot-ligand-tutorial mol new 3htb.pdb mol modstyle 0 0 licorice A few of the amino acids have 2 conformers that are present in the structure.
+ Strip out the crystal waters, PO4, and BME.  awk &amp;#39;!(/HETATM/ &amp;amp;&amp;amp; /HOH/ || /HETATM/ &amp;amp;&amp;amp; /BME/ || /HETATM/ &amp;amp;&amp;amp; /PO4/)&amp;#39; 3htb.</description>
+    </item>
+    
+    <item>
       <title>Customizing the Site</title>
       <link>https://dgoppenheimer.github.io/pymol-notes/introduction/customizing-the-site/</link>
       <pubDate>Fri, 09 Oct 2020 19:08:25 -0400</pubDate>
