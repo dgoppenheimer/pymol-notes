@@ -80,3 +80,24 @@ hugo new _index.md
 ```
 
 Add some content to the homepage, and you're good to go!
+
+### Add another chapter page
+
+```zsh
+# make sure you are in the pymol-notes directory
+cd ~/Sites/pymol-notes
+hugo new --kind chapter GROMACS-simulations/_index.md
+```
+
+Open the new `_index.md` file and change the front matter and add some text. 
+
+
+Save the files, and track them with `git`.
+
+```zsh
+git status
+git add .
+git commit -m "added a new chapter on gromacs"
+# deploy the new pages
+git push origin/main
+```
