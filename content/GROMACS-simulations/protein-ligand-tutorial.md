@@ -523,7 +523,7 @@ gmx mdrun -deffnm md_0_10
 The 100 ps runs took \\(\approx\\) 10 min. For the production MD run of 10 ns, expect:
 
 \\[
-\mathsf{10\,ns\times\cfrac{1000\,ps}{ns}\times\cfrac{10\,min}{100\,ps}\times\cfrac{1\,hr}{60\,min}=16.7\,hr}
+\mathsf{10\ ns\times\cfrac{1000\ ps}{ns}\times\cfrac{10\ min}{100\ ps}\times\cfrac{1\ hr}{60\ min}=16.7\ hr}
 \\]
 
 Note: to print the math, I used [MathJax](http://docs.mathjax.org/en/latest/index.html). For inline math, use `\\(<math here>\\)` and for more complex math use:
