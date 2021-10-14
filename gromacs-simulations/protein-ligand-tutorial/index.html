@@ -11,19 +11,19 @@
     <title>Protein-Ligand Complex Tutorial :: PyMOL Notes</title>
 
     
-    <link href="/pymol-notes/css/nucleus.css?1634243101" rel="stylesheet">
-    <link href="/pymol-notes/css/fontawesome-all.min.css?1634243101" rel="stylesheet">
-    <link href="/pymol-notes/css/hybrid.css?1634243101" rel="stylesheet">
-    <link href="/pymol-notes/css/featherlight.min.css?1634243101" rel="stylesheet">
-    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1634243101" rel="stylesheet">
-    <link href="/pymol-notes/css/auto-complete.css?1634243101" rel="stylesheet">
-    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1634243101" rel="stylesheet">
-    <link href="/pymol-notes/css/theme.css?1634243101" rel="stylesheet">
-    <link href="/pymol-notes/css/hugo-theme.css?1634243101" rel="stylesheet">
+    <link href="/pymol-notes/css/nucleus.css?1634244201" rel="stylesheet">
+    <link href="/pymol-notes/css/fontawesome-all.min.css?1634244201" rel="stylesheet">
+    <link href="/pymol-notes/css/hybrid.css?1634244201" rel="stylesheet">
+    <link href="/pymol-notes/css/featherlight.min.css?1634244201" rel="stylesheet">
+    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1634244201" rel="stylesheet">
+    <link href="/pymol-notes/css/auto-complete.css?1634244201" rel="stylesheet">
+    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1634244201" rel="stylesheet">
+    <link href="/pymol-notes/css/theme.css?1634244201" rel="stylesheet">
+    <link href="/pymol-notes/css/hugo-theme.css?1634244201" rel="stylesheet">
     
-    <link href="/pymol-notes/css/custom.css?1634243101" rel="stylesheet">
+    <link href="/pymol-notes/css/custom.css?1634244201" rel="stylesheet">
 
-    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1634243101"></script>
+    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1634244201"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -145,14 +145,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1634243101"></script>
-<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1634243101"></script>
+<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1634244201"></script>
+<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1634244201"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dgoppenheimer.github.io\/pymol-notes\/";
     
 </script>
-<script type="text/javascript" src="/pymol-notes/js/search.js?1634243101"></script>
+<script type="text/javascript" src="/pymol-notes/js/search.js?1634244201"></script>
 
     
   </div>
@@ -856,13 +856,14 @@ gmx mdrun -deffnm npt
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -n index.ndx -o md_0_10.tpr
 gmx mdrun -deffnm md_0_10
-</code></pre></div><p>The 100 ps runs took $$\approx$$ 10 min. For the production MD run of 10 ns, expect:</p>
-<pre><code class="language-math" data-lang="math">\mathsf{10\,ns\times\cfrac{1000\,ps}{ns}\times\cfrac{10\,min}{100\,ps}\times\cfrac{1\,hr}{60\,min}=16.7\,hr}
-</code></pre><p>Note: to print the math, I used <a href="https://katex.org/docs/supported.html#style-color-size-and-font">K<!-- raw HTML omitted -->A<!-- raw HTML omitted -->T<!-- raw HTML omitted -->E<!-- raw HTML omitted -->X</a>. For inline math, use <code>$&lt;math here&gt;$</code> and for more complex math use fenced code blocks:</p>
-<pre><code>
-```math
+</code></pre></div><p>The 100 ps runs took \(\approx\) 10 min. For the production MD run of 10 ns, expect:</p>
+<p>\[
+\mathsf{10,ns\times\cfrac{1000,ps}{ns}\times\cfrac{10,min}{100,ps}\times\cfrac{1,hr}{60,min}=16.7,hr}
+\]</p>
+<p>Note: to print the math, I used <a href="http://docs.mathjax.org/en/latest/index.html">MathJax</a>. For inline math, use <code>\\(&lt;math here&gt;\\)</code> and for more complex math use:</p>
+<pre><code>\\[
 &lt;complex math here&gt;
-```
+\\]
 </code></pre>
 
 <footer class="footline">
@@ -1050,19 +1051,19 @@ gmx mdrun -deffnm md_0_10
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/pymol-notes/js/clipboard.min.js?1634243101"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1634243101"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1634243101"></script>
-    <script src="/pymol-notes/js/jquery.sticky.js?1634243101"></script>
-    <script src="/pymol-notes/js/featherlight.min.js?1634243101"></script>
-    <script src="/pymol-notes/js/highlight.pack.js?1634243101"></script>
+    <script src="/pymol-notes/js/clipboard.min.js?1634244201"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1634244201"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1634244201"></script>
+    <script src="/pymol-notes/js/jquery.sticky.js?1634244201"></script>
+    <script src="/pymol-notes/js/featherlight.min.js?1634244201"></script>
+    <script src="/pymol-notes/js/highlight.pack.js?1634244201"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1634243101"></script>
-    <script src="/pymol-notes/js/learn.js?1634243101"></script>
-    <script src="/pymol-notes/js/hugo-learn.js?1634243101"></script>
+    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1634244201"></script>
+    <script src="/pymol-notes/js/learn.js?1634244201"></script>
+    <script src="/pymol-notes/js/hugo-learn.js?1634244201"></script>
     
         
-            <script src="/pymol-notes/mermaid/mermaid.js?1634243101"></script>
+            <script src="/pymol-notes/mermaid/mermaid.js?1634244201"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
