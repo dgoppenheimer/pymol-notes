@@ -520,17 +520,16 @@ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -n index.ndx -o md_0_10.
 gmx mdrun -deffnm md_0_10
 ```
 
-The 100 ps runs took $$\approx$$ 10 min. For the production MD run of 10 ns, expect:
+The 100 ps runs took \\(\approx\\) 10 min. For the production MD run of 10 ns, expect:
 
-```math
+\\[
 \mathsf{10\,ns\times\cfrac{1000\,ps}{ns}\times\cfrac{10\,min}{100\,ps}\times\cfrac{1\,hr}{60\,min}=16.7\,hr}
-```
+\\]
 
-Note: to print the math, I used [K<sup>A</sup>T<sub>E</sub>X](https://katex.org/docs/supported.html#style-color-size-and-font). For inline math, use `$<math here>$` and for more complex math use fenced code blocks:
+Note: to print the math, I used [MathJax](http://docs.mathjax.org/en/latest/index.html). For inline math, use `\\(<math here>\\)` and for more complex math use:
 
 ````
-
-```math
+\\[
 <complex math here>
-```
+\\]
 ````
