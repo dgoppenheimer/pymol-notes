@@ -110,4 +110,4 @@ git push origin main
 
 ### Getting equations to display properly
 
-I use equations sometimes, and it is nice to have them display properly on webpages. I found this post on [MathJax support](https://bwaycer.github.io/hugo_tutorial.hugo/tutorials/mathjax/) in the Hugo documentation. I put the following `HTML` code in my `/layouts/partials/footer.html` file in the theme directory.
+I use equations sometimes, and it is nice to have them display properly on webpages. I found this post on [MathJax support](https://bwaycer.github.io/hugo_tutorial.hugo/tutorials/mathjax/) in the Hugo documentation. I put the following `HTML` code in my `/layouts/partials/footer.html` file.
