@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GROMACS Simulations on PyMOL Notes</title>
+    <link>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/</link>
+    <description>Recent content in GROMACS Simulations on PyMOL Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Oct 2021 15:41:22 -0400</lastBuildDate><atom:link href="https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
