@@ -1,10 +1,8 @@
 ---
-title: "Protein Ligand Tutorial"
+title: "Protein-Ligand Complex Tutorial"
 date: 2021-10-14T15:53:20-04:00
-draft: true
+draft: false
 ---
-
-# Protein-Ligand Complex
 
 This tutorial is from [this website](http://www.mdtutorials.com/gmx/complex/index.html).
 
@@ -522,7 +520,7 @@ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -n index.ndx -o md_0_10.
 gmx mdrun -deffnm md_0_10
 ```
 
-The 100 ps runs took $\approx$ 10 min. For the production MD run of 10 ns, expect:
+The 100 ps runs took $$\approx$$ 10 min. For the production MD run of 10 ns, expect:
 
 ```math
 \mathsf{10\,ns\times\cfrac{1000\,ps}{ns}\times\cfrac{10\,min}{100\,ps}\times\cfrac{1\,hr}{60\,min}=16.7\,hr}

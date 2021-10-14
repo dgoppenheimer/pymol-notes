@@ -89,8 +89,14 @@ cd ~/Sites/pymol-notes
 hugo new --kind chapter GROMACS-simulations/_index.md
 ```
 
-Open the new `_index.md` file and change the front matter and add some text. 
+- Open the new `_index.md` file and change the front matter and add some text.
+- Create some content:
 
+```zsh
+hugo new GROMACS-simulations/protein-ligand-tutorial.md
+```
+
+- Open `protein-ligand-tutorial.md` and paste in the contents of my research notes `.md` file.
 
 Save the files, and track them with `git`.
 
@@ -99,5 +105,5 @@ git status
 git add .
 git commit -m "added a new chapter on gromacs"
 # deploy the new pages
-git push origin/main
+git push origin main
 ```
