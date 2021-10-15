@@ -18,6 +18,8 @@ hugo new site pymol-notes
 
 I want to use the [Learn theme](https://themes.gohugo.io/theme/hugo-theme-learn/en/) for Hugo. It is a theme designed for documentation. It looks nice and is functional.
 
+This theme has tons of useful features. Check out the [Hugo Learn Theme documentation](https://learn.netlify.app/en/).
+
 The theme's repository is: [https://github.com/matcornic/hugo-theme-learn.git](https://github.com/matcornic/hugo-theme-learn.git).
 
 ```zsh
@@ -129,5 +131,5 @@ Success!
 For MathJax syntax, see these web pages:
 
 [MathJax Cheat Sheet](https://jojozhuang.github.io/tutorial/mathjax-cheat-sheet-for-mathematical-notation/)  
-[LaTeX Math Symbols cheat sheet](https://kapeli.com/cheat_sheets/LaTeX_Math_Symbols.docset/Contents/Resources/Documents/index)
-
+[LaTeX Math Symbols cheat sheet](https://kapeli.com/cheat_sheets/LaTeX_Math_Symbols.docset/Contents/Resources/Documents/index)  
+[Supported Katex Functions](https://katex.org/docs/supported.html)
