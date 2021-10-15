@@ -116,4 +116,18 @@ I use equations sometimes, and it is nice to have them display properly on webpa
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 ```
 
+For inline math, use `\\(<math here>\\)` and for more complex math use:
+
+````
+\\[
+<complex math here>
+\\]
+````
+
 Success!
+
+For MathJax syntax, see these web pages:
+
+[MathJax Cheat Sheet](https://jojozhuang.github.io/tutorial/mathjax-cheat-sheet-for-mathematical-notation/)  
+[LaTeX Math Symbols cheat sheet](https://kapeli.com/cheat_sheets/LaTeX_Math_Symbols.docset/Contents/Resources/Documents/index)
+
