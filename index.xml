@@ -15,8 +15,9 @@
       <guid>https://dgoppenheimer.github.io/pymol-notes/introduction/building-this-site/</guid>
       <description>I already have Hugo installed. I installed it using MacPorts.
 Create a project cd ~/Sites hugo new site pymol-notes Install the theme I want to use the Learn theme for Hugo. It is a theme designed for documentation. It looks nice and is functional.
+This theme has tons of useful features. Check out the Hugo Learn Theme documentation.
 The theme&amp;rsquo;s repository is: https://github.com/matcornic/hugo-theme-learn.git.
-cd pymol-notes git init git submodule add https://github.com/matcornic/hugo-theme-learn.git themes/hugo-theme-learn echo &amp;#39;theme = &amp;#34;hugo-theme-learn&amp;#34;&amp;#39; &amp;gt;&amp;gt; config.toml Configure the theme Open config.toml and add the following:</description>
+cd pymol-notes git init git submodule add https://github.</description>
     </item>
     
     <item>
