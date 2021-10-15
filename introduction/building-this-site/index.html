@@ -11,19 +11,19 @@
     <title>Building this site :: PyMOL Notes</title>
 
     
-    <link href="/pymol-notes/css/nucleus.css?1634245104" rel="stylesheet">
-    <link href="/pymol-notes/css/fontawesome-all.min.css?1634245104" rel="stylesheet">
-    <link href="/pymol-notes/css/hybrid.css?1634245104" rel="stylesheet">
-    <link href="/pymol-notes/css/featherlight.min.css?1634245104" rel="stylesheet">
-    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1634245104" rel="stylesheet">
-    <link href="/pymol-notes/css/auto-complete.css?1634245104" rel="stylesheet">
-    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1634245104" rel="stylesheet">
-    <link href="/pymol-notes/css/theme.css?1634245104" rel="stylesheet">
-    <link href="/pymol-notes/css/hugo-theme.css?1634245104" rel="stylesheet">
+    <link href="/pymol-notes/css/nucleus.css?1634303748" rel="stylesheet">
+    <link href="/pymol-notes/css/fontawesome-all.min.css?1634303748" rel="stylesheet">
+    <link href="/pymol-notes/css/hybrid.css?1634303748" rel="stylesheet">
+    <link href="/pymol-notes/css/featherlight.min.css?1634303748" rel="stylesheet">
+    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1634303748" rel="stylesheet">
+    <link href="/pymol-notes/css/auto-complete.css?1634303748" rel="stylesheet">
+    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1634303748" rel="stylesheet">
+    <link href="/pymol-notes/css/theme.css?1634303748" rel="stylesheet">
+    <link href="/pymol-notes/css/hugo-theme.css?1634303748" rel="stylesheet">
     
-    <link href="/pymol-notes/css/custom.css?1634245104" rel="stylesheet">
+    <link href="/pymol-notes/css/custom.css?1634303748" rel="stylesheet">
 
-    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1634245104"></script>
+    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1634303748"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -145,14 +145,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1634245104"></script>
-<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1634245104"></script>
+<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1634303748"></script>
+<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1634303748"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dgoppenheimer.github.io\/pymol-notes\/";
     
 </script>
-<script type="text/javascript" src="/pymol-notes/js/search.js?1634245104"></script>
+<script type="text/javascript" src="/pymol-notes/js/search.js?1634303748"></script>
 
     
   </div>
@@ -518,7 +518,14 @@ git push origin main
 </code></pre></div><h3 id="getting-equations-to-display-properly">Getting equations to display properly</h3>
 <p>I use equations sometimes, and it is nice to have them display properly on webpages. I found this post on <a href="https://bwaycer.github.io/hugo_tutorial.hugo/tutorials/mathjax/">MathJax support</a> in the Hugo documentation. I put the following <code>HTML</code> code in my <code>/layouts/partials/footer.html</code> file.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><p>Success!</p>
+</code></pre></div><p>For inline math, use <code>\\(&lt;math here&gt;\\)</code> and for more complex math use:</p>
+<pre><code>\\[
+&lt;complex math here&gt;
+\\]
+</code></pre><p>Success!</p>
+<p>For MathJax syntax, see these web pages:</p>
+<p><a href="https://jojozhuang.github.io/tutorial/mathjax-cheat-sheet-for-mathematical-notation/">MathJax Cheat Sheet</a><br>
+<a href="https://kapeli.com/cheat_sheets/LaTeX_Math_Symbols.docset/Contents/Resources/Documents/index">LaTeX Math Symbols cheat sheet</a></p>
 
 
 <footer class="footline">
@@ -706,20 +713,20 @@ git push origin main
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/pymol-notes/js/clipboard.min.js?1634245104"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1634245104"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1634245104"></script>
-    <script src="/pymol-notes/js/jquery.sticky.js?1634245104"></script>
-    <script src="/pymol-notes/js/featherlight.min.js?1634245104"></script>
-    <script src="/pymol-notes/js/highlight.pack.js?1634245104"></script>
+    <script src="/pymol-notes/js/clipboard.min.js?1634303748"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1634303748"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1634303748"></script>
+    <script src="/pymol-notes/js/jquery.sticky.js?1634303748"></script>
+    <script src="/pymol-notes/js/featherlight.min.js?1634303748"></script>
+    <script src="/pymol-notes/js/highlight.pack.js?1634303748"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1634245104"></script>
-    <script src="/pymol-notes/js/learn.js?1634245104"></script>
-    <script src="/pymol-notes/js/hugo-learn.js?1634245104"></script>
+    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1634303748"></script>
+    <script src="/pymol-notes/js/learn.js?1634303748"></script>
+    <script src="/pymol-notes/js/hugo-learn.js?1634303748"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
         
-            <script src="/pymol-notes/mermaid/mermaid.js?1634245104"></script>
+            <script src="/pymol-notes/mermaid/mermaid.js?1634303748"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
