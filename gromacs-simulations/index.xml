@@ -20,5 +20,16 @@
  Strip out the crystal waters, PO4, and BME.  awk &amp;#39;!(/HETATM/ &amp;amp;&amp;amp; /HOH/ || /HETATM/ &amp;amp;&amp;amp; /BME/ || /HETATM/ &amp;amp;&amp;amp; /PO4/)&amp;#39; 3htb.</description>
     </item>
     
+    <item>
+      <title>Analyze Trajectories in VMD</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/analyze-trajectories-in-vmd/</link>
+      <pubDate>Sun, 17 Oct 2021 13:45:18 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/analyze-trajectories-in-vmd/</guid>
+      <description>Useful information can be found on the following websites:
+Analyze your trajectory
+ Start VMD, open the Tk console and load the .gro file of the trajectory to analyze.  cd /Users/davidoppenheimer/Dropbox\ \(UFL\)/GROMACS/gromacs-prot-ligand-tutorial mol new md_0_10.gro  Then load the trajectory file into the previously loaded molecule.  In the VMD Main window, select the molecule. Go to File → Load Data into Molecule and choose the .xtc trajectory to load from the file browser.</description>
+    </item>
+    
   </channel>
 </rss>
