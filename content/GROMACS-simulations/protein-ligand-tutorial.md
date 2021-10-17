@@ -2,6 +2,8 @@
 title: "Protein-Ligand Complex Tutorial"
 date: 2021-10-14T15:53:20-04:00
 draft: false
+weight: 5
+
 ---
 
 This tutorial is from [this website](http://www.mdtutorials.com/gmx/complex/index.html).
@@ -526,10 +528,38 @@ The 100 ps runs took \\(\approx\\) 10 min. For the production MD run of 10 ns, e
 \mathsf{10\ ns\times\cfrac{1000\ ps}{ns}\times\cfrac{10\ min}{100\ ps}\times\cfrac{1\ hr}{60\ min}=16.7\ hr}
 \\]
 
-Note: to print the math, I used [MathJax](http://docs.mathjax.org/en/latest/index.html). For inline math, use `\\(<math here>\\)` and for more complex math use:
+Note: to print the math, I used [MathJax](http://docs.mathjax.org/en/latest/index.html).
 
-````
-\\[
-<complex math here>
-\\]
-````
+```zsh
+               Core t (s)   Wall t (s)        (%)
+       Time:   593342.460    74167.808      800.0
+                        20h36:07
+                 (ns/day)    (hour/ns)
+Performance:       11.649        2.060
+```
+
+## Step Nine: Analysis
+
+- To recenter the protein and rewrap the molecules within the unit cell to recover the desired rhombic dodecahedral shape, invoke `trjconv`:
+
+```zsh
+gmx trjconv -s md_0_10.tpr -f md_0_10.xtc -o md_0_10_center.xtc -center -pbc mol -ur compact
+```
+
+- Choose `Protein` for centering and `System` for output.
+-Extract the first frame (t = 0 ns) of the trajectory; use `trjconv -dump` with the recentered trajectory:
+
+
+```zsh
+gmx trjconv -s md_0_10.tpr -f md_0_10_center.xtc -o start.pdb -dump 0
+```
+
+- For even smoother visualization, it may be beneficial to perform rotational and translational fitting. Execute trjconv as follows:
+
+```zsh
+gmx trjconv -s md_0_10.tpr -f md_0_10_center.xtc -o md_0_10_fit.xtc -fit rot+trans
+```
+
+- Choose `Backbone` to perform least-squares fitting to the protein backbone, and "System" for output.
+
+
