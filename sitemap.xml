@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/introduction/</loc>
+    <lastmod>2020-09-22T13:21:40-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/protein-ligand-tutorial/</loc>
     <lastmod>2021-10-14T15:53:20-04:00</lastmod>
   </url>
@@ -18,13 +23,13 @@
   </url>
   
   <url>
-    <loc>https://dgoppenheimer.github.io/pymol-notes/introduction/</loc>
-    <lastmod>2020-09-22T13:21:40-04:00</lastmod>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/</loc>
+    <lastmod>2021-10-14T15:41:22-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/</loc>
-    <lastmod>2021-10-14T15:41:22-04:00</lastmod>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/vmd-notes/</loc>
+    <lastmod>2021-10-17T16:38:56-04:00</lastmod>
   </url>
   
   <url>
@@ -40,6 +45,11 @@
   <url>
     <loc>https://dgoppenheimer.github.io/pymol-notes/introduction/automatic-build-and-deploy/</loc>
     <lastmod>2020-10-09T20:22:44-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dgoppenheimer.github.io/pymol-notes/vmd-notes/vmd-scripting/</loc>
+    <lastmod>2021-10-17T17:02:04-04:00</lastmod>
   </url>
   
   <url>

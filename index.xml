@@ -77,6 +77,16 @@ fetch 3G6M, mol, async=0 extract caf1, /mol//A/CFF`427 h_add set valence, 0 hide
     </item>
     
     <item>
+      <title>VMD Scripting</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/vmd-notes/vmd-scripting/</link>
+      <pubDate>Sun, 17 Oct 2021 17:02:04 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/vmd-notes/vmd-scripting/</guid>
+      <description>VMD scripting is handy for executing command that you do often&amp;ndash;like preparing a molecule for a figure, or for carrying out certain analyses. When I use PyMOL, I have a set of scripts for coloring atoms and defining various representations so I don&amp;rsquo;t have to repeat these by hand each time I need them. In addition, there are useful scripts available for analyzing protein structure and trajectories.
+Scripting Resources Here are some web resources for scripting in VMD:</description>
+    </item>
+    
+    <item>
       <title>Customizing the Site</title>
       <link>https://dgoppenheimer.github.io/pymol-notes/introduction/customizing-the-site/</link>
       <pubDate>Fri, 09 Oct 2020 19:08:25 -0400</pubDate>
