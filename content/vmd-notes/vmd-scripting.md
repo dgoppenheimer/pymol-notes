@@ -16,11 +16,21 @@ From the VMD wiki:
 
 Other VMD scripting resources:  
 [VMD Script Library](https://www.ks.uiuc.edu/Research/vmd/script_library/)  
-Nice trajectory post-processing scripts: [Advanced VMD: Trajectories, movies, scripting](https://westgrid.github.io/trainingMaterials/materials/vmd20201028.pdf)  
 A few useful short scripts: [VMD](http://titin.abrol.csun.edu/abrollab/protocols/temp_docs/VMD.html)  
 [Resources](https://miaolab.ku.edu/resources.html)  
+
+{{% notice tip %}}
+I'll move the information below to an MD Analysis document.
+{{% /notice %}}
+
+Nice trajectory post-processing scripts: [Advanced VMD: Trajectories, movies, scripting](https://westgrid.github.io/trainingMaterials/materials/vmd20201028.pdf)  
 [MD-Task](https://github.com/RUBi-ZA/MD-TASK)  
 [MD-Task Documentation](https://md-task.readthedocs.io/en/latest/home.html)  
 [MDAnalysis](https://github.com/MDAnalysis/mdanalysis)  
 [STCSB](https://github.com/irisa-lab/STCSB)  
 [RIP-MD](https://github.com/DLab/RIP-MD)  
+[webPSN v2.0](http://webpsn.hpc.unimo.it/wpsn.php#Category-welcome)  
+[Geo-Measures](https://pymolwiki.org/index.php/Geo_Measures_Plugin.) This is a nice set of tools integrated into a PyMOL plugin.  
+
+[Side-chain network approach](https://www.frontiersin.org/articles/10.3389/fmolb.2020.596945/full)
+
