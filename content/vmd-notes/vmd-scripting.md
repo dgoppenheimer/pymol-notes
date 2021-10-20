@@ -19,18 +19,47 @@ Other VMD scripting resources:
 A few useful short scripts: [VMD](http://titin.abrol.csun.edu/abrollab/protocols/temp_docs/VMD.html)  
 [Resources](https://miaolab.ku.edu/resources.html)  
 
+Other useful structural biology resources:  
+[OpenStructure](https://www.openstructure.org/)  
+[SpotOn: High Accuracy Identification of Protein-Protein Interface Hot-Spots](https://alcazar.science.uu.nl/cgi/services/SPOTON/spoton/)
+
+
+From the [VMD wiki](https://www.ks.uiuc.edu/Research/vmd/current/ug/node97.html#SECTION00938300000000000000):
+
+
+>**Finding contact residues**
+>Suppose you want to view the atoms in A which are in contact with B. Use the within <distance> of <selection> selection command. For purposes of demonstration, let A be protein, B be nucleic, and define contact as an atom in A which is within 2 Å of an atom in B. Then the selection command is
+>
+>```tk
+>protein within 2 of nucleic
+>```
+>
+>If you want to see all the residues of A which have at least one atom in contact with B, use
+>
+>```tk
+>same residue as (protein within 2 of nucleic)
+>```
+
+[mono2poly 1.0 script](http://www.ks.uiuc.edu/Research/vmd/script_library/scripts/mono2poly/)  
+This script takes a monomer from an asymmetric unit of a crystal structure and makes the appropriate translations as found in the `.pdb` header to get the full polymer.
+
 {{% notice tip %}}
-I'll move the information below to an MD Analysis document.
+The `mono2poly.tcl` script strips out ligands and other hetero atoms.
 {{% /notice %}}
 
-Nice trajectory post-processing scripts: [Advanced VMD: Trajectories, movies, scripting](https://westgrid.github.io/trainingMaterials/materials/vmd20201028.pdf)  
-[MD-Task](https://github.com/RUBi-ZA/MD-TASK)  
-[MD-Task Documentation](https://md-task.readthedocs.io/en/latest/home.html)  
-[MDAnalysis](https://github.com/MDAnalysis/mdanalysis)  
-[STCSB](https://github.com/irisa-lab/STCSB)  
-[RIP-MD](https://github.com/DLab/RIP-MD)  
-[webPSN v2.0](http://webpsn.hpc.unimo.it/wpsn.php#Category-welcome)  
-[Geo-Measures](https://pymolwiki.org/index.php/Geo_Measures_Plugin.) This is a nice set of tools integrated into a PyMOL plugin.  
 
-[Side-chain network approach](https://www.frontiersin.org/articles/10.3389/fmolb.2020.596945/full)
+How to use:
 
+```tk
+source mono2poly.tcl
+mol delete all
+mol new 1c8e.pdb
+set sel [atomselect top all]
+set matrix [parsematrix 1c8e.pdb]
+mono2poly -o outname $sel $matrix
+```
+
+An alternative to the `mono2poly.tcl` script to build the biological assembly from a monomer in the asymmetric unit is to:
+
+1. download the biological assembly file from `RCSB`.
+2. Go into the *Trajectory* tab and change the *Draw Multiple Frames:* value to `0.20` for a dimer, or `0.30` for a trimer, etc.
