@@ -3,7 +3,7 @@ title: "Protein-Ligand Complex Tutorial"
 date: 2021-10-14T15:53:20-04:00
 draft: false
 weight: 5
-
+tags: ["tutorial"] 
 ---
 
 This tutorial is from [this website](http://www.mdtutorials.com/gmx/complex/index.html).

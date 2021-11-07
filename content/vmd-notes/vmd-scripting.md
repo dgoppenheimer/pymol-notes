@@ -2,6 +2,7 @@
 title: "VMD Scripting"
 date: 2021-10-17T17:02:04-04:00
 draft: false
+lastmodifierdisplayname: DGO
 ---
 
 VMD scripting is handy for executing command that you do often--like preparing a molecule for a figure, or for carrying out certain analyses. When I use PyMOL, I have a set of scripts for coloring atoms and defining various representations so I don't have to repeat these by hand each time I need them. In addition, there are useful scripts available for analyzing protein structure and trajectories.
@@ -63,3 +64,42 @@ An alternative to the `mono2poly.tcl` script to build the biological assembly fr
 
 1. download the biological assembly file from `RCSB`.
 2. Go into the *Trajectory* tab and change the *Draw Multiple Frames:* value to `0.20` for a dimer, or `0.30` for a trimer, etc.
+
+
+{{% notice info %}}
+With the above alternative, I cannot select residues on each monomer--I  can only select residues on one monomer, and each monomer is labeled chain A.
+{{% /notice %}}
+
+Here is another script to create a biological assembly from a `.pdb` file:
+
+[mergemultiframepdb 1.0](http://www.ks.uiuc.edu/Research/vmd/script_library/scripts/mergemultiframepdb/)
+
+EXAMPLE USAGE:
+
+```tcl
+source mergemultiframepdb.tcl # the script is in the working directory
+mol delete all
+mol new 2cft.pdb # the multi-frame .pdb file
+merge_multi_frame_structure top /tmp/ 2cft-poly
+
+# Results will be written to /my/final/filename.psf and /my/final/filename.pdb
+```
+
+{{% notice info %}}
+The above script fails if your protein has a ligand.
+{{% /notice %}}
+
+
+[check out this site](https://chryswoods.com/dynamics/visualisation/comparing.html)
+
+Try [TopoTools](https://sites.google.com/site/akohlmey/software/topotools)
+
+This is probably the best way: I could use grep or awk or just do it by hand:
+
+[preparing a dimeric protein for NAMD](https://www.ks.uiuc.edu/Research/namd/mailing_list/namd-l.2005-2006/1573.html)
+
+build section of main menu and use the pdb scan function. ( I can't find it)
+
+
+
+

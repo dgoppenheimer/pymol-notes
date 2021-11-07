@@ -2,6 +2,8 @@ baseURL = "https://dgoppenheimer.github.io/pymol-notes/"
 languageCode = "en-us"
 title = "PyMOL Notes"
 theme = "hugo-theme-learn"
+enableGitInfo = true
+
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
@@ -9,3 +11,15 @@ home = [ "HTML", "RSS", "JSON"]
 [params]
     custom_css = ["css/custom.css"]
     disableInlineCopyToClipBoard = true 
+    DateForm = "02 Jan 2006"
+    LastModifierDisplayName = true
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tags'></i> Tags"
+url = "/tags"
+weight = 30
+
+[frontmatter]
+
+  lastmod = ["lastmod", ":git", "date", "publishDate"]
+
