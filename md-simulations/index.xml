@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MD Simulations on PyMOL Notes</title>
+    <link>https://dgoppenheimer.github.io/pymol-notes/md-simulations/</link>
+    <description>Recent content in MD Simulations on PyMOL Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Oct 2021 14:27:51 -0400</lastBuildDate><atom:link href="https://dgoppenheimer.github.io/pymol-notes/md-simulations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making It Rain</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/md-simulations/making-it-rain/</link>
+      <pubDate>Fri, 29 Oct 2021 19:20:18 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/md-simulations/making-it-rain/</guid>
+      <description>Making it rain 1 is a front end for running molecular dynamics simulations using cloud-based resources. It makes use of the OpenMM toolkit, Google Colab framework, and Jupyter notebooks.
+Before I start running MD simulations in Colab, I will start with some Colab-Jupyter tutorials outlined in the paper by Engelberger et al. (2021) 2. These tutorials are available from the Cloud-based Tutorials on Structural Bioinformatics github repository.
+PyRosetta notebooks PyRosetta Google Drive Setup First follow these instructions:</description>
+    </item>
+    
+    <item>
+      <title>MD Notes</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/md-simulations/md-notes/</link>
+      <pubDate>Fri, 29 Oct 2021 11:36:52 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/md-simulations/md-notes/</guid>
+      <description>Common software GROMACS CHARMM CHARMM Tutorials
+AMBER NAMD ABINIT for free energy calculations
+DL_POLY
+Making it rain: Cloud-based molecular simulations for everyone
+Force fields Force fields for small molecules There is a recent paper that covers this topic by Lin and MacKerell 1, Force fields for small molecules.
+OPLS-All-Atom (OPLS-AA)
+OPLS3
+CHARMM General force field (CGenFF) see ParamChem
+General AMBER Force Field (GAFF)
+Merck Molecular Force Field (MMFF)
+GROMOS
+Drude Polarizable Force Field for Small Organic Molecules</description>
+    </item>
+    
+  </channel>
+</rss>

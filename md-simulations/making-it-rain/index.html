@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.75.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/pymol-notes/images/favicon2.png">
+    <title>Making It Rain :: PyMOL Notes</title>
+
+    
+    <link href="/pymol-notes/css/nucleus.css?1636300918" rel="stylesheet">
+    <link href="/pymol-notes/css/fontawesome-all.min.css?1636300918" rel="stylesheet">
+    <link href="/pymol-notes/css/hybrid.css?1636300918" rel="stylesheet">
+    <link href="/pymol-notes/css/featherlight.min.css?1636300918" rel="stylesheet">
+    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1636300918" rel="stylesheet">
+    <link href="/pymol-notes/css/auto-complete.css?1636300918" rel="stylesheet">
+    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1636300918" rel="stylesheet">
+    <link href="/pymol-notes/css/theme.css?1636300918" rel="stylesheet">
+    <link href="/pymol-notes/css/hugo-theme.css?1636300918" rel="stylesheet">
+    
+    <link href="/pymol-notes/css/custom.css?1636300918" rel="stylesheet">
+
+    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1636300918"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+
+  </head>
+  <body class="" data-url="/pymol-notes/md-simulations/making-it-rain/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://dgoppenheimer.github.io/pymol-notes/">
+  <svg id="caffeine-logo-outline" width="100%" height="100%" viewBox="0 0 1040 312" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(0.764771,0,0,0.744101,-32.0841,-121.612)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.65px;"/>
+    </g>
+    <g id="_6" serif:id="6" transform="matrix(0.829282,0.479376,-0.411528,0.711911,168.902,-6.21961)">
+        <path d="M32.191,62.08L32.191,29.223L32.2,29.223C32.378,26.308 35.144,23.99 38.525,23.99C41.906,23.99 44.672,26.308 44.85,29.223L44.878,29.223L44.878,62.08L32.191,62.08Z" style="fill:white;stroke:black;stroke-width:2.24px;"/>
+    </g>
+    <g transform="matrix(0.760029,0,0,0.739487,-142.881,-82.277)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.67px;"/>
+    </g>
+    <g id="_4" serif:id="4" transform="matrix(0.699686,-0.555279,0.62164,0.783303,45.363,66.3373)">
+        <path d="M32.191,62.08L32.191,29.223L32.2,29.223C32.378,26.308 35.144,23.99 38.525,23.99C41.906,23.99 44.672,26.308 44.85,29.223L44.878,29.223L44.878,62.08L32.191,62.08Z" style="fill:white;stroke:black;stroke-width:2.11px;"/>
+    </g>
+    <g transform="matrix(0.760029,0,0,0.739487,-118.801,-48.7379)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.67px;"/>
+    </g>
+    <g transform="matrix(-0.240085,-0.605011,0.826443,-0.327955,148.871,309.168)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.57px;"/>
+    </g>
+    <g id="_2" serif:id="2" transform="matrix(0.70757,0.429003,-0.518455,0.855105,-117.446,17.7458)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.18px;"/>
+    </g>
+    <g transform="matrix(1.11188,0,0,1.08183,-290.168,75.865)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:1.82px;"/>
+    </g>
+    <g transform="matrix(0.878487,0,0,0.854744,-94.7963,-93.444)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.31px;"/>
+    </g>
+    <g transform="matrix(0.547176,-0.458574,0.423215,0.504985,-34.1273,196.882)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.91px;"/>
+    </g>
+    <g transform="matrix(1.01192,2.80863e-17,0,0.984566,-97.6956,-74.902)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(-0.0285174,-0.819867,1.06581,-0.0370719,165.108,385.33)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.1px;"/>
+    </g>
+    <g transform="matrix(0.70757,0.429003,-0.518455,0.855105,-7.24693,-65.4796)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.18px;"/>
+    </g>
+    <g id="CH3-1" serif:id="CH3 1" transform="matrix(1.17376,0,0,1.17376,43.502,-29.2485)">
+        <circle cx="262.111" cy="60.363" r="24.489" style="fill:white;stroke:black;stroke-width:1.7px;"/>
+    </g>
+    <g id="CH3-1-bond" serif:id="CH3 1 bond" transform="matrix(0.622796,0.626812,-0.709376,0.70483,171.918,-195.059)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.12px;"/>
+    </g>
+    <g transform="matrix(0.760029,0,0,0.739487,-205.93,22.6848)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.67px;"/>
+    </g>
+    <g id="_41" serif:id="4" transform="matrix(-0.296288,-0.938557,0.953611,-0.301041,19.6417,205.455)">
+        <path d="M32.191,62.08L32.191,29.223L32.2,29.223C32.378,26.308 35.144,23.99 38.525,23.99C41.906,23.99 44.672,26.308 44.85,29.223L44.878,29.223L44.878,62.08L32.191,62.08Z" style="fill:white;stroke:black;stroke-width:2.02px;"/>
+    </g>
+    <g transform="matrix(0.566775,0.35118,-0.526701,0.850051,-54.0496,-65.8967)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.35px;"/>
+    </g>
+    <g transform="matrix(0.899721,0,0,0.875404,-196.676,-16.5331)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.25px;"/>
+    </g>
+    <g transform="matrix(1.0277,-0.387797,0.27634,0.732324,29.4297,156.791)">
+        <path d="M32.191,62.08L32.191,29.223L32.2,29.223C32.378,26.308 35.144,23.99 38.525,23.99C41.906,23.99 44.672,26.308 44.85,29.223L44.878,29.223L44.878,62.08L32.191,62.08Z" style="fill:white;stroke:black;stroke-width:2.1px;"/>
+    </g>
+    <g transform="matrix(0.922596,0,0,0.897661,-183.913,30.0555)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:2.2px;"/>
+    </g>
+    <g transform="matrix(-0.158165,-0.798561,0.872193,-0.172749,104.447,474.397)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.35px;"/>
+    </g>
+    <g transform="matrix(1.06849,0,0,1.03962,-158.416,-10.7868)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:1.9px;"/>
+    </g>
+    <g transform="matrix(1.0964,0,0,1.08673,-31.5746,-16.6491)">
+        <circle cx="287.026" cy="114.324" r="23.072" style="fill:white;stroke:black;stroke-width:1.83px;"/>
+    </g>
+    <g transform="matrix(-0.591525,-0.86277,0.824768,-0.565471,374.023,552.818)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:1.95px;"/>
+    </g>
+    <g transform="matrix(0.935355,-0.196148,0.193993,0.925079,-37.1528,127.271)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:2.1px;"/>
+    </g>
+    <g transform="matrix(1.26533,0,0,1.23113,-78.4456,-49.9484)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:1.6px;"/>
+    </g>
+    <g transform="matrix(0.653147,-0.675499,0.766673,0.741304,-92.2011,375.455)">
+        <path d="M322.123,65.96C322.39,63.674 326.539,61.856 331.609,61.856C336.68,61.856 340.828,63.674 341.095,65.96L341.137,65.96L341.137,121.923L322.109,121.923L322.109,65.96L322.123,65.96Z" style="fill:white;stroke:black;stroke-width:1.99px;"/>
+    </g>
+    <g transform="matrix(1.14281,0,0,1.11192,-126.282,28.2889)">
+        <circle cx="298.705" cy="190.787" r="25.319" style="fill:white;stroke:black;stroke-width:1.77px;"/>
+    </g>
+    <path id="PyMOL-Notes" serif:id="PyMOL Notes" fill="#fff" d="M500.288,197.431C484.988,197.431 473.138,202.381 465.788,213.481L465.788,198.631C463.928,189.726 452.426,190.757 451.388,198.631L451.388,303.631C452.134,312.327 465.308,312.84 466.388,303.631L466.388,244.081C466.388,221.431 478.688,210.781 497.288,210.781C514.688,210.781 525.638,221.131 525.638,241.831L525.638,303.631C527.238,312.206 538.897,312.19 540.488,303.631L540.488,241.381C540.488,212.881 525.188,197.431 500.288,197.431ZM698.588,288.631C695.588,291.031 691.538,292.381 687.338,292.381C679.238,292.381 674.888,287.581 674.888,279.031L674.888,235.981L697.688,235.981C703.48,235.789 705.644,225.687 697.688,224.131L674.888,224.131L674.888,206.731C673.767,197.972 661.4,198.426 660.488,206.731L660.488,279.631C660.488,295.681 669.638,304.531 685.688,304.531C692.138,304.531 698.738,302.731 703.088,298.981C710.3,292.883 702.668,285.644 698.588,288.631ZM829.388,304.531C850.538,304.531 863.738,295.381 863.738,280.981C863.738,250.081 813.338,265.381 813.338,246.631C813.338,240.331 819.488,235.681 832.088,235.681C839.888,235.681 847.838,237.331 855.038,241.981C861.826,244.309 866.724,236.109 861.188,230.581C854.288,226.081 842.588,223.381 832.238,223.381C811.838,223.381 799.088,232.981 799.088,247.231C799.088,278.881 849.338,263.431 849.338,281.281C849.338,288.031 843.788,292.081 830.438,292.081C820.088,292.081 809.288,288.631 802.538,283.831C796.024,281.292 789.688,289.96 796.538,295.231C803.138,300.481 816.188,304.531 829.388,304.531ZM752.138,291.931C738.788,291.931 728.888,285.631 724.838,274.681L787.988,262.381C787.538,238.681 770.588,223.381 748.838,223.381C725.738,223.381 708.938,240.331 708.938,263.881C708.938,287.581 726.038,304.531 751.688,304.531C764.888,304.531 775.838,300.031 782.888,291.631C788.69,284.56 779.994,278.272 775.088,282.331C769.238,288.781 761.438,291.931 752.138,291.931ZM601.538,304.531C625.388,304.531 642.788,287.581 642.788,263.881C642.788,240.181 625.388,223.381 601.538,223.381C577.688,223.381 560.138,240.181 560.138,263.881C560.138,287.581 577.688,304.531 601.538,304.531ZM601.538,291.931C586.238,291.931 574.688,280.831 574.688,263.881C574.688,246.931 586.238,235.981 601.538,235.981C616.838,235.981 628.238,246.931 628.238,263.881C628.238,280.831 616.838,291.931 601.538,291.931ZM748.838,235.531C761.738,235.531 771.188,243.631 773.738,255.031L722.888,264.631L722.888,263.131C722.888,246.481 733.688,235.531 748.838,235.531ZM614.288,32.514L614.288,69.414C614.288,86.514 604.688,95.814 589.688,95.814C576.038,95.814 568.238,88.014 568.238,72.564L568.238,32.514C566.492,23.684 554.781,24.826 553.838,32.514L553.838,74.214C553.838,97.614 567.488,108.714 588.038,108.714C598.838,108.714 608.438,104.514 614.288,96.864L614.288,102.714C614.288,120.714 606.488,129.264 588.938,129.264C577.838,129.264 567.488,125.364 560.588,119.064C551.693,114.581 547.467,125.798 553.538,130.164C561.938,137.964 575.888,142.014 589.688,142.014C615.338,142.014 628.688,129.264 628.688,101.214L628.688,32.514C628.005,24.414 615.251,23.721 614.288,32.514ZM769.988,5.814C754.538,5.814 741.788,12.114 735.188,23.364C729.788,12.414 718.238,5.814 702.488,5.814C687.338,5.814 675.788,11.964 669.638,22.314L669.638,7.014C668.628,-1.534 656.086,-0.957 655.238,7.014L655.238,112.014C656.724,121.451 669.424,120.719 670.238,112.014L670.238,49.314C670.238,28.164 682.238,19.164 698.888,19.164C714.188,19.164 724.388,28.014 724.388,47.214L724.388,112.014C725.513,120.567 737.957,120.941 739.238,112.014L739.238,49.314C739.238,28.164 750.938,19.164 767.438,19.164C782.588,19.164 793.688,28.014 793.688,47.214L793.688,112.014C794.786,120.366 806.889,121.447 808.538,112.014L808.538,46.764C808.538,19.764 793.838,5.814 769.988,5.814ZM492.338,7.014L451.388,7.014L451.42,112.017C452.788,120.86 464.971,121.277 466.404,112.02L466.388,80.214L492.338,80.214C519.638,80.214 536.138,66.414 536.138,43.614C536.138,20.814 519.638,7.014 492.338,7.014ZM883.688,113.214C915.638,113.214 939.338,90.414 939.338,59.514C939.338,28.614 915.638,5.814 883.688,5.814C851.438,5.814 827.738,28.764 827.738,59.514C827.738,90.264 851.438,113.214 883.688,113.214ZM959.288,112.014L1031.14,112.014C1039.92,111.083 1038.33,99.101 1031.14,98.964L974.288,98.964L974.288,7.014C972.93,-1.555 960.903,-1.635 959.288,7.014L959.288,112.014ZM883.688,99.864C860.138,99.864 842.738,82.764 842.738,59.514C842.738,36.264 860.138,19.164 883.688,19.164C906.938,19.164 924.338,36.264 924.338,59.514C924.338,82.764 906.938,99.864 883.688,99.864ZM491.888,67.164L466.388,67.164L466.388,20.064L491.888,20.064C511.088,20.064 521.138,28.614 521.138,43.614C521.138,58.614 511.088,67.164 491.888,67.164Z" style="fill-rule:nonzero;"/>
+</svg>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1636300918"></script>
+<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1636300918"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/dgoppenheimer.github.io\/pymol-notes\/";
+    
+</script>
+<script type="text/javascript" src="/pymol-notes/js/search.js?1636300918"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/pymol-notes/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/pymol-notes/introduction/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/introduction/building-this-site/" title="Building this site" class="dd-item ">
+        <a href="/pymol-notes/introduction/building-this-site/">
+        Building this site
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/introduction/hosting-the-site-on-github/" title="Hosting the Site on Github" class="dd-item ">
+        <a href="/pymol-notes/introduction/hosting-the-site-on-github/">
+        Hosting the Site on Github
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/introduction/creating-a-logo/" title="Creating a Logo" class="dd-item ">
+        <a href="/pymol-notes/introduction/creating-a-logo/">
+        Creating a Logo
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/introduction/automatic-build-and-deploy/" title="Automatic Build and Deploy using GitHub Actions" class="dd-item ">
+        <a href="/pymol-notes/introduction/automatic-build-and-deploy/">
+        Automatic Build and Deploy using GitHub Actions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/introduction/hugo-basics/" title="Hugo Basics" class="dd-item ">
+        <a href="/pymol-notes/introduction/hugo-basics/">
+        Hugo Basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/introduction/customizing-the-site/" title="Customizing the Site" class="dd-item ">
+        <a href="/pymol-notes/introduction/customizing-the-site/">
+        Customizing the Site
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/pymol-notes/md-simulations/" title="MD Simulations" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/pymol-notes/md-simulations/">
+          <b>2. </b>MD Simulations
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/md-simulations/making-it-rain/" title="Making It Rain" class="dd-item active">
+        <a href="/pymol-notes/md-simulations/making-it-rain/">
+        Making It Rain
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/md-simulations/md-notes/" title="MD Notes" class="dd-item ">
+        <a href="/pymol-notes/md-simulations/md-notes/">
+        MD Notes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/pymol-notes/md-simulations/gromacs-simulations/" title="GROMACS Simulations" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/pymol-notes/md-simulations/gromacs-simulations/">
+          GROMACS Simulations
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/md-simulations/gromacs-simulations/protein-ligand-tutorial/" title="Protein-Ligand Complex Tutorial" class="dd-item ">
+        <a href="/pymol-notes/md-simulations/gromacs-simulations/protein-ligand-tutorial/">
+        Protein-Ligand Complex Tutorial
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/md-simulations/gromacs-simulations/analyze-trajectories-in-vmd/" title="Analyze Trajectories in VMD" class="dd-item ">
+        <a href="/pymol-notes/md-simulations/gromacs-simulations/analyze-trajectories-in-vmd/">
+        Analyze Trajectories in VMD
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/pymol-notes/vmd-notes/" title="VMD Notes" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/pymol-notes/vmd-notes/">
+          <b>3. </b>VMD Notes
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/vmd-notes/vmd-scripting/" title="VMD Scripting" class="dd-item ">
+        <a href="/pymol-notes/vmd-notes/vmd-scripting/">
+        VMD Scripting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/pymol-notes/jupyter-notebooks/" title="Jupyter Notebooks" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/pymol-notes/jupyter-notebooks/">
+          <b>4. </b>Jupyter Notebooks
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/jupyter-notebooks/installing-jupyter/" title="Installing Jupyter" class="dd-item ">
+        <a href="/pymol-notes/jupyter-notebooks/installing-jupyter/">
+        Installing Jupyter
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/pymol-notes/molecular-modeling-tutorials/" title="Molecular Modeling Tutorials" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/pymol-notes/molecular-modeling-tutorials/">
+          <b>5. </b>Molecular Modeling Tutorials
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/pymol-notes/molecular-modeling-tutorials/lab.00-software/" title="Lab.00 Software" class="dd-item ">
+        <a href="/pymol-notes/molecular-modeling-tutorials/lab.00-software/">
+        Lab.00 Software
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://dgoppenheimer.github.io/pymol-notes/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/md-simulations/'>MD Simulations</a> > Making It Rain
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#pyrosetta-notebooks">PyRosetta notebooks</a>
+      <ul>
+        <li><a href="#pyrosetta-google-drive-setup">PyRosetta Google Drive Setup</a></li>
+        <li><a href="#install-extensions">Install extensions</a></li>
+      </ul>
+    </li>
+    <li><a href="#p3lab-ibm3202tutorials">p3lab (IBM3202)tutorials</a>
+      <ul>
+        <li><a href="#lab00-software">Lab.00 Software</a></li>
+        <li><a href="#installation-of-gromacs">Installation of GROMACS</a></li>
+      </ul>
+    </li>
+    <li><a href="#installing-gromacs">Installing GROMACS</a>
+      <ul>
+        <li><a href="#backup-gromacs-to-google-drive">Backup GROMACS to Google Drive</a></li>
+        <li><a href="#installation-of-sbm-enhanced-gromacs">Installation of SBM-enhanced GROMACS</a></li>
+        <li><a href="#colab-tips">Colab tips</a></li>
+        <li><a href="#lab01-warmup">Lab.01 warmup</a></li>
+      </ul>
+    </li>
+    <li><a href="#resources-for-data-visualization">Resources for data visualization</a>
+      <ul>
+        <li><a href="#seaborn">Seaborn</a></li>
+        <li><a href="#pandas">Pandas</a></li>
+      </ul>
+    </li>
+    <li><a href="#data-science-tutorials">Data science tutorials</a>
+      <ul>
+        <li><a href="#nbpages">nbpages</a></li>
+        <li><a href="#intalling-nbextensions">Intalling <code>nbextensions</code></a></li>
+        <li><a href="#installation-of-pyrosetta">Installation of PyRosetta</a></li>
+        <li><a href="#avoiding-colab-timeouts">Avoiding colab timeouts</a></li>
+        <li><a href="#adding-css-to-colab-notebooks">Adding CSS to colab notebooks</a></li>
+        <li><a href="#other-online-jupyter-notebook-environments">Other online jupyter notebook environments</a></li>
+        <li><a href="#installing-conda-on-colab">Installing <code>conda</code> on <code>colab</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Making It Rain
+            </h1>
+          
+
+        
+
+
+<p>Making it rain <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> is a front end for running molecular dynamics simulations using cloud-based resources. It makes use of the <a href="https://openmm.org/">OpenMM toolkit</a>, <a href="https://colab.research.google.com/">Google Colab framework</a>, and <a href="https://jupyter.org/index.html">Jupyter notebooks</a>.</p>
+<p>Before I start running MD simulations in Colab, I will start with some Colab-Jupyter tutorials outlined in the paper by Engelberger et al. (2021) <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. These tutorials are available from the <a href="https://github.com/pb3lab/ibm3202">Cloud-based Tutorials on Structural Bioinformatics github repository</a>.</p>
+<h2 id="pyrosetta-notebooks">PyRosetta notebooks</h2>
+<h3 id="pyrosetta-google-drive-setup">PyRosetta Google Drive Setup</h3>
+<p>First follow these instructions:</p>
+<ul>
+<li>Visit the <a href="https://github.com/RosettaCommons/PyRosetta.notebooks">RosettaCommons/PyRosetta.notebooks github page</a>.</li>
+<li>Click on <a href="https://nbviewer.org/github/RosettaCommons/PyRosetta.notebooks/blob/master/notebooks/01.00-How-to-Get-Started.ipynb">Chapter 1: How to get started</a>.</li>
+<li><strong>Change to the Google work account</strong></li>
+<li>(Step 1) Get the PyRosetta License.</li>
+<li>Mount Google Drive.</li>
+<li>(Step 2) Copy the <code>01.00-How-to-Get-Started.ipynb</code> notebook to your google drive.</li>
+<li>Rename the copy to <code>01.00-How-to-Get-Started-dgo.ipynb</code>.</li>
+<li>(Step 3) Run the first two cells in the <code>01.00-How-to-Get-Started-dgo.ipynb</code> jupyter notebook.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PyRosetta installed at <span style="color:#e6db74">&#39;prefix&#39;</span>... Please click <span style="color:#e6db74">&#34;Runtime → Restart runtime&#34;</span> before using it.
+</code></pre></div><p>Success!</p>
+<ul>
+<li>Run the code in cell 2.</li>
+</ul>
+<p>Success!</p>
+<h3 id="install-extensions">Install extensions</h3>
+<ul>
+<li>(Step 4) Run the cell with the following code:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">if</span> not os.getenv<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;DEBUG&#34;</span><span style="color:#f92672">)</span>:
+    !pip install attrs billiard biopython blosc dask dask-jobqueue distributed GitPython graphviz jupyter matplotlib numpy pandas py3Dmol scipy seaborn traitlets --user
+</code></pre></div><p>I got the following error:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">NameError: name <span style="color:#e6db74">&#39;os&#39;</span> is not defined
+</code></pre></div><p>Add the following to the code at the top:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">import os
+</code></pre></div><p>Success!</p>
+<p>Now I will try the <a href="https://github.com/pb3lab/ibm3202">Cloud-based Tutorials on Structural Bioinformatics</a>.</p>
+<hr>
+<h2 id="p3lab-ibm3202tutorials">p3lab (IBM3202)tutorials</h2>
+<h3 id="lab00-software">Lab.00 Software</h3>
+<ul>
+<li>Go to the <a href="https://github.com/pb3lab/ibm3202">Cloud-based Tutorials on Structural Bioinformatics github repository</a>.</li>
+<li>Choose Lab.00 and Open in Colab.</li>
+<li><strong>change account to work account</strong></li>
+<li>Copy the notebook to Google Drive and rename it <code>lab00_software-dgo.ipynb</code>.</li>
+<li>Setting up PyRosetta: follow instructions.</li>
+<li>Update the minor version information in the code. I changed</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">if</span> sys<span style="color:#f92672">.</span>version_info<span style="color:#f92672">.</span>major <span style="color:#f92672">!=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">or</span> sys<span style="color:#f92672">.</span>version_info<span style="color:#f92672">.</span>minor <span style="color:#f92672">!=</span> <span style="color:#ae81ff">6</span>:
+</code></pre></div><p>to</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">if</span> sys<span style="color:#f92672">.</span>version_info<span style="color:#f92672">.</span>major <span style="color:#f92672">!=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">or</span> sys<span style="color:#f92672">.</span>version_info<span style="color:#f92672">.</span>minor <span style="color:#f92672">!=</span> <span style="color:#ae81ff">7</span>:
+</code></pre></div><p>I also needed to change the version downloaded to:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">http:<span style="color:#f92672">//</span>graylab<span style="color:#f92672">.</span>jhu<span style="color:#f92672">.</span>edu<span style="color:#f92672">/</span>download<span style="color:#f92672">/</span>PyRosetta4<span style="color:#f92672">/</span>archive<span style="color:#f92672">/</span>release<span style="color:#f92672">/</span>PyRosetta4<span style="color:#f92672">.</span>MinSizeRel<span style="color:#f92672">.</span>python37<span style="color:#f92672">.</span>linux<span style="color:#f92672">/</span>PyRosetta4<span style="color:#f92672">.</span>MinSizeRel<span style="color:#f92672">.</span>python37<span style="color:#f92672">.</span>linux<span style="color:#f92672">.</span>release<span style="color:#f92672">-</span><span style="color:#ae81ff">300.</span>tar<span style="color:#f92672">.</span>bz2   
+</code></pre></div><p>Success! File is downloading.</p>
+
+<div class="notices info" ><p>I&rsquo;m not sure why the instructions say to follow the PyRosetta installation from the PyRosetta notebooks, then install it again, here. It appeared to be already installed in a <code>prefix</code> directory from my first installation attempt.</p>
+</div>
+
+<p>I saw a fatal error early in the running of the script in the output cell. However, the streaming was truncated to the last 5000 lines, and I cannot find where the log files (if any) are located. The error had something to do with <code>.pth</code> files. The installation appeared to succeed&ndash;it ended with <code>PyRosetta setup took: 687.3s...</code>, which is the last line of the script.</p>
+<p>I ran the checks for PyRosetta and the scripts ran without problems. There was one user warning:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Import of <span style="color:#e6db74">&#39;rosetta&#39;</span> as a top-level module is deprecated and may be removed in 2018, import via <span style="color:#e6db74">&#39;pyrosetta.rosetta&#39;</span>.
+  This is separate from the ipykernel package so we can avoid doing imports <span style="color:#66d9ef">until</span>
+</code></pre></div><p>It looks like the warning was truncated.</p>
+<p><a href="https://www.rosettacommons.org/node/11238">From this site</a></p>
+<blockquote>
+<p>As a result changing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> rosetta <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> pyrosetta <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> rosetta.protocols.rigid <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</code></pre></div><p>to</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> pyrosetta.rosetta <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> pyrosetta <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> pyrosetta.rosetta.protocols.rigid <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</code></pre></div></blockquote>
+<p>In my case:</p>
+<p>Consider changing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> pyrosetta <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> rosetta.protocols.rosetta_scripts <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> pyrosetta <span style="color:#f92672">import</span> (
+</code></pre></div><p>to</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> pyrosetta <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> pyrosetta.rosetta.protocols.rosetta_scripts <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> pyrosetta <span style="color:#f92672">import</span> (
+</code></pre></div><h3 id="installation-of-gromacs">Installation of GROMACS</h3>
+<ul>
+<li>Follow the instructions in the notebook.</li>
+</ul>
+<p>Had some problems.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">GROMACS set up completed
+. . . 
+GROMACS extraction completed
+. . . 
+-- Downloading... <span style="color:#66d9ef">done</span>
+-- extracting... <span style="color:#66d9ef">done</span>
+. . .
+Making all in generic-simd256
+. . . 
+Making all in .
+. . .
+Making all in tools
+. . .
+Making install in .
+. . .
+<span style="color:#f92672">[</span>  1%<span style="color:#f92672">]</span> Completed <span style="color:#e6db74">&#39;fftwBuild&#39;</span>
+. . .
+src/gromacs/CMakeFiles/libgromacs.dir/build.make:63: recipe <span style="color:#66d9ef">for</span> target <span style="color:#e6db74">&#39;src/gromacs/CMakeFiles/libgromacs.dir/nbnxm/cuda/libgromacs_generated_nbnxm_cuda.cu.o&#39;</span> failed
+CMakeFiles/Makefile2:3038: recipe <span style="color:#66d9ef">for</span> target <span style="color:#e6db74">&#39;src/gromacs/CMakeFiles/libgromacs.dir/all&#39;</span> failed
+Makefile:162: recipe <span style="color:#66d9ef">for</span> target <span style="color:#e6db74">&#39;all&#39;</span> failed
+GROMACS building completed
+src/gromacs/CMakeFiles/libgromacs.dir/build.make:63: recipe <span style="color:#66d9ef">for</span> target <span style="color:#e6db74">&#39;src/gromacs/CMakeFiles/libgromacs.dir/nbnxm/cuda/libgromacs_generated_nbnxm_cuda.cu.o&#39;</span> failed
+CMakeFiles/Makefile2:3038: recipe <span style="color:#66d9ef">for</span> target <span style="color:#e6db74">&#39;src/gromacs/CMakeFiles/libgromacs.dir/all&#39;</span> failed
+CMakeFiles/Makefile2:1091: recipe <span style="color:#66d9ef">for</span> target <span style="color:#e6db74">&#39;CMakeFiles/check.dir/rule&#39;</span> failed
+Makefile:587: recipe <span style="color:#66d9ef">for</span> target <span style="color:#e6db74">&#39;check&#39;</span> failed
+GROMACS testing completed
+src/gromacs/CMakeFiles/libgromacs.dir/build.make:63: recipe <span style="color:#66d9ef">for</span> target <span style="color:#e6db74">&#39;src/gromacs/CMakeFiles/libgromacs.dir/nbnxm/cuda/libgromacs_generated_nbnxm_cuda.cu.o&#39;</span> failed
+CMakeFiles/Makefile2:3038: recipe <span style="color:#66d9ef">for</span> target <span style="color:#e6db74">&#39;src/gromacs/CMakeFiles/libgromacs.dir/all&#39;</span> failed
+Makefile:162: recipe <span style="color:#66d9ef">for</span> target <span style="color:#e6db74">&#39;all&#39;</span> failed
+GROMACS installation completed. Please check <span style="color:#66d9ef">if</span> any errors occurred during installation
+/content/gromacs-2020.3/build/src/external/build-fftw/fftwBuild-prefix/src/fftwBuild/configure: line 8325: /usr/bin/file: No such file or directory
+nvcc fatal   : Unsupported gpu architecture <span style="color:#e6db74">&#39;compute_30&#39;</span>
+
+CMake Error at libgromacs_generated_nbnxm_cuda.cu.o.Release.cmake:219 <span style="color:#f92672">(</span>message<span style="color:#f92672">)</span>:
+  Error generating
+  /content/gromacs-2020.3/build/src/gromacs/CMakeFiles/libgromacs.dir/nbnxm/cuda/./libgromacs_generated_nbnxm_cuda.cu.o
+
+
+make<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>: *** <span style="color:#f92672">[</span>src/gromacs/CMakeFiles/libgromacs.dir/nbnxm/cuda/libgromacs_generated_nbnxm_cuda.cu.o<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">1</span>
+make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: *** <span style="color:#f92672">[</span>src/gromacs/CMakeFiles/libgromacs.dir/all<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">2</span>
+make: *** <span style="color:#f92672">[</span>all<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">2</span>
+nvcc fatal   : Unsupported gpu architecture <span style="color:#e6db74">&#39;compute_30&#39;</span>
+CMake Error at libgromacs_generated_nbnxm_cuda.cu.o.Release.cmake:219 <span style="color:#f92672">(</span>message<span style="color:#f92672">)</span>:
+  Error generating
+  /content/gromacs-2020.3/build/src/gromacs/CMakeFiles/libgromacs.dir/nbnxm/cuda/./libgromacs_generated_nbnxm_cuda.cu.o
+
+make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: *** <span style="color:#f92672">[</span>src/gromacs/CMakeFiles/libgromacs.dir/nbnxm/cuda/libgromacs_generated_nbnxm_cuda.cu.o<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">1</span>
+make<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>: *** <span style="color:#f92672">[</span>src/gromacs/CMakeFiles/libgromacs.dir/all<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">2</span>
+make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: *** <span style="color:#f92672">[</span>CMakeFiles/check.dir/rule<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">2</span>
+make: *** <span style="color:#f92672">[</span>check<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">2</span>
+nvcc fatal   : Unsupported gpu architecture <span style="color:#e6db74">&#39;compute_30&#39;</span>
+CMake Error at libgromacs_generated_nbnxm_cuda.cu.o.Release.cmake:219 <span style="color:#f92672">(</span>message<span style="color:#f92672">)</span>:
+  Error generating
+  /content/gromacs-2020.3/build/src/gromacs/CMakeFiles/libgromacs.dir/nbnxm/cuda/./libgromacs_generated_nbnxm_cuda.cu.o
+
+
+make<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>: *** <span style="color:#f92672">[</span>src/gromacs/CMakeFiles/libgromacs.dir/nbnxm/cuda/libgromacs_generated_nbnxm_cuda.cu.o<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">1</span>
+make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: *** <span style="color:#f92672">[</span>src/gromacs/CMakeFiles/libgromacs.dir/all<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">2</span>
+make: *** <span style="color:#f92672">[</span>all<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">2</span>
+</code></pre></div><p><a href="https://stackoverflow.com/questions/64633341/unsupported-gpu-with-nvcc-fatal">From this Stackoverflow issue</a></p>
+<blockquote>
+<p>use GROMACS 2020.4</p>
+</blockquote>
+<p>Restart Runtime (factory reset).</p>
+<ul>
+<li>Reinstall GROMACS using the 2020.4 version.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">2021-11-01 15:41:58 <span style="color:#f92672">(</span>16.1 MB/s<span style="color:#f92672">)</span> - ‘gromacs-2020.4.tar.gz’ saved <span style="color:#f92672">[</span>29149899/29149899<span style="color:#f92672">]</span>
+</code></pre></div><hr>
+<p>Start over from top.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PyRosetta setup took: 5000.8s...
+</code></pre></div><p>Change</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">from</span> pyrosetta <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> rosetta.protocols.rosetta_scripts <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> pyrosetta <span style="color:#f92672">import</span> (
+    init, pose_from_sequence, pose_from_file, Pose, MoveMap, create_score_function, get_fa_scorefxn,
+    MonteCarlo, TrialMover, SwitchResidueTypeSetMover, PyJobDistributor,
+)
+</code></pre></div><p>to</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">from</span> pyrosetta <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> pyrosetta.rosetta.protocols.rosetta_scripts <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> pyrosetta <span style="color:#f92672">import</span> (
+    init, pose_from_sequence, pose_from_file, Pose, MoveMap, create_score_function, get_fa_scorefxn,
+    MonteCarlo, TrialMover, SwitchResidueTypeSetMover, PyJobDistributor,
+)
+</code></pre></div><h2 id="installing-gromacs">Installing GROMACS</h2>
+<p>Change to</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">!wget http://ftp.gromacs.org/pub/gromacs/gromacs-2020.4.tar.gz
+</code></pre></div><p>in the following code, change <code>gromacs-2020.3</code> to <code>gromacs-2020.4</code></p>
+
+<div class="notices info" ><p>It appears that code cells that use <code>%%bash</code> scripts do not show intermediate output. You only get output when the entire script is done.</p>
+</div>
+
+<p>Success!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">GROMACS installation completed. Please check <span style="color:#66d9ef">if</span> any errors occurred during installation
+</code></pre></div><p>The next cell executed successfully. Output of <code>gmx -h</code> was the gromacs help file.</p>
+<h3 id="backup-gromacs-to-google-drive">Backup GROMACS to Google Drive</h3>
+<p>Success!</p>
+<h3 id="installation-of-sbm-enhanced-gromacs">Installation of SBM-enhanced GROMACS</h3>
+<p>Downloading SBM-enhanced GROMACS was successful.</p>
+<p>Extracting and Installing it did not show output <code>%%bash</code> until the end.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SBM-enhanced GROMACS installation completed. Please check <span style="color:#66d9ef">if</span> any errors occurred during installation
+</code></pre></div><p>Installation check: <code>gmx -h</code> returned the help file. Success!</p>
+<p>Backing up:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">GROMACS successfully backed up!
+</code></pre></div><p>Software notebook, <code>lab00_software-dgo.ipynb</code>,  successfully completed!</p>
+<h3 id="colab-tips">Colab tips</h3>
+<p>From <a href="https://www.kdnuggets.com/2019/01/more-google-colab-environment-management-tips.html">this website</a>.</p>
+<ul>
+<li>Go to <a href="https://colab.research.google.com/">colab</a></li>
+<li><strong>Change to the Google work account</strong></li>
+<li>Click on the 3 dots in the upper right corner of your Chrome browswer.</li>
+<li>Go to <em>More Tools</em> -&gt; <em>Create Shortcut&hellip;</em></li>
+<li>Give the shortcut a name such as <code>Colab</code>.</li>
+<li>Click the box, <em>Open as window</em>.</li>
+<li>Click <em>Create</em>.</li>
+</ul>
+<p>Great! Now you have an app on your computer that will launch Colab in a new window.</p>
+<h3 id="lab01-warmup">Lab.01 warmup</h3>
+<ul>
+<li>Open the Colab app.</li>
+<li>In the <code>GitHub</code> tab, open <a href="https://github.com/pb3lab/ibm3202">this link</a>.</li>
+<li>Open the tutorials/lab01_intro.ipynb notebook.</li>
+<li>Save a copy to Drive, and rename it with the <em>-dgo</em> suffix.</li>
+</ul>
+
+<div class="notices info" ><p>As soon as you <em>make a copy</em> of the notebook, the copy is opened in the browser, which defeats thr purpose of using the Colab shortcut app.</p>
+</div>
+
+<ul>
+<li>Continue with tutorial.</li>
+</ul>
+<h2 id="resources-for-data-visualization">Resources for data visualization</h2>
+<h3 id="seaborn">Seaborn</h3>
+<p>From the <a href="http://seaborn.pydata.org/">Seaborn</a> website:</p>
+<blockquote>
+<p>Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.</p>
+</blockquote>
+<p>There is a nice Seaborn tutorial presented as a jupyter notebook in Colab: <a href="https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/04.14-Visualization-With-Seaborn.ipynb">04.14-Visualization-With-Seaborn.ipynb</a>.</p>
+<h3 id="pandas">Pandas</h3>
+<p><a href="https://pandas.pydata.org/">Pandas</a></p>
+<p>An introduction to Pandas is provided by Google as a <a href="https://colab.research.google.com/notebooks/mlcc/intro_to_pandas.ipynb">colab notebook</a> and a tutorial can be found at <a href="https://colab.research.google.com/github/google/eng-edu/blob/master/ml/cc/exercises/pandas_dataframe_ultraquick_tutorial.ipynb">Pandas DataFrame UltraQuick Tutorial.ipynb</a>.</p>
+<p>There are tutorials available on the <a href="https://pandas.pydata.org/pandas-docs/stable/index.html">Pandas documentation website</a>.</p>
+<h2 id="data-science-tutorials">Data science tutorials</h2>
+<p><a href="https://towardsdatascience.com/data-science-101-start-with-pandas-scikit-learn-and-google-colab-ecbb6a247cc9">Data Science 101: Build your first Machine Learning Model with Pandas, Scikit-Learn, and Google Colab</a></p>
+<p><a href="https://reproducible-science-curriculum.github.io/sharing-RR-Jupyter/01-sharing-github/">simple tutorial for sharing jupyter notebooks on GitHub</a></p>
+<ol>
+<li>git init</li>
+<li>change master to main</li>
+<li>git add README.md</li>
+<li>git add GeeksForGeeks.ipynb</li>
+<li>git commit -m &ldquo;notebook first commit&rdquo;</li>
+<li>git remote add origin <a href="https://github.com/%7BYour">https://github.com/{Your</a> repo}/GeeksForGeeks.git</li>
+<li>git push -u origin master</li>
+</ol>
+<p>Organizing notebooks</p>
+<p><a href="https://www.drivendata.co/blog/nbautoexport-jupyter-code-review/">extensions for code review</a></p>
+<h3 id="nbpages">nbpages</h3>
+<p>From the <a href="https://jckantor.github.io/nbpages/">nbpages documentation</a>:</p>
+<blockquote>
+<p><a href="https://github.com/jckantor/nbpages#id1">nbpages</a> is a command line tool for publishing a collection of Jupyter notebooks to Github Pages. This project was inspired by the tools included with the <a href="https://github.com/jakevdp/PythonDataScienceHandbook">Python Data Science Handbook</a> by <a href="https://github.com/jakevdp">Jake Vanderplas</a>.</p>
+</blockquote>
+<h3 id="intalling-nbextensions">Intalling <code>nbextensions</code></h3>
+<p>The jupyter notebook extensions are a useful set of tools that makes working with jupyter notebooks easier. See <a href="https://medium.com/@maxtingle/10-jupyter-notebook-extensions-making-my-lyfe-easier-f40139a334ce">10 Jupyter Notebook Extensions Making My Lyfe Easier</a> for some of them.</p>
+<ul>
+<li>Try these commands (note: <code>conda</code> is not installed on <code>colab</code>):</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">!pip install jupyter_contrib_nbextensions
+<span style="color:#75715e"># it appears many of the packages are already installed</span>
+!pip install jupyter_nbextensions_configurator
+<span style="color:#75715e"># Requirement already satisfied:</span>
+!jupyter contrib nbextension install --user 
+!jupyter nbextensions_configurator enable --user
+</code></pre></div><h3 id="installation-of-pyrosetta">Installation of PyRosetta</h3>
+<ul>
+<li>Get the PyRosetta License.</li>
+<li>Mount Google Drive.</li>
+</ul>
+<p>Success!</p>
+<h3 id="avoiding-colab-timeouts">Avoiding colab timeouts</h3>
+<p><a href="https://medium.com/analytics-vidhya/how-to-save-google-colab-notebooks-from-runtime-timeouts-4aa133375a7e">How to save Google Colab Notebooks from runtime timeouts</a> has a <code>keep alive</code> script that you can get from the <a href="https://github.com/sour4bh/stop-cursing-colab">sour4bh/stop-cursing-colab</a> repository. It uses <code>AutoHotKey</code>.</p>
+<hr>
+<h3 id="adding-css-to-colab-notebooks">Adding CSS to colab notebooks</h3>
+<p>From <a href="https://stackoverflow.com/questions/58019749/how-to-import-css-file-into-google-colab-notebook-python3">Stackoverflow</a>.</p>
+<p>More <a href="https://stackoverflow.com/questions/18024769/adding-custom-styled-paragraphs-in-markdown-cells">Stackoverflow answers</a>, but these are from a few years ago.</p>
+<p><a href="https://stackoverflow.com/questions/61957742/how-to-increase-font-size-of-google-colab-cell-output">This might work</a></p>
+<h3 id="other-online-jupyter-notebook-environments">Other online jupyter notebook environments</h3>
+<p><a href="https://www.kaggle.com/">Kaggle</a>  access free GPUs</p>
+<p><a href="https://cocalc.com/">CoCalc</a></p>
+<p>Offers real-time collaboration, version control, chat, and other features.<br>
+Also has been used for teaching since 2013, so has useful teaching features.<br>
+Pricing: $14 per student, and a per month/core/project, etc. subscriptions.<br>
+Academic Research Group: $831/yr<br>
+Hobbyist: $70/yr, but only 1GB/project</p>
+<h3 id="installing-conda-on-colab">Installing <code>conda</code> on <code>colab</code></h3>
+<ul>
+<li>Follow the instructions at <a href="https://inside-machinelearning.com/en/how-to-install-use-conda-on-google-colab/">How to install / use Conda on Google Colab</a> (May 2021).</li>
+<li>Check for <code>conda</code>.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">!conda --version
+/bin/bash: conda: command not found
+</code></pre></div><p><code>Conda</code> is not installed.</p>
+<ul>
+<li>Install it with the <code>pip</code> command.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">!pip install -q condacolab
+import condacolab
+condacolab.install<span style="color:#f92672">()</span>
+</code></pre></div><p>I may not need this if I stick with <code>pip</code>.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Arantes, P.R., Polêto, M.D., Pedebos, C., and Ligabue-Braun, R. (2021). Making it Rain: Cloud-Based Molecular Simulations for Everyone. J Chem Inf Model 61: 4852–4856. doi: <a href="https://doi.org/10.1021/acs.jcim.1c00998">10.1021/acs.jcim.1c00998</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Engelberger, F., Galaz-Davison, P., Bravo, G., Rivera, M., and Ramírez-Sarmiento, C.A. (2021). Developing and Implementing Cloud-Based Tutorials That Combine Bioinformatics Software, Interactive Coding, and Visualization Exercises for Distance Learning on Structural Bioinformatics. doi: <a href="https://pubs.acs.org/doi/10.1021/acs.jchemed.1c00022">10.1021/acs.jchemed.1c00022</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+<footer class="footline">
+	
+	    <i class='fas fa-user'></i> DGO,   29 October 2021
+	    </div>
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/pymol-notes/md-simulations/" title="MD Simulations"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/pymol-notes/md-simulations/md-notes/" title="MD Notes" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/pymol-notes/js/clipboard.min.js?1636300918"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1636300918"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1636300918"></script>
+    <script src="/pymol-notes/js/jquery.sticky.js?1636300918"></script>
+    <script src="/pymol-notes/js/featherlight.min.js?1636300918"></script>
+    <script src="/pymol-notes/js/highlight.pack.js?1636300918"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1636300918"></script>
+    <script src="/pymol-notes/js/learn.js?1636300918"></script>
+    <script src="/pymol-notes/js/hugo-learn.js?1636300918"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+        
+            <script src="/pymol-notes/mermaid/mermaid.js?1636300918"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

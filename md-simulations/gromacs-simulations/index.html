@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/pymol-notes/images/favicon2.png">
-    <title>Hosting the Site on Github :: PyMOL Notes</title>
+    <title>GROMACS Simulations :: PyMOL Notes</title>
 
     
     <link href="/pymol-notes/css/nucleus.css?1636300918" rel="stylesheet">
@@ -39,7 +39,7 @@
 
 
   </head>
-  <body class="" data-url="/pymol-notes/introduction/hosting-the-site-on-github/">
+  <body class="" data-url="/pymol-notes/md-simulations/gromacs-simulations/">
     <nav id="sidebar" class="">
 
 
@@ -173,7 +173,7 @@
   
     
     <li data-nav-id="/pymol-notes/introduction/" title="Introduction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -220,7 +220,7 @@
  
   
     
-      <li data-nav-id="/pymol-notes/introduction/hosting-the-site-on-github/" title="Hosting the Site on Github" class="dd-item active">
+      <li data-nav-id="/pymol-notes/introduction/hosting-the-site-on-github/" title="Hosting the Site on Github" class="dd-item ">
         <a href="/pymol-notes/introduction/hosting-the-site-on-github/">
         Hosting the Site on Github
         
@@ -333,7 +333,7 @@
   
     
     <li data-nav-id="/pymol-notes/md-simulations/" title="MD Simulations" class="dd-item 
-        
+        parent
         
         
         ">
@@ -404,8 +404,8 @@
   
     
     <li data-nav-id="/pymol-notes/md-simulations/gromacs-simulations/" title="GROMACS Simulations" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/pymol-notes/md-simulations/gromacs-simulations/">
@@ -704,7 +704,7 @@
             
           
           
-            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/introduction/'>Introduction</a> > Hosting the Site on Github
+            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/md-simulations/'>MD Simulations</a> > GROMACS Simulations
           
         
           
@@ -717,17 +717,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#preparations-for-gh-pages-branch">Preparations for <code>gh-pages</code> branch</a></li>
-        <li><a href="#initialize-your-gh-pages-branch">Initialize your <code>gh-pages</code> branch</a></li>
-        <li><a href="#build-and-deploy-your-project">Build and deploy your project</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -743,116 +733,21 @@
           
             <h1>
               
-              Hosting the Site on Github
+              GROMACS Simulations
             </h1>
           
 
         
 
 
-<p>I more-or-less followed the instructions provided on the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Hugo website</a>.</p>
-<p>I already have a GitHub account. I&rsquo;ll create a new public repository called <code>pymol-notes</code>, which will be the repository for my project. I&rsquo;ll deploy my site from the <code>gh-pages</code> branch of my project.</p>
-<p>Update the local repository for the site.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git add .
-git status
-On branch master
 
-No commits yet
-
-Changes to be committed:
-  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git rm --cached &lt;file&gt;...&#34;</span> to unstage<span style="color:#f92672">)</span>
-	new file:   .gitignore
-	new file:   .gitmodules
-	new file:   archetypes/default.md
-	new file:   config.toml
-	new file:   content/introduction/.DS_Store
-	new file:   content/introduction/_index.md
-	new file:   content/introduction/building-this-site.md
-	new file:   themes/hugo-theme-learn
-</code></pre></div><p>Commit the files.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git commit -a -m <span style="color:#e6db74">&#34;first commit of site&#34;</span>
-</code></pre></div><p>Oops. I need to untrack the <code>.DS_Store</code> files.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git rm --cached content/introduction/.DS_Store
-echo <span style="color:#e6db74">&#34;.DS_Store&#34;</span> &gt;&gt; .gitignore
-</code></pre></div><h3 id="preparations-for-gh-pages-branch">Preparations for <code>gh-pages</code> branch</h3>
-<p>These steps only need to be done once. Replace <code>upstream</code> with the name of your remote; e.g., <code>origin</code>:</p>
-
-<div class="notices note" ><p>Make sure your baseURL key-value in your site&rsquo;s <code>config.toml</code> configuration file reflects the full URL of your GitHub pages repository if you’re using the default GitHub Pages URL (e.g., <!-- raw HTML omitted -->.github.io/<!-- raw HTML omitted -->/) and not a custom domain.</p>
-</div>
-
-<p>For this project, in <code>config.toml</code>, change <code>baseURL = &quot;http://example.org/&quot;</code> to</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://dgoppenheimer.github.io/pymol-notes/&#34;</span>
-</code></pre></div><h4 id="add-the-public-folder-to-gitignore">Add the <code>public</code> folder to <code>.gitignore</code></h4>
-<p>Add the <code>public</code> folder to the <code>.gitignore</code> in your project root. You don&rsquo;t need to track the files for the built site, only for the source files.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">echo <span style="color:#e6db74">&#34;public&#34;</span> &gt;&gt; .gitignore
-</code></pre></div><h3 id="initialize-your-gh-pages-branch">Initialize your <code>gh-pages</code> branch</h3>
-<p>Initialize your local <code>gh-pages</code> branch as an empty <a href="https://git-scm.com/docs/git-checkout/#git-checkout---orphanltnewbranchgt">orphan branch</a>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git checkout --orphan gh-pages
-git reset --hard
-git commit --allow-empty -m <span style="color:#e6db74">&#34;Initializing gh-pages branch&#34;</span>
-git remote add origin git@github.com:dgoppenheimer/pymol-notes.git
-git push origin gh-pages
-git checkout master
-</code></pre></div><h3 id="build-and-deploy-your-project">Build and deploy your project</h3>
-<p>Checkout the <code>gh-pages</code> branch into your <code>public</code> directory using the <a href="https://git-scm.com/docs/git-worktree">git worktree feature</a>. This feature allows you to checkout and have different branches of the same local repository in different directories.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">rm -rf public
-git worktree add -B gh-pages public origin/gh-pages
-</code></pre></div><p>Regenerate the site using the <code>hugo</code> command and commit the generated files on the <code>gh-pages</code> branch.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo
-cd public
-git add --all
-git commit -m <span style="color:#e6db74">&#34;Publishing to gh-pages&#34;</span>
-cd ..
-</code></pre></div><p>Or as a script, <code>commit-gh-pages-files.sh</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo
-cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span style="color:#f92672">&amp;&amp;</span> git commit -m <span style="color:#e6db74">&#34;Publishing to gh-pages&#34;</span> <span style="color:#f92672">&amp;&amp;</span> cd ..
-</code></pre></div><p>Push the changes to the gh-pages branch to the GitHub repo.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git push origin gh-pages
-</code></pre></div><h4 id="set-_gh-pages_-as-your-publish-branch">Set <em>gh-pages</em> as your publish branch</h4>
-<p>To publish the <code>gh-pages</code> branch as your site, you need to tweak some setting in GitHub.</p>
-<ul>
-<li>Log into your account using a web browser.</li>
-<li>Go to <em>Settings</em> → <em>GitHub Pages</em>.</li>
-<li>From <em>Source</em>, select <em>gh-pages branch</em> and then <em>Save</em>.</li>
-</ul>
-<p>The site should be visible at <a href="https://dgoppenheimer.github.io/pymol-notes/">https://dgoppenheimer.github.io/pymol-notes/</a>.</p>
-<p>Success!</p>
-<p>To automate the publishing to <code>gh-pages</code> process, create the following script: <code>publish_to_ghpages.sh</code>. Put this script in your project directory.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">
-<span style="color:#75715e">#!/bin/sh</span>
-
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;`git status -s`&#34;</span> <span style="color:#f92672">]</span>
-<span style="color:#66d9ef">then</span>
-    echo <span style="color:#e6db74">&#34;The working directory is dirty. Please commit any pending changes.&#34;</span>
-    exit 1;
-<span style="color:#66d9ef">fi</span>
-
-echo <span style="color:#e6db74">&#34;Deleting old publication&#34;</span>
-rm -rf public
-mkdir public
-git worktree prune
-rm -rf .git/worktrees/public/
-
-echo <span style="color:#e6db74">&#34;Checking out gh-pages branch into public&#34;</span>
-git worktree add -B gh-pages public origin/gh-pages
-
-echo <span style="color:#e6db74">&#34;Removing existing files&#34;</span>
-rm -rf public/*
-
-echo <span style="color:#e6db74">&#34;Generating site&#34;</span>
-hugo
-
-echo <span style="color:#e6db74">&#34;Updating gh-pages branch&#34;</span>
-cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span style="color:#f92672">&amp;&amp;</span> git commit -m <span style="color:#e6db74">&#34;Publishing to gh-pages (publish.sh)&#34;</span>
-
-<span style="color:#75715e">#echo &#34;Pushing to github&#34;</span>
-<span style="color:#75715e">#git push --all</span>
-</code></pre></div><p>Make the script executable.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">chmod +x publish_to_ghpages.sh
-</code></pre></div><p>Run the script with <code>./publish_to_ghpages.sh</code>. Either uncomment the <code>git push</code> line, or manually run <code>git push --all</code>. Wait a few minutes and the site should be live on GitHub.</p>
+	<p>Here I&rsquo;ll document my learning of GROMACS for molecular dynamics simulations. I&rsquo;ll start with a few tutorials and then move on to some of the proteins (including membrane proteins) that I discuss in my Cancer Biology course.</p>
 
 
-<footer class="footline">
+
+
+
+<footer class=" footline" >
 	
 </footer>
 
@@ -887,6 +782,8 @@ cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span styl
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -900,26 +797,6 @@ cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span styl
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -937,8 +814,21 @@ cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span styl
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -1007,6 +897,7 @@ cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span styl
             
                 
                     
+                    
                 
                 
 
@@ -1021,6 +912,9 @@ cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span styl
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1054,6 +948,7 @@ cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span styl
             
                 
                     
+                    
                 
                 
 
@@ -1066,6 +961,9 @@ cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span styl
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1205,10 +1103,10 @@ cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span styl
 	 
 	 
 		
-			<a class="nav nav-prev" href="/pymol-notes/introduction/building-this-site/" title="Building this site"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/pymol-notes/md-simulations/md-notes/" title="MD Notes"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/pymol-notes/introduction/creating-a-logo/" title="Creating a Logo" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/pymol-notes/md-simulations/gromacs-simulations/protein-ligand-tutorial/" title="Protein-Ligand Complex Tutorial" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1241,4 +1139,3 @@ cd public <span style="color:#f92672">&amp;&amp;</span> git add --all <span styl
 
   </body>
 </html>
-

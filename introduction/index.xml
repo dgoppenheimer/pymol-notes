@@ -53,6 +53,18 @@ fetch 3G6M, mol, async=0 extract caf1, /mol//A/CFF`427 h_add set valence, 0 hide
     </item>
     
     <item>
+      <title>Hugo Basics</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/introduction/hugo-basics/</link>
+      <pubDate>Fri, 29 Oct 2021 15:48:44 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/introduction/hugo-basics/</guid>
+      <description>Here I&amp;rsquo;ll note some basic hugo commands so I don&amp;rsquo;t have to keep searching the web. The chapter and page commands are from the Hugo-theme-learn Documentation.
+Create a new chapter:
+hugo new --kind chapter &amp;lt;chapter-name&amp;gt;/_index.md This creates a chapter page with the following front matter:
++++ title = &amp;#34;{{ replace .Name &amp;#34;-&amp;#34; &amp;#34; &amp;#34; | title }}&amp;#34; date = {{ .Date }} weight = 5 chapter = true pre = &amp;#34;&amp;lt;b&amp;gt;X.</description>
+    </item>
+    
+    <item>
       <title>Customizing the Site</title>
       <link>https://dgoppenheimer.github.io/pymol-notes/introduction/customizing-the-site/</link>
       <pubDate>Fri, 09 Oct 2020 19:08:25 -0400</pubDate>

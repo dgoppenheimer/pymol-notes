@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Molecular Modeling Tutorials on PyMOL Notes</title>
+    <link>https://dgoppenheimer.github.io/pymol-notes/molecular-modeling-tutorials/</link>
+    <description>Recent content in Molecular Modeling Tutorials on PyMOL Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Nov 2021 11:12:34 -0400</lastBuildDate><atom:link href="https://dgoppenheimer.github.io/pymol-notes/molecular-modeling-tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lab.00 Software</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/molecular-modeling-tutorials/lab.00-software/</link>
+      <pubDate>Thu, 04 Nov 2021 11:40:43 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/molecular-modeling-tutorials/lab.00-software/</guid>
+      <description>This tutorial was taken from the Cloud-based Tutorials on Structural Bioinformatics Github repository.</description>
+    </item>
+    
+  </channel>
+</rss>

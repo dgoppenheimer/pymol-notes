@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GROMACS Simulations on PyMOL Notes</title>
-    <link>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/</link>
+    <link>https://dgoppenheimer.github.io/pymol-notes/md-simulations/gromacs-simulations/</link>
     <description>Recent content in GROMACS Simulations on PyMOL Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Oct 2021 15:41:22 -0400</lastBuildDate><atom:link href="https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Oct 2021 14:39:48 -0400</lastBuildDate><atom:link href="https://dgoppenheimer.github.io/pymol-notes/md-simulations/gromacs-simulations/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Protein-Ligand Complex Tutorial</title>
-      <link>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/protein-ligand-tutorial/</link>
+      <link>https://dgoppenheimer.github.io/pymol-notes/md-simulations/gromacs-simulations/protein-ligand-tutorial/</link>
       <pubDate>Thu, 14 Oct 2021 15:53:20 -0400</pubDate>
       
-      <guid>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/protein-ligand-tutorial/</guid>
+      <guid>https://dgoppenheimer.github.io/pymol-notes/md-simulations/gromacs-simulations/protein-ligand-tutorial/</guid>
       <description>This tutorial is from this website.
   Download 3HTB from the RCSB website.
   View the structure in VMD.
@@ -22,10 +22,10 @@
     
     <item>
       <title>Analyze Trajectories in VMD</title>
-      <link>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/analyze-trajectories-in-vmd/</link>
+      <link>https://dgoppenheimer.github.io/pymol-notes/md-simulations/gromacs-simulations/analyze-trajectories-in-vmd/</link>
       <pubDate>Sun, 17 Oct 2021 13:45:18 -0400</pubDate>
       
-      <guid>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/analyze-trajectories-in-vmd/</guid>
+      <guid>https://dgoppenheimer.github.io/pymol-notes/md-simulations/gromacs-simulations/analyze-trajectories-in-vmd/</guid>
       <description>Useful information can be found on the following websites:
 Analyze your trajectory
  Start VMD, open the Tk console and load the .gro file of the trajectory to analyze.  cd /Users/davidoppenheimer/Dropbox\ \(UFL\)/GROMACS/gromacs-prot-ligand-tutorial mol new md_0_10.gro  Then load the trajectory file into the previously loaded molecule.  In the VMD Main window, select the molecule. Go to File → Load Data into Molecule and choose the .xtc trajectory to load from the file browser.</description>

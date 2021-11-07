@@ -22,10 +22,10 @@ cd pymol-notes git init git submodule add https://github.</description>
     
     <item>
       <title>Protein-Ligand Complex Tutorial</title>
-      <link>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/protein-ligand-tutorial/</link>
+      <link>https://dgoppenheimer.github.io/pymol-notes/md-simulations/gromacs-simulations/protein-ligand-tutorial/</link>
       <pubDate>Thu, 14 Oct 2021 15:53:20 -0400</pubDate>
       
-      <guid>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/protein-ligand-tutorial/</guid>
+      <guid>https://dgoppenheimer.github.io/pymol-notes/md-simulations/gromacs-simulations/protein-ligand-tutorial/</guid>
       <description>This tutorial is from this website.
   Download 3HTB from the RCSB website.
   View the structure in VMD.
@@ -47,10 +47,10 @@ git add . git status On branch master No commits yet Changes to be committed: (u
     
     <item>
       <title>Analyze Trajectories in VMD</title>
-      <link>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/analyze-trajectories-in-vmd/</link>
+      <link>https://dgoppenheimer.github.io/pymol-notes/md-simulations/gromacs-simulations/analyze-trajectories-in-vmd/</link>
       <pubDate>Sun, 17 Oct 2021 13:45:18 -0400</pubDate>
       
-      <guid>https://dgoppenheimer.github.io/pymol-notes/gromacs-simulations/analyze-trajectories-in-vmd/</guid>
+      <guid>https://dgoppenheimer.github.io/pymol-notes/md-simulations/gromacs-simulations/analyze-trajectories-in-vmd/</guid>
       <description>Useful information can be found on the following websites:
 Analyze your trajectory
  Start VMD, open the Tk console and load the .gro file of the trajectory to analyze.  cd /Users/davidoppenheimer/Dropbox\ \(UFL\)/GROMACS/gromacs-prot-ligand-tutorial mol new md_0_10.gro  Then load the trajectory file into the previously loaded molecule.  In the VMD Main window, select the molecule. Go to File → Load Data into Molecule and choose the .xtc trajectory to load from the file browser.</description>
@@ -74,6 +74,70 @@ fetch 3G6M, mol, async=0 extract caf1, /mol//A/CFF`427 h_add set valence, 0 hide
       
       <guid>https://dgoppenheimer.github.io/pymol-notes/introduction/automatic-build-and-deploy/</guid>
       <description>I&amp;rsquo;m using GitHub Pages to host this site. I started by building the site locally, and pushing the /public directory to my gh-pages branch on GitHub. (See these instructions on the Hugo website.) GitHub provides native support for building Jekyll sites, but does not have native support for Hugo. Nonetheless, using GitHub Actions, I can build and deploy my Hugo site automatically when I push new content to the main branch of my GitHub repository.</description>
+    </item>
+    
+    <item>
+      <title>Lab.00 Software</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/molecular-modeling-tutorials/lab.00-software/</link>
+      <pubDate>Thu, 04 Nov 2021 11:40:43 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/molecular-modeling-tutorials/lab.00-software/</guid>
+      <description>This tutorial was taken from the Cloud-based Tutorials on Structural Bioinformatics Github repository.</description>
+    </item>
+    
+    <item>
+      <title>Making It Rain</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/md-simulations/making-it-rain/</link>
+      <pubDate>Fri, 29 Oct 2021 19:20:18 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/md-simulations/making-it-rain/</guid>
+      <description>Making it rain 1 is a front end for running molecular dynamics simulations using cloud-based resources. It makes use of the OpenMM toolkit, Google Colab framework, and Jupyter notebooks.
+Before I start running MD simulations in Colab, I will start with some Colab-Jupyter tutorials outlined in the paper by Engelberger et al. (2021) 2. These tutorials are available from the Cloud-based Tutorials on Structural Bioinformatics github repository.
+PyRosetta notebooks PyRosetta Google Drive Setup First follow these instructions:</description>
+    </item>
+    
+    <item>
+      <title>Installing Jupyter</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/jupyter-notebooks/installing-jupyter/</link>
+      <pubDate>Fri, 29 Oct 2021 16:17:12 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/jupyter-notebooks/installing-jupyter/</guid>
+      <description>I&amp;rsquo;ve decided to give JupyterLab a try. Follow the installation instructions on the Jupyter website.
+Install conda First I need to install conda.
+ Download the Miniconda installer. Check the installer hash:  shasum -a 256 ~/Downloads/Miniconda3-latest-MacOSX-x86_64.sh An easier way to compare the hashes:
+cd ~/Downloads echo &amp;#34;8fa371ae97218c3c005cd5f04b1f40156d1506a9bd1d5c078f89d563fd416816 Miniconda3-latest-MacOSX-x86_64.pkg&amp;#34; | shasum -a 256 -c Miniconda3-latest-MacOSX-x86_64.pkg: OK  Double-click on the installer and follow the prompts. Restart iTerm2. Test installation with conda list.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Basics</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/introduction/hugo-basics/</link>
+      <pubDate>Fri, 29 Oct 2021 15:48:44 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/introduction/hugo-basics/</guid>
+      <description>Here I&amp;rsquo;ll note some basic hugo commands so I don&amp;rsquo;t have to keep searching the web. The chapter and page commands are from the Hugo-theme-learn Documentation.
+Create a new chapter:
+hugo new --kind chapter &amp;lt;chapter-name&amp;gt;/_index.md This creates a chapter page with the following front matter:
++++ title = &amp;#34;{{ replace .Name &amp;#34;-&amp;#34; &amp;#34; &amp;#34; | title }}&amp;#34; date = {{ .Date }} weight = 5 chapter = true pre = &amp;#34;&amp;lt;b&amp;gt;X.</description>
+    </item>
+    
+    <item>
+      <title>MD Notes</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/md-simulations/md-notes/</link>
+      <pubDate>Fri, 29 Oct 2021 11:36:52 -0400</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/md-simulations/md-notes/</guid>
+      <description>Common software GROMACS CHARMM CHARMM Tutorials
+AMBER NAMD ABINIT for free energy calculations
+DL_POLY
+Making it rain: Cloud-based molecular simulations for everyone
+Force fields Force fields for small molecules There is a recent paper that covers this topic by Lin and MacKerell 1, Force fields for small molecules.
+OPLS-All-Atom (OPLS-AA)
+OPLS3
+CHARMM General force field (CGenFF) see ParamChem
+General AMBER Force Field (GAFF)
+Merck Molecular Force Field (MMFF)
+GROMOS
+Drude Polarizable Force Field for Small Organic Molecules</description>
     </item>
     
     <item>
