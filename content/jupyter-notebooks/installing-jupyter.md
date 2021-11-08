@@ -1,11 +1,11 @@
 ---
-title: "Installing Jupyter"
+title: "Installing JupyterLab"
 date: 2021-10-29T16:17:12-04:00
 draft: false
 lastmodifierdisplayname: DGO
 ---
 
-I've decided to give [JupyterLab](https://jupyter.org/index.html) a try. Follow the installation instructions on the [Jupyter website](https://jupyter.org/install).
+I've decided to give [JupyterLab](https://jupyter.org/index.html) a try. Follow the installation instructions on the [Jupyter website](https://jupyter.org/install). This will allow me to test the notebooks locally. If all works well, I'll try to repeat it on [Google Colab](https://colab.research.google.com/) and [UF JupyterHub](https://help.rc.ufl.edu/doc/JupyterHub).
 
 ## Install `conda`
 
