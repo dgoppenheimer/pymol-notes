@@ -8,15 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 29 Oct 2021 16:01:10 -0400</lastBuildDate><atom:link href="https://dgoppenheimer.github.io/pymol-notes/jupyter-notebooks/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Installing Jupyter</title>
+      <title>Installing JupyterLab</title>
       <link>https://dgoppenheimer.github.io/pymol-notes/jupyter-notebooks/installing-jupyter/</link>
       <pubDate>Fri, 29 Oct 2021 16:17:12 -0400</pubDate>
       
       <guid>https://dgoppenheimer.github.io/pymol-notes/jupyter-notebooks/installing-jupyter/</guid>
-      <description>I&amp;rsquo;ve decided to give JupyterLab a try. Follow the installation instructions on the Jupyter website.
+      <description>I&amp;rsquo;ve decided to give JupyterLab a try. Follow the installation instructions on the Jupyter website. This will allow me to test the notebooks locally. If all works well, I&amp;rsquo;ll try to repeat it on Google Colab and UF JupyterHub.
 Install conda First I need to install conda.
  Download the Miniconda installer. Check the installer hash:  shasum -a 256 ~/Downloads/Miniconda3-latest-MacOSX-x86_64.sh An easier way to compare the hashes:
-cd ~/Downloads echo &amp;#34;8fa371ae97218c3c005cd5f04b1f40156d1506a9bd1d5c078f89d563fd416816 Miniconda3-latest-MacOSX-x86_64.pkg&amp;#34; | shasum -a 256 -c Miniconda3-latest-MacOSX-x86_64.pkg: OK  Double-click on the installer and follow the prompts. Restart iTerm2. Test installation with conda list.</description>
+cd ~/Downloads echo &amp;#34;8fa371ae97218c3c005cd5f04b1f40156d1506a9bd1d5c078f89d563fd416816 Miniconda3-latest-MacOSX-x86_64.</description>
     </item>
     
   </channel>

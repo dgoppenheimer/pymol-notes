@@ -77,6 +77,20 @@
 	"content": "Chapter 5 Molecular Modeling Tutorials The tutorials are from the Cloud-based Tutorials on Structural Bioinformatics Github repository. These tutorials use Google Colab Jupyter notebooks. Be sure to switch to the correct Google account after starting Colab, but before you save the notebook to your Google Drive.\n"
 },
 {
+	"uri": "https://dgoppenheimer.github.io/pymol-notes/pymol-tips/",
+	"title": "Pymol Tips",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 6 Pymol Tips This chapter focuses on PyMOL-specific tips and tricks to increase productivity when working with PyMOL.\n"
+},
+{
+	"uri": "https://dgoppenheimer.github.io/pymol-notes/pymol-tips/pymol-shortcuts/",
+	"title": "PyMOL Shortcuts",
+	"tags": [],
+	"description": "",
+	"content": "This page describes the installation and use of the pymolshortucs built by B.H.M. Mooers and described in Mooers (2020) 1.\nInstall the date time module The pymolshortcuts.py script has a shortcut to timestamp filenames produced by PyMOL. To use this, the date time module needs to be installed. Because I have MacPorts on my system, I\u0026rsquo;ll used the suggested MacPorts installation instructions.\nIn a terminal window, type the following command:\nsudo -H /opt/local/bin/python3.7 -m pip install --upgrade datetime Upgrade pip too.\nsudo -H /opt/local/bin/python3.7 -m pip install --upgrade pip Download the script file  Download and unpack the pymolshortcuts-master.zip file. Move the pymolshortcuts-master folder into the ~/pymol-work/1-scripts` directory.  Edit the .pymolrc  Add run ~/pymol-work/1-scripts/pymolshortcuts-master/pymolshortcuts.py to the bottom of the file. Save and close the file.  Test the script  Open PyMOL. Type the following into the command prompt:  Fetch 3OAC AO Success! The molecule has ambient occlusion lighting.\nInstall the shortcuts in VS Code Follow the instructions on this site: PyMOL Script Writing with Code Templates.\n Open VS Code and install the bioSyntax extension. Download and unpack the pymolsnips-master.zip file from the pymolsnips github repository. Move into the vscpymolsnips folder and run the following command:  mv pml.json ~/Library/Application\\ Support/Code/User/snippets  Restart VS Code. Create a new file and save it as test.pml. Type ao and the autocomplete should trigger to insert the ao code. Hit enter to insert the code.  Success! I can insert PyMOL code into documents I create/edit in VS Code.\n  Mooers, B.H.M. (2020). Shortcuts for faster image creation in PyMOL. Protein Sci 29: 268–276. \u0026#x21a9;\u0026#xfe0e;\n   "
+},
+{
 	"uri": "https://dgoppenheimer.github.io/pymol-notes/molecular-modeling-tutorials/lab.00-software/",
 	"title": "Lab.00 Software",
 	"tags": [],
@@ -92,10 +106,10 @@
 },
 {
 	"uri": "https://dgoppenheimer.github.io/pymol-notes/jupyter-notebooks/installing-jupyter/",
-	"title": "Installing Jupyter",
+	"title": "Installing JupyterLab",
 	"tags": [],
 	"description": "",
-	"content": "I\u0026rsquo;ve decided to give JupyterLab a try. Follow the installation instructions on the Jupyter website.\nInstall conda First I need to install conda.\n Download the Miniconda installer. Check the installer hash:  shasum -a 256 ~/Downloads/Miniconda3-latest-MacOSX-x86_64.sh An easier way to compare the hashes:\ncd ~/Downloads echo \u0026#34;8fa371ae97218c3c005cd5f04b1f40156d1506a9bd1d5c078f89d563fd416816 Miniconda3-latest-MacOSX-x86_64.pkg\u0026#34; | shasum -a 256 -c Miniconda3-latest-MacOSX-x86_64.pkg: OK  Double-click on the installer and follow the prompts. Restart iTerm2. Test installation with conda list.  Success!\nInstall JupyterLab  Use conda to install jupyterlab.  conda install -c conda-forge jupyterlab  Restart iTerm2. Launch JupyterLab with jupyter-lab.  Success!\n Use Use Control-C to stop the JupyterLab server.  "
+	"content": "I\u0026rsquo;ve decided to give JupyterLab a try. Follow the installation instructions on the Jupyter website. This will allow me to test the notebooks locally. If all works well, I\u0026rsquo;ll try to repeat it on Google Colab and UF JupyterHub.\nInstall conda First I need to install conda.\n Download the Miniconda installer. Check the installer hash:  shasum -a 256 ~/Downloads/Miniconda3-latest-MacOSX-x86_64.sh An easier way to compare the hashes:\ncd ~/Downloads echo \u0026#34;8fa371ae97218c3c005cd5f04b1f40156d1506a9bd1d5c078f89d563fd416816 Miniconda3-latest-MacOSX-x86_64.pkg\u0026#34; | shasum -a 256 -c Miniconda3-latest-MacOSX-x86_64.pkg: OK  Double-click on the installer and follow the prompts. Restart iTerm2. Test installation with conda list.  Success!\nInstall JupyterLab  Use conda to install jupyterlab.  conda install -c conda-forge jupyterlab  Restart iTerm2. Launch JupyterLab with jupyter-lab.  Success!\n Use Use Control-C to stop the JupyterLab server.  "
 },
 {
 	"uri": "https://dgoppenheimer.github.io/pymol-notes/introduction/hugo-basics/",

@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/pymol-notes/images/favicon2.png">
-    <title>Building this site :: PyMOL Notes</title>
+    <title>PyMOL Shortcuts :: PyMOL Notes</title>
 
     
     <link href="/pymol-notes/css/nucleus.css?1636375053" rel="stylesheet">
@@ -39,7 +39,7 @@
 
 
   </head>
-  <body class="" data-url="/pymol-notes/introduction/building-this-site/">
+  <body class="" data-url="/pymol-notes/pymol-tips/pymol-shortcuts/">
     <nav id="sidebar" class="">
 
 
@@ -173,7 +173,7 @@
   
     
     <li data-nav-id="/pymol-notes/introduction/" title="Introduction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -199,7 +199,7 @@
  
   
     
-      <li data-nav-id="/pymol-notes/introduction/building-this-site/" title="Building this site" class="dd-item active">
+      <li data-nav-id="/pymol-notes/introduction/building-this-site/" title="Building this site" class="dd-item ">
         <a href="/pymol-notes/introduction/building-this-site/">
         Building this site
         
@@ -654,7 +654,7 @@
   
     
     <li data-nav-id="/pymol-notes/pymol-tips/" title="Pymol Tips" class="dd-item 
-        
+        parent
         
         
         ">
@@ -680,7 +680,7 @@
  
   
     
-      <li data-nav-id="/pymol-notes/pymol-tips/pymol-shortcuts/" title="PyMOL Shortcuts" class="dd-item ">
+      <li data-nav-id="/pymol-notes/pymol-tips/pymol-shortcuts/" title="PyMOL Shortcuts" class="dd-item active">
         <a href="/pymol-notes/pymol-tips/pymol-shortcuts/">
         PyMOL Shortcuts
         
@@ -759,7 +759,7 @@
             
           
           
-            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/introduction/'>Introduction</a> > Building this site
+            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/pymol-tips/'>Pymol Tips</a> > PyMOL Shortcuts
           
         
           
@@ -774,19 +774,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#create-a-project">Create a project</a></li>
-        <li><a href="#install-the-theme">Install the theme</a></li>
-        <li><a href="#configure-the-theme">Configure the theme</a></li>
-        <li><a href="#create-a-chapter-page">Create a chapter page</a></li>
-        <li><a href="#create-some-content">Create some content</a></li>
-        <li><a href="#spin-up-the-site">Spin up the site</a></li>
-        <li><a href="#create-a-homepage">Create a homepage</a></li>
-        <li><a href="#add-another-chapter-page">Add another chapter page</a></li>
-        <li><a href="#getting-equations-to-display-properly">Getting equations to display properly</a></li>
-      </ul>
-    </li>
+    <li><a href="#install-the-date-time-module">Install the date time module</a></li>
+    <li><a href="#download-the-script-file">Download the script file</a></li>
+    <li><a href="#edit-the-pymolrc">Edit the <code>.pymolrc</code></a></li>
+    <li><a href="#test-the-script">Test the script</a></li>
+    <li><a href="#install-the-shortcuts-in-vs-code">Install the shortcuts in VS Code</a></li>
   </ul>
 </nav>
     </div>
@@ -804,88 +796,67 @@
           
             <h1>
               
-              Building this site
+              PyMOL Shortcuts
             </h1>
           
 
         
 
 
-<p>I already have <a href="https://gohugo.io/">Hugo</a> installed. I installed it using <a href="https://www.macports.org/">MacPorts</a>.</p>
-<h3 id="create-a-project">Create a project</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">cd ~/Sites
-hugo new site pymol-notes
-</code></pre></div><h3 id="install-the-theme">Install the theme</h3>
-<p>I want to use the <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en/">Learn theme</a> for Hugo. It is a theme designed for documentation. It looks nice and is functional.</p>
-<p>This theme has tons of useful features. Check out the <a href="https://learn.netlify.app/en/">Hugo Learn Theme documentation</a>.</p>
-<p>The theme&rsquo;s repository is: <a href="https://github.com/matcornic/hugo-theme-learn.git">https://github.com/matcornic/hugo-theme-learn.git</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">cd pymol-notes
-git init
-git submodule add https://github.com/matcornic/hugo-theme-learn.git themes/hugo-theme-learn
-echo <span style="color:#e6db74">&#39;theme = &#34;hugo-theme-learn&#34;&#39;</span> &gt;&gt; config.toml
-</code></pre></div><h3 id="configure-the-theme">Configure the theme</h3>
-<p>Open <code>config.toml</code> and add the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#75715e"># Change the default theme to be use when building the site with Hugo</span>
-theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hugo-theme-learn&#34;</span>
-
-<span style="color:#75715e"># Change the title</span>
-title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;PyMOL Notes&#34;</span>
-
-<span style="color:#75715e"># For search functionality</span>
-<span style="color:#f92672">[</span>outputs<span style="color:#f92672">]</span>
-home <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span><span style="color:#f92672">]</span>
-</code></pre></div><h3 id="create-a-chapter-page">Create a chapter page</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo new --kind chapter introduction/_index.md
-</code></pre></div><h3 id="create-some-content">Create some content</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo new introduction/building-this-site.md
-</code></pre></div><h3 id="spin-up-the-site">Spin up the site</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo server
-</code></pre></div>
-<div class="notices note" ><p>When you run <code>hugo server</code>, Hugo will build the site in and serve the pages from memory.</p>
-</div>
-
-<p>Go to <code>http://localhost:1313</code>.</p>
-<p>Success!</p>
-
-<div class="notices note" ><p>If you want the site to be built in, and served from, the <code>public</code> directory, then run <code>hugo server --renderToDisk</code>. If you just want to build the site in the <code>public</code> directory, then run <code>hugo</code>.</p>
-</div>
-
-<h3 id="create-a-homepage">Create a homepage</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo new _index.md
-</code></pre></div><p>Add some content to the homepage, and you&rsquo;re good to go!</p>
-<h3 id="add-another-chapter-page">Add another chapter page</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#75715e"># make sure you are in the pymol-notes directory</span>
-cd ~/Sites/pymol-notes
-hugo new --kind chapter GROMACS-simulations/_index.md
-</code></pre></div><ul>
-<li>Open the new <code>_index.md</code> file and change the front matter and add some text.</li>
-<li>Create some content:</li>
+<p>This page describes the installation and use of the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortucs</a> built by B.H.M. Mooers and described in Mooers (2020) <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<h2 id="install-the-date-time-module">Install the date time module</h2>
+<p>The <code>pymolshortcuts.py</code> script has a shortcut to timestamp filenames produced by PyMOL. To use this, the date time module needs to be installed. Because I have <code>MacPorts</code> on my system, I&rsquo;ll used the suggested <code>MacPorts</code> installation instructions.</p>
+<p>In a terminal window, type the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">sudo -H /opt/local/bin/python3.7 -m pip install --upgrade datetime
+</code></pre></div><p>Upgrade <code>pip</code> too.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">sudo -H /opt/local/bin/python3.7 -m pip install --upgrade pip
+</code></pre></div><h2 id="download-the-script-file">Download the script file</h2>
+<ul>
+<li>Download and unpack the <code>pymolshortcuts-master.zip</code> file.</li>
+<li>Move the <code>pymolshortcuts-master</code> folder into the ~/pymol-work/1-scripts` directory.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">hugo new GROMACS-simulations/protein-ligand-tutorial.md
-</code></pre></div><ul>
-<li>Open <code>protein-ligand-tutorial.md</code> and paste in the contents of my research notes <code>.md</code> file.</li>
+<h2 id="edit-the-pymolrc">Edit the <code>.pymolrc</code></h2>
+<ul>
+<li>Add <code>run ~/pymol-work/1-scripts/pymolshortcuts-master/pymolshortcuts.py</code> to the bottom of the file.</li>
+<li>Save and close the file.</li>
 </ul>
-<p>Save the files, and track them with <code>git</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">git status
-git add .
-git commit -m <span style="color:#e6db74">&#34;added a new chapter on gromacs&#34;</span>
-<span style="color:#75715e"># deploy the new pages</span>
-git push origin main
-</code></pre></div><h3 id="getting-equations-to-display-properly">Getting equations to display properly</h3>
-<p>I use equations sometimes, and it is nice to have them display properly on webpages. I found this post on <a href="https://bwaycer.github.io/hugo_tutorial.hugo/tutorials/mathjax/">MathJax support</a> in the Hugo documentation. I put the following <code>HTML</code> code in my <code>/layouts/partials/footer.html</code> file.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><p>For inline math, use <code>\\(&lt;math here&gt;\\)</code> and for more complex math use:</p>
-<pre><code>\\[
-&lt;complex math here&gt;
-\\]
-</code></pre><p>Success!</p>
-<p>For MathJax syntax, see these web pages:</p>
-<p><a href="https://jojozhuang.github.io/tutorial/mathjax-cheat-sheet-for-mathematical-notation/">MathJax Cheat Sheet</a><br>
-<a href="https://kapeli.com/cheat_sheets/LaTeX_Math_Symbols.docset/Contents/Resources/Documents/index">LaTeX Math Symbols cheat sheet</a><br>
-<a href="https://katex.org/docs/supported.html">Supported Katex Functions</a></p>
+<h2 id="test-the-script">Test the script</h2>
+<ul>
+<li>Open PyMOL.</li>
+<li>Type the following into the command prompt:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">Fetch <span style="color:#ae81ff">3</span>OAC
+AO
+</code></pre></div><p>Success! The molecule has ambient occlusion lighting.</p>
+<h2 id="install-the-shortcuts-in-vs-code">Install the shortcuts in VS Code</h2>
+<p>Follow the instructions on this site: <a href="https://mooerslab.github.io/pymolsnips/#VisualStudioCode">PyMOL Script Writing with Code Templates</a>.</p>
+<ul>
+<li>Open VS Code and install the <code>bioSyntax</code> extension.</li>
+<li>Download and unpack the <code>pymolsnips-master.zip</code> file from the <a href="https://github.com/MooersLab/pymolsnips">pymolsnips github repository</a>.</li>
+<li>Move into the <code>vscpymolsnips</code> folder and run the following command:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">mv pml.json ~/Library/Application<span style="color:#ae81ff">\ </span>Support/Code/User/snippets
+</code></pre></div><ul>
+<li>Restart VS Code.</li>
+<li>Create a new file and save it as <code>test.pml</code>.</li>
+<li>Type <code>ao</code> and the autocomplete should trigger to insert the <code>ao</code> code.</li>
+<li>Hit <code>enter</code> to insert the code.</li>
+</ul>
+<p>Success! I can insert PyMOL code into documents I create/edit in VS Code.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Mooers, B.H.M. (2020). Shortcuts for faster image creation in PyMOL. Protein Sci 29: 268–276. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
 
 <footer class="footline">
+	
+	    <i class='fas fa-user'></i> DGO,   07 November 2021
+	    </div>
 	
 </footer>
 
@@ -920,6 +891,8 @@ git push origin main
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -933,7 +906,6 @@ git push origin main
             
             
                 
-                    
                     
                 
                 
@@ -950,9 +922,6 @@ git push origin main
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1123,38 +1092,6 @@ git push origin main
                     
             
         
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -1243,6 +1180,40 @@ git push origin main
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1267,10 +1238,10 @@ git push origin main
 	 
 	 
 		
-			<a class="nav nav-prev" href="/pymol-notes/introduction/" title="Introduction"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/pymol-notes/pymol-tips/" title="Pymol Tips"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/pymol-notes/introduction/hosting-the-site-on-github/" title="Hosting the Site on Github" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/pymol-notes/introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

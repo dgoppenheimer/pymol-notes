@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pymol Tips on PyMOL Notes</title>
+    <link>https://dgoppenheimer.github.io/pymol-notes/pymol-tips/</link>
+    <description>Recent content in Pymol Tips on PyMOL Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Nov 2021 18:58:08 -0500</lastBuildDate><atom:link href="https://dgoppenheimer.github.io/pymol-notes/pymol-tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PyMOL Shortcuts</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/pymol-tips/pymol-shortcuts/</link>
+      <pubDate>Sun, 07 Nov 2021 19:49:28 -0500</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/pymol-tips/pymol-shortcuts/</guid>
+      <description>This page describes the installation and use of the pymolshortucs built by B.H.M. Mooers and described in Mooers (2020) 1.
+Install the date time module The pymolshortcuts.py script has a shortcut to timestamp filenames produced by PyMOL. To use this, the date time module needs to be installed. Because I have MacPorts on my system, I&amp;rsquo;ll used the suggested MacPorts installation instructions.
+In a terminal window, type the following command:</description>
+    </item>
+    
+  </channel>
+</rss>

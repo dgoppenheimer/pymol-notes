@@ -77,6 +77,17 @@ fetch 3G6M, mol, async=0 extract caf1, /mol//A/CFF`427 h_add set valence, 0 hide
     </item>
     
     <item>
+      <title>PyMOL Shortcuts</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/pymol-tips/pymol-shortcuts/</link>
+      <pubDate>Sun, 07 Nov 2021 19:49:28 -0500</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/pymol-tips/pymol-shortcuts/</guid>
+      <description>This page describes the installation and use of the pymolshortucs built by B.H.M. Mooers and described in Mooers (2020) 1.
+Install the date time module The pymolshortcuts.py script has a shortcut to timestamp filenames produced by PyMOL. To use this, the date time module needs to be installed. Because I have MacPorts on my system, I&amp;rsquo;ll used the suggested MacPorts installation instructions.
+In a terminal window, type the following command:</description>
+    </item>
+    
+    <item>
       <title>Lab.00 Software</title>
       <link>https://dgoppenheimer.github.io/pymol-notes/molecular-modeling-tutorials/lab.00-software/</link>
       <pubDate>Thu, 04 Nov 2021 11:40:43 -0400</pubDate>
@@ -97,15 +108,15 @@ PyRosetta notebooks PyRosetta Google Drive Setup First follow these instructions
     </item>
     
     <item>
-      <title>Installing Jupyter</title>
+      <title>Installing JupyterLab</title>
       <link>https://dgoppenheimer.github.io/pymol-notes/jupyter-notebooks/installing-jupyter/</link>
       <pubDate>Fri, 29 Oct 2021 16:17:12 -0400</pubDate>
       
       <guid>https://dgoppenheimer.github.io/pymol-notes/jupyter-notebooks/installing-jupyter/</guid>
-      <description>I&amp;rsquo;ve decided to give JupyterLab a try. Follow the installation instructions on the Jupyter website.
+      <description>I&amp;rsquo;ve decided to give JupyterLab a try. Follow the installation instructions on the Jupyter website. This will allow me to test the notebooks locally. If all works well, I&amp;rsquo;ll try to repeat it on Google Colab and UF JupyterHub.
 Install conda First I need to install conda.
  Download the Miniconda installer. Check the installer hash:  shasum -a 256 ~/Downloads/Miniconda3-latest-MacOSX-x86_64.sh An easier way to compare the hashes:
-cd ~/Downloads echo &amp;#34;8fa371ae97218c3c005cd5f04b1f40156d1506a9bd1d5c078f89d563fd416816 Miniconda3-latest-MacOSX-x86_64.pkg&amp;#34; | shasum -a 256 -c Miniconda3-latest-MacOSX-x86_64.pkg: OK  Double-click on the installer and follow the prompts. Restart iTerm2. Test installation with conda list.</description>
+cd ~/Downloads echo &amp;#34;8fa371ae97218c3c005cd5f04b1f40156d1506a9bd1d5c078f89d563fd416816 Miniconda3-latest-MacOSX-x86_64.</description>
     </item>
     
     <item>
