@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 07 Nov 2021 18:58:08 -0500</lastBuildDate><atom:link href="https://dgoppenheimer.github.io/pymol-notes/pymol-tips/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Useful Commands</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/pymol-tips/useful-commands/</link>
+      <pubDate>Wed, 10 Nov 2021 09:52:31 -0500</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/pymol-tips/useful-commands/</guid>
+      <description>I created this document to store the commands I use often in PyMOL, but can&amp;rsquo;t remember them when I need them.
+Downloading the biological assembly from RCSB The default of the fetch command is to download the asymmetric unit from RCSB. If your protein of interest is a dimer or multimer then you need to download the biological assembly.
+See the PyMOL wiki entry for fetch, examples 3 and 4. Also see the entry for assembly.</description>
+    </item>
+    
+    <item>
       <title>PyMOL Shortcuts</title>
       <link>https://dgoppenheimer.github.io/pymol-notes/pymol-tips/pymol-shortcuts/</link>
       <pubDate>Sun, 07 Nov 2021 19:49:28 -0500</pubDate>

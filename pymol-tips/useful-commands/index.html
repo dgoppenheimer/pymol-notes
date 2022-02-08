@@ -8,22 +8,22 @@
 
 
     <link rel="icon" href="/pymol-notes/images/favicon2.png">
-    <title>tutorial :: PyMOL Notes</title>
+    <title>Useful Commands :: PyMOL Notes</title>
 
     
-    <link href="/pymol-notes/css/nucleus.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/fontawesome-all.min.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/hybrid.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/featherlight.min.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/auto-complete.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/theme.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/hugo-theme.css?1644340435" rel="stylesheet">
+    <link href="/pymol-notes/css/nucleus.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/fontawesome-all.min.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/hybrid.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/featherlight.min.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/auto-complete.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/theme.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/hugo-theme.css?1644340434" rel="stylesheet">
     
-    <link href="/pymol-notes/css/custom.css?1644340435" rel="stylesheet">
+    <link href="/pymol-notes/css/custom.css?1644340434" rel="stylesheet">
 
-    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1644340435"></script>
+    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1644340434"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -39,7 +39,7 @@
 
 
   </head>
-  <body class="" data-url="/pymol-notes/tags/tutorial/">
+  <body class="" data-url="/pymol-notes/pymol-tips/useful-commands/">
     <nav id="sidebar" class="">
 
 
@@ -147,14 +147,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1644340435"></script>
-<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1644340435"></script>
+<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1644340434"></script>
+<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1644340434"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dgoppenheimer.github.io\/pymol-notes\/";
     
 </script>
-<script type="text/javascript" src="/pymol-notes/js/search.js?1644340435"></script>
+<script type="text/javascript" src="/pymol-notes/js/search.js?1644340434"></script>
 
     
   </div>
@@ -709,7 +709,7 @@
   
     
     <li data-nav-id="/pymol-notes/pymol-tips/" title="Pymol Tips" class="dd-item 
-        
+        parent
         
         
         ">
@@ -735,7 +735,7 @@
  
   
     
-      <li data-nav-id="/pymol-notes/pymol-tips/useful-commands/" title="Useful Commands" class="dd-item ">
+      <li data-nav-id="/pymol-notes/pymol-tips/useful-commands/" title="Useful Commands" class="dd-item active">
         <a href="/pymol-notes/pymol-tips/useful-commands/">
         Useful Commands
         
@@ -835,7 +835,7 @@
             
           
           
-            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/tags/'>Tags</a> > tutorial
+            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/pymol-tips/'>Pymol Tips</a> > Useful Commands
           
         
           
@@ -848,7 +848,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#downloading-the-biological-assembly-from-rcsb">Downloading the biological assembly from RCSB</a></li>
+        <li><a href="#reinitialize">Reinitialize</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -864,26 +873,40 @@
           
             <h1>
               
-                tag ::
-              
-              tutorial
+              Useful Commands
             </h1>
           
 
         
 
 
+<p>I created this document to store the commands I use often in PyMOL, but can&rsquo;t remember them when I need them.</p>
+<h3 id="downloading-the-biological-assembly-from-rcsb">Downloading the biological assembly from RCSB</h3>
+<p>The default of the <code>fetch</code> command is to download the asymmetric unit from RCSB. If your protein of interest is a dimer or multimer then you need to download the biological assembly.</p>
+<p>See the <a href="https://pymolwiki.org/index.php/Fetch">PyMOL wiki entry for <code>fetch</code></a>, examples 3 and 4. Also see the entry for <a href="https://pymolwiki.org/index.php/Assembly"><code>assembly</code></a>.</p>
+<p>Example code for downloading the biological assembly of <a href="https://www.rcsb.org/structure/6TOF">6tof</a>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">fetch <span style="color:#ae81ff">6</span>tof, type<span style="color:#f92672">=</span>pdb1
+spit_states <span style="color:#ae81ff">6</span>tof
+</code></pre></div><p>Or</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">set assembly, <span style="color:#ae81ff">1</span>
+fetch <span style="color:#ae81ff">6</span>tof, assembly1, async<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+split_states assembly1
+</code></pre></div><p>An alternative is to use symmetry mates. Here is the <a href="https://pymolwiki.org/index.php/Symexp">PyMOL wiki page for <code>symexp</code></a> showing how to do that. An example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># Expand the &#39;&#39;object&#39;&#39; around its &#39;&#39;selection&#39;&#39; by cutoff Angstroms and</span>
+<span style="color:#75715e"># prefix the new objects withs &#39;&#39;prefix&#39;&#39;.</span>
+symexp prefix, object, selection, cutoff [, segi]
+</code></pre></div><p>Or</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">fetch <span style="color:#ae81ff">6</span>tof
+symexp mate, <span style="color:#ae81ff">6</span>tof, <span style="color:#ae81ff">6</span>tof, <span style="color:#ae81ff">1</span>
+</code></pre></div><p>To use <code>symexp</code>, you need to know which of the symmetry mates to keep and which to discard. In other words, you need to know what the biological assembly looks like, which is usually shown on the RCSB page for the protein of interest.</p>
+<h3 id="reinitialize">Reinitialize</h3>
+<p>They do not mention this on the <a href="https://pymolwiki.org/index.php/Reinitialize">PyMOL wiki reinitialize page</a>, but you can run this command using <code>reinit</code> or even <code>rein</code>.</p>
 
 
-
-<ul>
+<footer class="footline">
 	
-		<li><a href="/pymol-notes/md-simulations/gromacs-simulations/protein-ligand-tutorial/">Protein-Ligand Complex Tutorial</a></li>
-	
-</ul>
-
-
-<footer class=" footline" >
+	    <i class='fas fa-user'></i> DGO,   10 November 2021
+	    </div>
 	
 </footer>
 
@@ -1259,6 +1282,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1271,6 +1295,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1287,6 +1312,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1311,8 +1339,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/pymol-notes/pymol-tips/" title="Pymol Tips"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/pymol-notes/introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/pymol-notes/pymol-tips/pymol-shortcuts/" title="PyMOL Shortcuts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1322,20 +1352,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/pymol-notes/js/clipboard.min.js?1644340435"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1644340435"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1644340435"></script>
-    <script src="/pymol-notes/js/jquery.sticky.js?1644340435"></script>
-    <script src="/pymol-notes/js/featherlight.min.js?1644340435"></script>
-    <script src="/pymol-notes/js/highlight.pack.js?1644340435"></script>
+    <script src="/pymol-notes/js/clipboard.min.js?1644340434"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1644340434"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1644340434"></script>
+    <script src="/pymol-notes/js/jquery.sticky.js?1644340434"></script>
+    <script src="/pymol-notes/js/featherlight.min.js?1644340434"></script>
+    <script src="/pymol-notes/js/highlight.pack.js?1644340434"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1644340435"></script>
-    <script src="/pymol-notes/js/learn.js?1644340435"></script>
-    <script src="/pymol-notes/js/hugo-learn.js?1644340435"></script>
+    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1644340434"></script>
+    <script src="/pymol-notes/js/learn.js?1644340434"></script>
+    <script src="/pymol-notes/js/hugo-learn.js?1644340434"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
         
-            <script src="/pymol-notes/mermaid/mermaid.js?1644340435"></script>
+            <script src="/pymol-notes/mermaid/mermaid.js?1644340434"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
@@ -1345,3 +1375,4 @@
 
   </body>
 </html>
+

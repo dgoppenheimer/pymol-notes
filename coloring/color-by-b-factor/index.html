@@ -8,22 +8,22 @@
 
 
     <link rel="icon" href="/pymol-notes/images/favicon2.png">
-    <title>tutorial :: PyMOL Notes</title>
+    <title>Color by B-factor :: PyMOL Notes</title>
 
     
-    <link href="/pymol-notes/css/nucleus.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/fontawesome-all.min.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/hybrid.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/featherlight.min.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/auto-complete.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/theme.css?1644340435" rel="stylesheet">
-    <link href="/pymol-notes/css/hugo-theme.css?1644340435" rel="stylesheet">
+    <link href="/pymol-notes/css/nucleus.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/fontawesome-all.min.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/hybrid.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/featherlight.min.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/perfect-scrollbar.min.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/auto-complete.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/atom-one-dark-reasonable.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/theme.css?1644340434" rel="stylesheet">
+    <link href="/pymol-notes/css/hugo-theme.css?1644340434" rel="stylesheet">
     
-    <link href="/pymol-notes/css/custom.css?1644340435" rel="stylesheet">
+    <link href="/pymol-notes/css/custom.css?1644340434" rel="stylesheet">
 
-    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1644340435"></script>
+    <script src="/pymol-notes/js/jquery-3.3.1.min.js?1644340434"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -39,7 +39,7 @@
 
 
   </head>
-  <body class="" data-url="/pymol-notes/tags/tutorial/">
+  <body class="" data-url="/pymol-notes/coloring/color-by-b-factor/">
     <nav id="sidebar" class="">
 
 
@@ -147,14 +147,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1644340435"></script>
-<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1644340435"></script>
+<script type="text/javascript" src="/pymol-notes/js/lunr.min.js?1644340434"></script>
+<script type="text/javascript" src="/pymol-notes/js/auto-complete.js?1644340434"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/dgoppenheimer.github.io\/pymol-notes\/";
     
 </script>
-<script type="text/javascript" src="/pymol-notes/js/search.js?1644340435"></script>
+<script type="text/javascript" src="/pymol-notes/js/search.js?1644340434"></script>
 
     
   </div>
@@ -654,7 +654,7 @@
   
     
     <li data-nav-id="/pymol-notes/coloring/" title="Coloring" class="dd-item 
-        
+        parent
         
         
         ">
@@ -680,7 +680,7 @@
  
   
     
-      <li data-nav-id="/pymol-notes/coloring/color-by-b-factor/" title="Color by B-factor" class="dd-item ">
+      <li data-nav-id="/pymol-notes/coloring/color-by-b-factor/" title="Color by B-factor" class="dd-item active">
         <a href="/pymol-notes/coloring/color-by-b-factor/">
         Color by B-factor
         
@@ -835,7 +835,7 @@
             
           
           
-            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/tags/'>Tags</a> > tutorial
+            <a href='/pymol-notes/'>PyMOL Notes</a> > <a href='/pymol-notes/coloring/'>Coloring</a> > Color by B-factor
           
         
           
@@ -848,7 +848,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -864,26 +872,79 @@
           
             <h1>
               
-                tag ::
-              
-              tutorial
+              Color by B-factor
             </h1>
           
 
         
 
 
-
-
-
+<p>B-factors are measures of how much thermal motion an atom exhibited during the determination of a protein structure by X-ray crystallography. It is useful to color a protein based on the b-factors of its backbone atoms to see the segments of the protein that are most dynamic (or where the uncertainty in atom positions is the highest).</p>
+<p>The best way to color by b-factor in PyMOL is to use the <code>color_b.py</code> script. The script can be downloaded from the <a href="http://pldserver1.biochem.queensu.ca/~rlc/work/pymol/">PyMOL Script Repository</a>.</p>
 <ul>
-	
-		<li><a href="/pymol-notes/md-simulations/gromacs-simulations/protein-ligand-tutorial/">Protein-Ligand Complex Tutorial</a></li>
-	
+<li>Download the <a href="http://pldserver1.biochem.queensu.ca/~rlc/work/pymol/color_b.py"><code>color_b.py</code> script</a>.</li>
+<li>Put the script into your PyMOL scripts directory or your current working directory.</li>
+<li>Type <code>run color_b.py</code> in the PyMOL command line.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<ul>
+<li>Make a selection.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">select ca, name ca <span style="color:#75715e"># select alpha carbons and name the selection ca</span>
+</code></pre></div><ul>
+<li>Color the selection.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">color_b selection<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ca&#39;</span>,mode<span style="color:#f92672">=</span>ramp,gradient<span style="color:#f92672">=</span>bwr,nbins<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>,sat<span style="color:#f92672">=.</span><span style="color:#ae81ff">5</span>, value<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</code></pre></div><ul>
+<li><code>color_b</code>: invokes the command</li>
+<li><code>selection='ca'</code>: indicates the named selection that will be colored</li>
+<li><code>mode=ramp</code>: chooses ramp for gradient mode</li>
+</ul>
+<p>From the <code>help</code> file:</p>
+<blockquote>
+<p>The division of B-value ranges can be in either of two modes: &lsquo;hist&rsquo; or &lsquo;ramp&rsquo;. &lsquo;hist&rsquo; is like a histogram (equal-sized B-value increments leading to unequal numbers of atoms in each bin). &lsquo;ramp&rsquo; as a ramp of B-value ranges with the ranges chosen to provide an equal number of atoms in each group.</p>
+</blockquote>
+<ul>
+<li><code>gradient=bwr</code>: chooses one of the many preset gradients</li>
+</ul>
+<blockquote>
+<p>The gradients can be:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#e6db74">&#39;bgr&#39;</span>: blue <span style="color:#f92672">-&gt;</span> green   <span style="color:#f92672">-&gt;</span> red
+<span style="color:#e6db74">&#39;rgb&#39;</span>: red  <span style="color:#f92672">-&gt;</span> green   <span style="color:#f92672">-&gt;</span> blue
+<span style="color:#e6db74">&#39;bwr&#39;</span>: blue <span style="color:#f92672">-&gt;</span> white   <span style="color:#f92672">-&gt;</span> red
+<span style="color:#e6db74">&#39;rwb&#39;</span>: red  <span style="color:#f92672">-&gt;</span> white   <span style="color:#f92672">-&gt;</span> blue
+<span style="color:#e6db74">&#39;bmr&#39;</span>: blue <span style="color:#f92672">-&gt;</span> magenta <span style="color:#f92672">-&gt;</span> red
+<span style="color:#e6db74">&#39;rmb&#39;</span>: red  <span style="color:#f92672">-&gt;</span> magenta <span style="color:#f92672">-&gt;</span> blue
+<span style="color:#e6db74">&#39;rw&#39;</span> : red <span style="color:#f92672">-&gt;</span> white
+<span style="color:#e6db74">&#39;wr&#39;</span> : white <span style="color:#f92672">-&gt;</span> red
+<span style="color:#e6db74">&#39;ry&#39;</span> : red <span style="color:#f92672">-&gt;</span> yellow
+<span style="color:#e6db74">&#39;yr&#39;</span> : yellow <span style="color:#f92672">-&gt;</span> red
+<span style="color:#e6db74">&#39;gw&#39;</span> : green <span style="color:#f92672">-&gt;</span> white
+<span style="color:#e6db74">&#39;wg&#39;</span> : white <span style="color:#f92672">-&gt;</span> green
+<span style="color:#e6db74">&#39;bw&#39;</span> : blue <span style="color:#f92672">-&gt;</span> white
+<span style="color:#e6db74">&#39;wb&#39;</span> : white <span style="color:#f92672">-&gt;</span> blue
+<span style="color:#e6db74">&#39;gy&#39;</span> : green <span style="color:#f92672">-&gt;</span> yellow
+<span style="color:#e6db74">&#39;yg&#39;</span> : yellow <span style="color:#f92672">-&gt;</span> green
+<span style="color:#e6db74">&#39;gray&#39;</span> : black <span style="color:#f92672">-&gt;</span> white
+<span style="color:#e6db74">&#39;reversegray&#39;</span> : white <span style="color:#f92672">-&gt;</span> black
+<span style="color:#e6db74">&#39;user&#39;</span> : user defined <span style="color:#f92672">in</span> this script
+</code></pre></div></blockquote>
+<ul>
+<li><code>nbins=30</code>: Sets the number of bins for the color gradient. Higher numbers are wider gradients.</li>
+<li><code>sat=.5, value=1</code>:</li>
+</ul>
+<blockquote>
+<p>You can also specify the saturation and value (i.e. the &ldquo;s&rdquo; and &ldquo;v&rdquo; in the &ldquo;HSV&rdquo; color scheme) to be used for the gradient. The defaults are 1.0 for both &ldquo;sat&rdquo; and &ldquo;value&rdquo;.</p>
+</blockquote>
+<ul>
+<li>Type <code>help(color_b)</code> to get these and additional usage guidelines.</li>
 </ul>
 
 
-<footer class=" footline" >
+<footer class="footline">
+	
+	    <i class='fas fa-user'></i> DGO,   08 February 2022
+	    </div>
 	
 </footer>
 
@@ -1227,6 +1288,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1239,6 +1301,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1258,6 +1321,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1311,8 +1377,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/pymol-notes/coloring/" title="Coloring"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/pymol-notes/introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/pymol-notes/pymol-tips/" title="Pymol Tips" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1322,20 +1390,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/pymol-notes/js/clipboard.min.js?1644340435"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1644340435"></script>
-    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1644340435"></script>
-    <script src="/pymol-notes/js/jquery.sticky.js?1644340435"></script>
-    <script src="/pymol-notes/js/featherlight.min.js?1644340435"></script>
-    <script src="/pymol-notes/js/highlight.pack.js?1644340435"></script>
+    <script src="/pymol-notes/js/clipboard.min.js?1644340434"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.min.js?1644340434"></script>
+    <script src="/pymol-notes/js/perfect-scrollbar.jquery.min.js?1644340434"></script>
+    <script src="/pymol-notes/js/jquery.sticky.js?1644340434"></script>
+    <script src="/pymol-notes/js/featherlight.min.js?1644340434"></script>
+    <script src="/pymol-notes/js/highlight.pack.js?1644340434"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1644340435"></script>
-    <script src="/pymol-notes/js/learn.js?1644340435"></script>
-    <script src="/pymol-notes/js/hugo-learn.js?1644340435"></script>
+    <script src="/pymol-notes/js/modernizr.custom-3.6.0.js?1644340434"></script>
+    <script src="/pymol-notes/js/learn.js?1644340434"></script>
+    <script src="/pymol-notes/js/hugo-learn.js?1644340434"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
         
-            <script src="/pymol-notes/mermaid/mermaid.js?1644340435"></script>
+            <script src="/pymol-notes/mermaid/mermaid.js?1644340434"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
@@ -1345,3 +1413,4 @@
 
   </body>
 </html>
+

@@ -15,7 +15,7 @@
       <guid>https://dgoppenheimer.github.io/pymol-notes/md-simulations/making-it-rain/</guid>
       <description>Making it rain 1 is a front end for running molecular dynamics simulations using cloud-based resources. It makes use of the OpenMM toolkit, Google Colab framework, and Jupyter notebooks.
 Before I start running MD simulations in Colab, I will start with some Colab-Jupyter tutorials outlined in the paper by Engelberger et al. (2021) 2. These tutorials are available from the Cloud-based Tutorials on Structural Bioinformatics github repository.
-PyRosetta notebooks PyRosetta Google Drive Setup First follow these instructions:</description>
+Also see this blog: New paper describes Google Colab notebooks to efficiently run molecular dynamics simulations of proteins</description>
     </item>
     
     <item>

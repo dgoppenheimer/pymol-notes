@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coloring on PyMOL Notes</title>
+    <link>https://dgoppenheimer.github.io/pymol-notes/coloring/</link>
+    <description>Recent content in Coloring on PyMOL Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dgoppenheimer.github.io/pymol-notes/coloring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Color by B-factor</title>
+      <link>https://dgoppenheimer.github.io/pymol-notes/coloring/color-by-b-factor/</link>
+      <pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dgoppenheimer.github.io/pymol-notes/coloring/color-by-b-factor/</guid>
+      <description>B-factors are measures of how much thermal motion an atom exhibited during the determination of a protein structure by X-ray crystallography. It is useful to color a protein based on the b-factors of its backbone atoms to see the segments of the protein that are most dynamic (or where the uncertainty in atom positions is the highest).
+The best way to color by b-factor in PyMOL is to use the color_b.</description>
+    </item>
+    
+  </channel>
+</rss>
