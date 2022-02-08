@@ -56,7 +56,7 @@ Nice trajectory post-processing scripts: [Advanced VMD: Trajectories, movies, sc
 [Geo-Measures](https://pymolwiki.org/index.php/Geo_Measures_Plugin.) This is a nice set of tools integrated into a PyMOL plugin.  
 [Side-chain network approach](https://www.frontiersin.org/articles/10.3389/fmolb.2020.596945/full)
 
-Note done yet! More to come.
+Not done yet! More to come.
 
 
 

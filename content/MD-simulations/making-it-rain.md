@@ -9,6 +9,8 @@ Making it rain [^1] is a front end for running molecular dynamics simulations us
 
 Before I start running MD simulations in Colab, I will start with some Colab-Jupyter tutorials outlined in the paper by Engelberger et al. (2021) [^2]. These tutorials are available from the [Cloud-based Tutorials on Structural Bioinformatics github repository](https://github.com/pb3lab/ibm3202).
 
+Also see this blog: [New paper describes Google Colab notebooks to efficiently run molecular dynamics simulations of proteins](https://towardsdatascience.com/new-preprint-describes-google-colab-notebook-to-efficiently-run-molecular-dynamics-simulations-of-9b317f0e428c)
+
 ## PyRosetta notebooks
 
 ### PyRosetta Google Drive Setup
@@ -323,7 +325,7 @@ Great! Now you have an app on your computer that will launch Colab in a new wind
 - Save a copy to Drive, and rename it with the *-dgo* suffix.
 
 {{% notice info %}}
-As soon as you *make a copy* of the notebook, the copy is opened in the browser, which defeats thr purpose of using the Colab shortcut app.
+As soon as you *make a copy* of the notebook, the copy is opened in the browser, which defeats the purpose of using the Colab shortcut app.
 {{% /notice %}}
 
 - Continue with tutorial.
@@ -356,14 +358,6 @@ There are tutorials available on the [Pandas documentation website](https://pand
 
 
 
-
-
-
-
-
-
-
-
 [simple tutorial for sharing jupyter notebooks on GitHub](https://reproducible-science-curriculum.github.io/sharing-RR-Jupyter/01-sharing-github/)  
 
 
@@ -375,12 +369,10 @@ There are tutorials available on the [Pandas documentation website](https://pand
 5. git remote add origin https://github.com/{Your repo}/GeeksForGeeks.git 
 6. git push -u origin master 
 
-Organizing notebooks
+## Organizing notebooks
 
  
-
 [extensions for code review](https://www.drivendata.co/blog/nbautoexport-jupyter-code-review/)
-
 
 
 ### nbpages
@@ -388,9 +380,6 @@ Organizing notebooks
 From the [nbpages documentation](https://jckantor.github.io/nbpages/):
 
 >[nbpages](https://github.com/jckantor/nbpages#id1) is a command line tool for publishing a collection of Jupyter notebooks to Github Pages. This project was inspired by the tools included with the [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook) by [Jake Vanderplas](https://github.com/jakevdp).
-
-
-
 
 
 
@@ -420,14 +409,6 @@ Success!
 ### Avoiding colab timeouts
 
 [How to save Google Colab Notebooks from runtime timeouts](https://medium.com/analytics-vidhya/how-to-save-google-colab-notebooks-from-runtime-timeouts-4aa133375a7e) has a `keep alive` script that you can get from the [sour4bh/stop-cursing-colab](https://github.com/sour4bh/stop-cursing-colab) repository. It uses `AutoHotKey`.
-
-
-
-
-
-
-
-
 
 
 
@@ -490,3 +471,12 @@ I may not need this if I stick with `pip`.
 [^2]: Engelberger, F., Galaz-Davison, P., Bravo, G., Rivera, M., and Ramírez-Sarmiento, C.A. (2021). Developing and Implementing Cloud-Based Tutorials That Combine Bioinformatics Software, Interactive Coding, and Visualization Exercises for Distance Learning on Structural Bioinformatics. doi: [10.1021/acs.jchemed.1c00022](https://pubs.acs.org/doi/10.1021/acs.jchemed.1c00022)
 
 
+
+
+
+
+
+
+---
+
+------
